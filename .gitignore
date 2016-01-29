@@ -4,4 +4,4 @@
 /node_modules/*
 npm-debug.log
 .DS_Store
-./app/bower_components/
+/app/bower_components/
