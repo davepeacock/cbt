@@ -1,0 +1,11 @@
+{
+  "name": "raphael_game",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize-css": "normalize.css#~3.0.3",
+    "bower-skrollr": "~0.6.26",
+    "skrollr-menu": "~1.0.3",
+    "BigVideo": "BigVideo.js#~1.1.5"
+  }
+}
