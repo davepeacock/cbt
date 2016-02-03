@@ -17,8 +17,8 @@ var gulp = require('gulp'),
 gulp.task('html', function () {
 	return gulp.src('app/*.html')
 		.pipe(useref())
-		// .pipe(gulpif('js/*.js', uglify()))
-		// .pipe(gulpif('css/*.css', minifyCss()))
+		.pipe(gulpif('js/*.js', uglify()))
+		.pipe(gulpif('css/*.css', minifyCss()))
 		.pipe(gulp.dest('www'));
 });
 

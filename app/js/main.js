@@ -20,8 +20,8 @@ var videoList = {
 var sectionItemBgList = {
 	"suburbs": [
 		'img/suburbs/scene_2_blank.jpg',
-		'img/suburbs/scene_2_ee.jpg',
 		'img/suburbs/scene_2_housing.jpg',
+		'img/suburbs/scene_2_ee.jpg',
 		'img/suburbs/scene_2_transportation.jpg'
 	]
 }
@@ -348,6 +348,7 @@ function FirstSection(){
 
 	this.init = function (){
 		$('.wrap, .c-btns').show();
+		setHash(undefined);
 
 		var skrollInit = false,
 		count = $('[data-emit-events]').length;
@@ -373,7 +374,6 @@ function FirstSection(){
 
 		skrollr.menu.init(skrollrItem, {
 			change: function(hash, top) {
-				// console.log(hash, top);
 			}
 		});
 
@@ -404,19 +404,29 @@ function FirstSection(){
 
 function SecondSection(){
 	var $container = $('.second-section');
+	var BV;
 
 	this.init = function(hash){
 		$container.addClass('visible');
 		setHash(hash);
 	}
 
+	this.destroy = function(){
+
+		$container.children('.second-section__choices').find('.button-list__drop__item .btn').off('mouseenter mouseleave click');
+
+		$('.i-popup__close,.second-section-start,.first-section-start,.play-section-video').off('click');
+	}
+
 	function updateSize(container, elem, mediaAspect) {
 		var containerW = container.outerWidth() < $(window).width() ? container.outerWidth() : $(window).width(),
 			containerH = container.outerHeight() < $(window).height() ? container.outerHeight() : $(window).height(),
+			// containerH = container.outerHeight() < $(window).height() ? $(window).height() : container.outerHeight(),
 			containerAspect = containerW/containerH;
 
 
 		if (containerAspect < mediaAspect) {
+			console.log("taller");
 			// taller
 			$(container)
 				.css('top',0)
@@ -426,23 +436,9 @@ function SecondSection(){
 			$(elem)
 				.css('width',containerH*mediaAspect)
 				.css('height',containerH);
-
-			// if (currMediaType == 'video') {
-				
-
-			// } else {
-			// 	// is image
-			// 	$('#big-video-image')
-			// 		.css({
-			// 			width: 'auto',
-			// 			height: containerH,
-			// 			top:0,
-			// 			left:-(containerH*mediaAspect-containerW)/2
-			// 		});
-			// }
 		} else {
 			// wider
-			
+			console.log("wider");
 			$(container)
 				.css('top',-(containerW/mediaAspect-containerH)/2)
 				.css('left',0)
@@ -450,123 +446,160 @@ function SecondSection(){
 			$(elem)
 				.css('width',$(elem).parent().width()+"px")
 				.css('height','auto');
-
-			// $(vidEl+'_flash_api')
-			// 	.css('width',containerW)
-			// 	.css('height',containerW/mediaAspect);
-
-			// if (currMediaType == 'video') {
-				
-			// } else {
-			// 	// is image
-			// 	$('#big-video-image')
-			// 		.css({
-			// 			width: containerW,
-			// 			height: 'auto',
-			// 			top:-(containerW/mediaAspect-containerH)/2,
-			// 			left:0
-			// 		});
-			// }
 		}
 	}
 
-	function changeBg(container, btn){
-		var $this = $(btn);
-		var $attr = $this.attr('data-bgImg-src');
-		var img = new Image();
+	function changeBg(container, src){
+		var $img = $('<img>');
 
-		if($this.data('img-cashed')){
-			container.css('background-image', 'url('+$attr+')');
-		}else {
-			img.onload = function(){
-				container.css('background-image', 'url('+$attr+')');
-				$this.data('img-cashed', true);
-			}
-			img.src = $attr;
-		}
+		$img.on('load', function(){
+			container.css('background-image', 'url('+src+')');
+		}).attr('src', src);
 	}
 
 	function changeImgSrc(src, img){
-		console.log(src);
+		// console.log(src);
 		img.src = src;
-		console.log(img);
+		// console.log(img);
 	}
 
-	$container.children('.second-section__choices').find('.buttons-list .btn').on('mouseenter', function(){
-		changeBg($container, $(this));
+	$container.children('.second-section__choices').find('.button-list__drop__item .btn').on('mouseenter', function(){
+		changeBg($container, $(this).attr('data-bgImg-src'));
 	});
 
-	$container.children('.second-section__choices').find('.buttons-list .btn').on('mouseleave', function(){
+	$('.button-list__main').on('click', function(){
+		console.log("S");
+		var $buttonList = $(this).closest('.button-list');
+		
+		if($buttonList.hasClass('open')){
+			$buttonList.removeClass('open');
+		}else {
+			$buttonList.addClass('open');
+		}
+	});
+
+	$container.children('.second-section__choices').find('.button-list__drop__item .btn').on('mouseleave', function(){
 		$container.attr('style', '');
 	});
 
-	$container.children('.second-section__choices').find('.buttons-list .btn').on('click', function(e){
+	$container.children('.second-section__choices').find('.button-list__drop__item .btn').on('click', function(e){
 		e.preventDefault();
 		var $this = $(this);
 		var popupId = $this.attr('href').slice(1);
 		$this.closest('.second-section__choices').find('.i-popup[id="'+popupId+'"]').addClass('visible');
 	});
 
+	$('.i-popup__close').on('click', function(){
+		$(this).closest('.i-popup').removeClass('visible');
+	});
+
+	$('.second-section-start').on('click', function(e){
+		e.preventDefault();
+		$('.second-section__item').removeClass('visible');
+		$('.second-section__choices').fadeIn();
+		$('.second-section__item__image-list').children().remove();
+		BV.dispose();
+	});
+
+	$('.first-section-start').on('click', function(e){
+		e.preventDefault();
+		$('.second-section').removeClass('visible');
+		$('.second-section__item').removeClass('visible');
+		$('.second-section__choices').fadeIn();
+		$('.second-section__item__image-list').children().remove();
+		if(BV){
+			BV.dispose();
+		}
+		loadSection("");
+		$container.children('.second-section__choices').find('.button-list__drop__item .btn').off('mouseenter mouseleave click');
+		$('.i-popup__close, .second-section-start, .first-section-start, .play-section-video, .button-list__main').off('click');
+	});
+
 	$('.play-section-video').on('click', function(e){
 		e.preventDefault();
 		var $this = $(this);
 		var sectionId = $this.attr('href').slice(1);
-		var BV = new $.BigVideo({useFlashForFirefox:false});
 		var bgImgLink = sectionItemBgList[sectionId][0];
 		var $sectionItem = $('.second-section__item[data-section-item-id="'+sectionId+'"] .second-section__item_i');
+		BV = new $.BigVideo({useFlashForFirefox:false});
 		
 		$('.second-section__choices').fadeOut();
 		$('#big-video-wrap').removeClass('hidden');
 		
-		// console.log(videoList);
 		BV.init();
 		BV.show(
 			videoList[sectionId]
 		);
 		BV.getPlayer().on('ended' , function(){
-			var img = new Image();
-			var $img = $(img);
+			var $img;
 
-			img.onload = function(){
-				$('#big-video-wrap').addClass('hidden');
-				$sectionItem.closest('.second-section__item').addClass('visible');
-				updateSize($sectionItem.closest('.second-section__item'), $sectionItem, 16/9);
+			for(var i = 0; i < sectionItemBgList[sectionId].length; i++){
+				$img = $('<img>');
+
+				if(i === 0){
+					$img.on('load', function(){
+						$sectionItem.closest('.second-section__item').addClass('visible');
+						$('#big-video-wrap').addClass('hidden');
+						updateSize($sectionItem.closest('.second-section__item'), $sectionItem, 16/9);
+						addEvents($img, $sectionItem.children('.second-section__item__image-list'));
+					});
+				}
+				$img.attr({'src': sectionItemBgList[sectionId][i], 'eq': [i]})
+					.addClass('second-section__item__image')
+					.appendTo($sectionItem.children('.second-section__item__image-list'));
 			}
 
-			img.src = bgImgLink;
-			$img.addClass('second-section__item__image').appendTo($sectionItem);
+			function addEvents($el, $container){
+				if (!$el.data('c-event') === true){
+					$el.data('c-event', true);
 
-			$img.closest('.second-section__item').find('.buttons-list .btn').on('mouseenter', function(){
-				var $sectionN = $(this).attr('href').slice(1);
-				img.src = sectionItemBgList[sectionId][$sectionN]
-			});
+					$el.closest('.second-section__item').find('.button-list__drop__item .btn').on('mouseenter', function(){
+						var $sectionN = $(this).attr('href').slice(1);
+						$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('active');
 
-			$img.closest('.second-section__item').find('.buttons-list .btn').on('mouseleave', function(){
-				img.src = bgImgLink;
-			});
+					}).closest('.second-section__item').find('.button-list__drop__item .btn').on('mouseleave', function(){
+						$container.find('.second-section__item__image').removeClass('active');
+					}).closest('.second-section__item').find('.button-list__drop__item .btn').on('click', function(e){
+						e.preventDefault();
+						var $this = $(this);
+						var $sectionN = $this.attr('href').slice(1);
+
+						$this.closest('.button-list').removeClass('open');
+						
+						$container.find('.second-section__item__image').removeClass('show-titles');
+						$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('show-titles');
+
+						$('.second-section__item__titles-list__item#'+$this.attr('data-section-name')+'').addClass('active');
+					})
+				}
+			}			
 		});
 
 		$(window).on('resize', function(){
-			updateSize($sectionItem, $sectionItem.children('.second-section__item__image'), 16/9);
+
+			if(this.resizeTO) clearTimeout(this.resizeTO);
+			    this.resizeTO = setTimeout(function() {
+			        updateSize($sectionItem.closest('.second-section__item'), $sectionItem, 16/9);
+			    }, 500);
 		});
 	});
 }
 
-function loadSection(){
-	var hash = getHash();
+function loadSection(location){
+	var hash = location;
 	var firstSection;
 	var secondSection;
 
 	if(hash === 'secondSection'){
 		secondSection = new SecondSection();
-		secondSection.init();
+		secondSection.init(hash);
 	}else {
 		firstSection = new FirstSection();
-		firstSection.init(hash);
+		firstSection.init();
 	}
 
 	// help handlers
-	$('.btnSecondSection').on('click', function(e){
+	$('.btnSecondSection').off("click").on('click', function(e){
 		e.preventDefault();
 		firstSection.destroy();
 
@@ -580,12 +613,18 @@ function getHash(){
 }
 
 function setHash(hashStr){
-	hashStr !== undefined ? document.location.hash += hashStr : 0
+	if("#"+hashStr !== document.location.hash){
+		if(hashStr !== undefined){
+			document.location.hash += hashStr;
+		}else{
+			document.location.hash = "";
+		}
+	}
 	
 }
 
 jQuery(window).load(function(){
-	loadSection();
+	loadSection(getHash());
 
 	setTimeout(function(){
 		$('body').addClass('content-loaded');
