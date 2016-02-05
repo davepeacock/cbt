@@ -86,6 +86,10 @@ label, input[type="button"], input[type="submit"], button {
 	cursor: pointer;
 }
 
+.dib{
+	display: inline-block;
+}
+
 .btn{
 	position: relative;
 	z-index: 201;
@@ -130,3 +134,19 @@ label, input[type="button"], input[type="submit"], button {
 	text-align: center;
 	background-color: #0E9F84;
 }
+
+.icon-orange-house{
+	@extend .dib;
+	@extend .s-house_label;
+}
+
+.icon-orange-person{
+	@extend .dib;
+	@extend .s-orange_man;
+}
+
+.icon-info{
+	@extend .dib;
+	@extend .s-ico_info;
+}
+

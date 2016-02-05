@@ -66,6 +66,9 @@ body {
 label, input[type="button"], input[type="submit"], button {
   cursor: pointer; }
 
+.dib, .icon-orange-house, .icon-orange-person, .icon-info {
+  display: inline-block; }
+
 .btn {
   position: relative;
   z-index: 201;
@@ -108,6 +111,66 @@ label, input[type="button"], input[type="submit"], button {
   font-family: 'OpenSansRegular';
   text-align: center;
   background-color: #0E9F84; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.s-ee_arow, .t-title__main:before {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -31px;
+  width: 4px;
+  height: 43px; }
+
+.s-ee_arow2 {
+  background-image: url(../img/sprite.png);
+  background-position: -4px -31px;
+  width: 4px;
+  height: 43px; }
+
+.s-house_label, .icon-orange-house {
+  background-image: url(../img/sprite.png);
+  background-position: -31px 0px;
+  width: 14px;
+  height: 13px; }
+
+.s-ico_info, .icon-info {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 31px; }
+
+.s-orange_man, .icon-orange-person {
+  background-image: url(../img/sprite.png);
+  background-position: -8px -31px;
+  width: 8px;
+  height: 21px; }
 
 .preloaded {
   display: none; }
@@ -539,10 +602,7 @@ g.gasStations {
     position: absolute;
     content: '';
     bottom: -43px;
-    left: -2px;
-    background: url(../img/ee_arow.png);
-    width: 4px;
-    height: 43px; }
+    left: -2px; }
 
 .t-title__plus {
   position: absolute;
@@ -550,7 +610,10 @@ g.gasStations {
   right: -32px;
   width: 32px;
   height: 32px;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  -webkit-transition: opacity 0.1s ease 0s;
+  transition: opacity 0.1s ease 0s; }
   .t-title__plus:before, .t-title__plus:after {
     position: absolute;
     background: #fff;
@@ -566,6 +629,40 @@ g.gasStations {
     height: 14px;
     width: 4px;
     margin: -7px 0 0 -2px; }
+  .popup-active .t-title__plus {
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease 0s;
+    transition: opacity 0.1s ease 0s; }
+
+.t-title__popup {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s;
+  transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s; }
+  .popup-active .t-title__popup {
+    width: 160px;
+    padding: 10px;
+    height: auto;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
+    transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s; }
+
+.t-title__popup__text {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+  line-height: 26px;
+  padding: 0 0 15px; }
+
+.t-title__popup__icons {
+  padding: 0 0 15px; }
 
 .second-section__item {
   position: absolute;

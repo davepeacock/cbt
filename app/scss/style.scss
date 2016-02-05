@@ -1,5 +1,8 @@
 @import "includes/settings";
 @import "includes/common";
+@import "includes/sprite";
+
+@include sprites($spritesheet-sprites);
 
 body, html{
 	// min-height: 100%;
@@ -554,9 +557,7 @@ g.gasStations{
 	    content: '';
 	    bottom: -43px;
 	    left: -2px;
-	    background: url(../img/ee_arow.png);
-	    width: 4px;
-	    height: 43px;
+	    @extend .s-ee_arow;
 	}
 }
 
@@ -568,6 +569,8 @@ g.gasStations{
 	width: 32px;
 	height: 32px;
 	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+	transition: opacity 0.1s ease 0s;
 
 	&:before, &:after{
 		position: absolute;
@@ -589,6 +592,44 @@ g.gasStations{
 		width: 4px;
 		margin: -7px 0 0 -2px;
 	}
+
+	.popup-active &{
+		opacity: 0;
+		transition: opacity 0.1s ease 0s;
+	}
+}
+
+.t-title__popup{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: rgba(0,0,0,0.6);
+	padding: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s;
+
+    .popup-active &{
+    	width: 160px;
+    	padding: 10px;
+    	height: auto;
+    	opacity: 1;
+    	transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
+    }
+}
+
+.t-title__popup__text{
+	color: #fff;
+	font-size: 18px;
+	text-align: left;
+	line-height: 26px;
+	padding: 0 0 15px;
+}
+
+.t-title__popup__icons{
+	padding: 0 0 15px;
 }
 
 .second-section__item{
@@ -829,6 +870,9 @@ g.gasStations{
 		}
 	}
 }
+
+
+
 
 
 
