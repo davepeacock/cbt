@@ -515,6 +515,12 @@ function SecondSection(){
 		$('.i-popup__close, .second-section-start, .first-section-start, .play-section-video, .button-list__main').off('click');
 	});
 
+	$('.t-title').on('click', function(e){
+		var $this = $(this);
+
+		$this.toggleClass('popup-active');
+	});
+
 	$('.play-section-video').on('click', function(e){
 		e.preventDefault();
 		var $this = $(this);

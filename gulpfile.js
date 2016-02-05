@@ -11,16 +11,51 @@ var gulp = require('gulp'),
 	gulpif = require('gulp-if'),
 	uglify = require('gulp-uglify'),
 	del = require('del'),
-	runSequence = require('run-sequence');
+	runSequence = require('run-sequence'),
+	sprite = require('gulp-sprite-generator'),
+	spritesmith = require('gulp.spritesmith');
+
+// sprite
+// gulp.task('sprites', function() {
+// 	var spriteOutput;
+
+// 	spriteOutput = gulp.src("app/*.css")
+// 	.pipe(sprite({
+// 		baseUrl:         "./app/sprImage",
+// 		spriteSheetName: "sprite.png",
+// 		spriteSheetPath: "/app/csss"
+// 	}));
+
+// 	spriteOutput.css.pipe(gulp.dest("./app/css"));
+// 	spriteOutput.img.pipe(gulp.dest("./app/img"));
+// });
+
+gulp.task('sprite', function() {
+	var spriteData = 
+		gulp.src('./app/sprImage/*.*') // source path of the sprite images
+			.pipe(spritesmith({
+                imgName: '../img/sprite.png',
+                cssName: '_sprite.scss',
+                cssFormat: 'scss',
+                algorithm: 'binary-tree',
+                // cssTemplate: 'scss.template.mustache',
+                cssVarMap: function(sprite) {
+                    sprite.name = 's-' + sprite.name
+                }
+            }));
+
+	spriteData.img.pipe(gulp.dest('./app/img/')); // output path for the sprite
+	spriteData.css.pipe(gulp.dest('./app/scss/includes')); // output path for the CSS
+});
 
 // html
 gulp.task('html', function () {
 	return gulp.src('app/*.html')
-		.pipe(useref())
-		.pipe(gulpif('js/*.js', uglify()))
-		.pipe(gulpif('css/*.css', minifyCss()))
+	.pipe(useref())
+		// .pipe(gulpif('js/*.js', uglify()))
+		// .pipe(gulpif('css/*.css', minifyCss()))
 		.pipe(gulp.dest('www'));
-});
+	});
 
 // bower
 gulp.task('bower', function(){
@@ -33,7 +68,7 @@ gulp.task('bower', function(){
 
 // css
 gulp.task('css', function () {
-  return gulp.src('./app/scss/**/*.scss')
+	return gulp.src('./app/scss/**/*.scss')
 	.pipe(scss())
 	// .pipe(minifyCss())
 	.pipe(autoprefixer({
@@ -47,30 +82,30 @@ gulp.task('css', function () {
 
 // clean
 gulp.task('clean', function(done) {
-    del('./www', done);
+	del('./www', done);
 });
 
 gulp.task('assets-images', function() {
-    return gulp.src('./app/img/**/*.{png,jpg,svg}')
-        .pipe(gulp.dest('./www/img'));
+	return gulp.src('./app/img/**/*.{png,jpg,svg}')
+	.pipe(gulp.dest('./www/img'));
 });
 
 gulp.task('assets-videos', function() {
-    return gulp.src('./app/videos/**/*')
-        .pipe(gulp.dest('./www/videos'));
+	return gulp.src('./app/videos/**/*')
+	.pipe(gulp.dest('./www/videos'));
 });
 
 gulp.task('assets', function() {
-    return gulp.start('assets-images', 'assets-videos');
+	return gulp.start('assets-images', 'assets-videos');
 })
 
 // // connect
 gulp.task('connect', function() {
-  connect.server({
-	root: './www',
-	livereload: false,
-	port: 2020
-  });
+	connect.server({
+		root: './www',
+		livereload: false,
+		port: 2020
+	});
 });
 
 // // watch
@@ -90,6 +125,6 @@ gulp.task('watch', function(){
 // });
 
 gulp.task('go', function(done) {
-    runSequence(['connect', 'watch'], done);
+	runSequence(['connect', 'watch'], done);
 });
 

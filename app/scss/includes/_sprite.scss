@@ -1,0 +1,125 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$s-ee-arow-name: 's-ee_arow';
+$s-ee-arow-x: 0px;
+$s-ee-arow-y: 31px;
+$s-ee-arow-offset-x: 0px;
+$s-ee-arow-offset-y: -31px;
+$s-ee-arow-width: 4px;
+$s-ee-arow-height: 43px;
+$s-ee-arow-total-width: 45px;
+$s-ee-arow-total-height: 74px;
+$s-ee-arow-image: '../img/sprite.png';
+$s-ee-arow: (0px, 31px, 0px, -31px, 4px, 43px, 45px, 74px, '../img/sprite.png', 's-ee_arow', );
+$s-ee-arow2-name: 's-ee_arow2';
+$s-ee-arow2-x: 4px;
+$s-ee-arow2-y: 31px;
+$s-ee-arow2-offset-x: -4px;
+$s-ee-arow2-offset-y: -31px;
+$s-ee-arow2-width: 4px;
+$s-ee-arow2-height: 43px;
+$s-ee-arow2-total-width: 45px;
+$s-ee-arow2-total-height: 74px;
+$s-ee-arow2-image: '../img/sprite.png';
+$s-ee-arow2: (4px, 31px, -4px, -31px, 4px, 43px, 45px, 74px, '../img/sprite.png', 's-ee_arow2', );
+$s-house-label-name: 's-house_label';
+$s-house-label-x: 31px;
+$s-house-label-y: 0px;
+$s-house-label-offset-x: -31px;
+$s-house-label-offset-y: 0px;
+$s-house-label-width: 14px;
+$s-house-label-height: 13px;
+$s-house-label-total-width: 45px;
+$s-house-label-total-height: 74px;
+$s-house-label-image: '../img/sprite.png';
+$s-house-label: (31px, 0px, -31px, 0px, 14px, 13px, 45px, 74px, '../img/sprite.png', 's-house_label', );
+$s-ico-info-name: 's-ico_info';
+$s-ico-info-x: 0px;
+$s-ico-info-y: 0px;
+$s-ico-info-offset-x: 0px;
+$s-ico-info-offset-y: 0px;
+$s-ico-info-width: 31px;
+$s-ico-info-height: 31px;
+$s-ico-info-total-width: 45px;
+$s-ico-info-total-height: 74px;
+$s-ico-info-image: '../img/sprite.png';
+$s-ico-info: (0px, 0px, 0px, 0px, 31px, 31px, 45px, 74px, '../img/sprite.png', 's-ico_info', );
+$s-orange-man-name: 's-orange_man';
+$s-orange-man-x: 8px;
+$s-orange-man-y: 31px;
+$s-orange-man-offset-x: -8px;
+$s-orange-man-offset-y: -31px;
+$s-orange-man-width: 8px;
+$s-orange-man-height: 21px;
+$s-orange-man-total-width: 45px;
+$s-orange-man-total-height: 74px;
+$s-orange-man-image: '../img/sprite.png';
+$s-orange-man: (8px, 31px, -8px, -31px, 8px, 21px, 45px, 74px, '../img/sprite.png', 's-orange_man', );
+$spritesheet-width: 45px;
+$spritesheet-height: 74px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($s-ee-arow, $s-ee-arow2, $s-house-label, $s-ico-info, $s-orange-man, );
+$spritesheet: (45px, 74px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

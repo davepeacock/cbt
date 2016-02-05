@@ -66,6 +66,9 @@ body {
 label, input[type="button"], input[type="submit"], button {
   cursor: pointer; }
 
+.dib, .icon-orange-house, .icon-orange-person, .icon-info {
+  display: inline-block; }
+
 .btn {
   position: relative;
   z-index: 201;
