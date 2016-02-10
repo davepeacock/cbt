@@ -44,16 +44,16 @@ sup {
   font-size: smaller; }
 
 /* --------------- /reset.css --------------- */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .bott-text__bott:before, .clearfix:after, .bott-text__bott:after {
   content: "\0020";
   display: block;
   height: 0;
   visibility: hidden; }
 
-.clearfix:after {
+.clearfix:after, .bott-text__bott:after {
   clear: both; }
 
-.clearfix {
+.clearfix, .bott-text__bott {
   zoom: 1; }
 
 body {
@@ -145,18 +145,18 @@ The `sprites` mixin generates identical output to the CSS template
 .s-ee_arow, .t-title__main:before {
   background-image: url(../img/sprite.png);
   background-position: 0px -31px;
-  width: 4px;
-  height: 43px; }
+  width: 14px;
+  height: 68px; }
 
-.s-ee_arow2 {
+.s-ee_arow2, .second-section__item__titles-list__item#nn-housing .t-title_forth .t-title__main:before, .second-section__item__titles-list__item#nn-walkability .t-title_forth .t-title__main:before, .second-section__item__titles-list__item#nn-walkability .t-title_seventh .t-title__main:before, .second-section__item__titles-list__item#nn-walkability .t-title_six .t-title__main:before, .second-section__item__titles-list__item#nn-walkability .t-title_fifth .t-title__main:before {
   background-image: url(../img/sprite.png);
-  background-position: -4px -31px;
-  width: 4px;
-  height: 43px; }
+  background-position: -14px -31px;
+  width: 14px;
+  height: 68px; }
 
 .s-house_label, .icon-orange-house {
   background-image: url(../img/sprite.png);
-  background-position: -31px 0px;
+  background-position: -31px -26px;
   width: 14px;
   height: 13px; }
 
@@ -166,9 +166,15 @@ The `sprites` mixin generates identical output to the CSS template
   width: 31px;
   height: 31px; }
 
+.s-m-glass, .next-step:before {
+  background-image: url(../img/sprite.png);
+  background-position: -31px 0px;
+  width: 25px;
+  height: 26px; }
+
 .s-orange_man, .icon-orange-person {
   background-image: url(../img/sprite.png);
-  background-position: -8px -31px;
+  background-position: -31px -39px;
   width: 8px;
   height: 21px; }
 
@@ -189,7 +195,7 @@ body:after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #e1e9d0; }
+  background: #fdfffe; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -250,33 +256,33 @@ g.gasStations {
   .t-text h1 {
     font-style: normal;
     font-family: 'Oswald', sans-serif;
-    font-size: 48px;
-    line-height: 60px;
-    letter-spacing: 0.96px;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0.66px;
     text-transform: uppercase;
     color: #454545;
     font-weight: 100;
     text-rendering: optimizelegibility; }
   .t-text h2 {
     font-family: Open Sans, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 22px;
     color: #454545;
     font-weight: 100;
     text-align: right; }
   .t-text h3 {
     font-family: Open Sans, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 22px;
     color: #454545;
     font-weight: 100;
     text-align: center; }
   .t-text p {
     font-family: Open Sans, sans-serif;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 22px;
     letter-spacing: 0.6px;
-    color: #96978C;
+    color: #454545;
     font-weight: 100;
     text-align: right; }
   .t-text.t-text_diff {
@@ -318,6 +324,13 @@ g.gasStations {
   transform: translate(0, -50%);
   z-index: 999;
   cursor: pointer; }
+  .c-btns svg .g {
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease; }
+  .c-btns:focus svg .g {
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+    fill: #F6FAFC; }
 
 .nextButton {
   right: 20px; }
@@ -348,7 +361,7 @@ g.gasStations {
   -webkit-transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
   transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
   overflow: hidden;
-  background: #E2E8D0; }
+  background: #fdfffe; }
   .loading-screen svg {
     width: 100%;
     height: 100%; }
@@ -356,12 +369,12 @@ g.gasStations {
       -webkit-transform-origin: 50% 50% 0;
       -ms-transform-origin: 50% 50% 0;
       transform-origin: 50% 50% 0;
-      fill: #25b89a;
+      fill: #F6FAFC;
       stroke: #13a085;
-      stroke-width: 7px;
-      stroke-dasharray: 50px 200px;
-      -webkit-animation: pending 0.66s infinite cubic-bezier(0.24, 0.12, 0.36, 0.12);
-      animation: pending 0.66s infinite cubic-bezier(0.24, 0.12, 0.36, 0.12); }
+      stroke-width: 2px;
+      stroke-dasharray: 40px 172px;
+      -webkit-animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38);
+      animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38); }
   .content-loaded .loading-screen {
     height: 0;
     width: 0;
@@ -375,7 +388,7 @@ g.gasStations {
 
 .second-section-welcome {
   position: relative;
-  background: rgba(197, 204, 184, 0.7);
+  background: rgba(253, 255, 254, 0.7);
   height: 100%;
   width: 100%; }
   .second-section-welcome .btn {
@@ -421,7 +434,7 @@ g.gasStations {
     bottom: 0;
     left: 0;
     width: 520px;
-    min-height: 330px; }
+    min-height: 250px; }
 
 .button-list__main {
   position: relative;
@@ -526,6 +539,24 @@ g.gasStations {
     -webkit-transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
     transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s; }
 
+.third-section {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+  transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 13; }
+  .third-section.visible {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+    transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s; }
+
 .second-section__item__image {
   position: absolute;
   top: 0;
@@ -558,7 +589,7 @@ g.gasStations {
     max-width: auto;
     max-height: auto; }
 
-.second-section__item__titles-list__item {
+.second-section__item__titles-list__item .t-title {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -568,18 +599,119 @@ g.gasStations {
   padding: 0;
   -webkit-transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
   transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s; }
-  .second-section__item__titles-list__item#suburbs-housing {
-    top: 41%;
-    left: 26%; }
-  .second-section__item__titles-list__item.active {
-    width: auto;
-    height: auto;
+
+.second-section__item__titles-list__item#suburbs-housing .t-title {
+  top: 41%;
+  left: 26%; }
+
+.second-section__item__titles-list__item#suburbs-walkability .t-title {
+  top: 41%;
+  left: 26%; }
+
+.second-section__item__titles-list__item#suburbs-emissions .t-title {
+  top: 41%;
+  left: 26%; }
+
+.second-section__item__titles-list__item#nn-housing .t-title {
+  top: 17%;
+  left: 37%; }
+
+.second-section__item__titles-list__item#nn-housing .t-title_second {
+  top: 37%;
+  left: 41%; }
+
+.second-section__item__titles-list__item#nn-housing .t-title_third {
+  top: 57%;
+  left: 61%; }
+
+.second-section__item__titles-list__item#nn-housing .t-title_forth {
+  top: 47%;
+  left: 71%; }
+  .second-section__item__titles-list__item#nn-housing .t-title_forth .t-title__main:before {
+    bottom: auto;
+    top: -68px;
+    left: auto;
+    right: 0; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title {
+  top: 27%;
+  left: 34%; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_second {
+  top: 26%;
+  left: 46%; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_third {
+  top: 47%;
+  left: 51%; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_forth {
+  top: 47%;
+  left: 71%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_forth .t-title__main:before {
+    bottom: auto;
+    top: -68px;
+    left: auto;
+    right: 0; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_seventh {
+  top: 47%;
+  left: 71%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_seventh .t-title__main:before {
+    bottom: auto;
+    top: -68px;
+    left: auto;
+    right: 0; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_six {
+  top: 57%;
+  left: 68%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_six .t-title__main:before {
+    bottom: auto;
+    top: -68px;
+    left: auto;
+    right: 0; }
+
+.second-section__item__titles-list__item#nn-walkability .t-title_fifth {
+  top: 57%;
+  left: 61%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_fifth .t-title__main:before {
+    bottom: auto;
+    top: -68px;
+    left: auto;
+    right: 0; }
+
+.second-section__item__titles-list__item.active .t-title {
+  width: auto;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+  transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+  z-index: 10;
+  padding-right: 32px;
+  overflow: visible; }
+
+.second-section__item__bott-list__item {
+  z-index: -1;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  -webkit-transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+  transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s; }
+  .second-section__item__bott-list__item.active {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 520px;
+    min-height: 330px;
+    z-index: 10;
     opacity: 1;
     -webkit-transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
-    transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
-    z-index: 10;
-    padding-right: 32px;
-    overflow: visible; }
+    transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s; }
+    .second-section__item__bott-list__item.active .bott-text {
+      height: 100%;
+      width: 100%; }
 
 .t-title {
   position: relative; }
@@ -596,18 +728,28 @@ g.gasStations {
   font-family: 'OpenSansLight';
   font-size: 15pt;
   text-transform: uppercase;
-  padding: 0 5px; }
+  padding: 0 5px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease, color 0.3s ease-in-out; }
   .t-title__main:before {
     display: block;
     position: absolute;
     content: '';
-    bottom: -43px;
+    bottom: -68px;
     left: -2px; }
+  .t-title__main:hover {
+    color: #fff; }
+    #suburbs-housing .t-title__main:hover {
+      background: #D25627; }
+    #suburbs-walkability .t-title__main:hover {
+      background: #3597d3; }
+    #suburbs-emissions .t-title__main:hover {
+      background: #7f6585; }
 
 .t-title__plus {
   position: absolute;
   top: 0;
-  right: -32px;
+  right: 0;
   width: 32px;
   height: 32px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -715,12 +857,14 @@ g.gasStations {
         @media screen and (max-height: 768px) {
           .second-section__item.visible .second-section__item_i .button-list {
             top: 30px; } }
-    .second-section__item.visible .bott-text {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 520px;
-      min-height: 330px; }
+        .second-section__item.visible .second-section__item_i .button-list.hidden {
+          display: none; }
+      .second-section__item.visible .second-section__item_i > .bott-text {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 520px;
+        min-height: 250px; }
 
 .i-popup {
   position: absolute;
@@ -958,19 +1102,36 @@ g.gasStations {
   bottom: 30px;
   left: 25px;
   right: 0; }
-  .bott-text__bott a {
-    position: relative;
-    font-size: 16px;
-    line-height: 18px;
-    text-decoration: underline;
-    color: #000;
-    padding: 0 0 0 20px; }
-    .bott-text__bott a:before {
-      position: absolute;
-      bottom: 1px;
-      display: block;
-      content: "";
-      left: 0;
-      width: 9px;
-      height: 14px;
-      background: url("../img/arr-left.svg") 0 0 no-repeat; }
+
+.bott-text__bott__link {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #000;
+  padding: 0 0 0 20px;
+  float: left; }
+  .bott-text__bott__link:before {
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    content: "";
+    left: 0;
+    width: 9px;
+    height: 14px;
+    background: url("../img/arr-left.svg") 0 0 no-repeat; }
+
+.next-step {
+  position: relative;
+  margin: 0 55px 0 0;
+  float: right;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #000; }
+  .next-step:before {
+    position: absolute;
+    top: -6px;
+    right: -35px;
+    content: "";
+    display: block; }

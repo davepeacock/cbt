@@ -44,7 +44,7 @@ gulp.task('sprite', function() {
                 }
             }));
 
-	spriteData.img.pipe(gulp.dest('./app/img/')); // output path for the sprite
+	spriteData.img.pipe(gulp.dest('./app/img')); // output path for the sprite
 	spriteData.css.pipe(gulp.dest('./app/scss/includes')); // output path for the CSS
 });
 
