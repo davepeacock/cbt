@@ -38,7 +38,7 @@ body:after {
 	// position: relative;
 	width:100%;
 	height:100%;
-	background: #e1e9d0;
+	background: rgb(253, 255, 254);
 
 	// &#third{
 	// 	z-index: 10;
@@ -126,9 +126,9 @@ g.gasStations{
 	h1{
 		font-style: normal;
 		font-family: 'Oswald', sans-serif;
-		font-size: 48px;
-		line-height: 60px;
-		letter-spacing: 0.96px;
+		font-size: 36px;
+		line-height: 50px;
+		letter-spacing: 0.66px;
 		text-transform: uppercase;
 		color: #454545;
 		font-weight: 100;
@@ -137,8 +137,8 @@ g.gasStations{
 
 	h2{
 		font-family: Open Sans, sans-serif;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 15px;
+		line-height: 22px;
 		color: #454545;
 		font-weight: 100;
 		text-align: right;
@@ -146,20 +146,19 @@ g.gasStations{
 
 	h3{
 		font-family: Open Sans, sans-serif;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 15px;
+		line-height: 22px;
 		color: #454545;
 		font-weight: 100;
 		text-align: center;
 	}
 
-
 	p{
 		font-family: Open Sans, sans-serif;
 		font-size: 15px;
-		line-height: 20px;
+		line-height: 22px;
 		letter-spacing: 0.6px;
-		color: #96978C;
+		color: #454545;
 		font-weight: 100;
 		text-align: right;
 	}
@@ -181,6 +180,17 @@ g.gasStations{
 	top: 20px;
 	left: 20px;
 	z-index: 2000;
+}
+
+.skroll-event-item{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
 }
 
 .menus{
@@ -209,6 +219,30 @@ g.gasStations{
 	transform: translate(0, -50%);
 	z-index: 999;
 	cursor: pointer;
+
+	svg{
+		.g{
+			transition: fill 0.3s ease;
+		}
+	}
+
+	&:active{
+		svg{
+			.g{
+				// transition: fill 0.3s ease;
+				// fill: #fff;
+			}
+		}
+	}
+
+	&:focus{
+		svg{
+			.g{
+				transition: fill 0.3s ease;
+				fill: #F6FAFC;
+			}
+		}
+	}
 }
 
 .nextButton{
@@ -247,7 +281,7 @@ g.gasStations{
 	opacity: 1;
 	transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
 	overflow: hidden;
-	background: #E2E8D0;
+	background: rgb(253, 255, 254);
 
 	svg{
 		width: 100%;
@@ -255,11 +289,11 @@ g.gasStations{
 
 		circle{
 			transform-origin: 50% 50% 0;
-			fill: #25b89a;
+			fill: #F6FAFC;
 			stroke: #13a085;
-			stroke-width: 7px;
-			stroke-dasharray: 50px 200px;
-			animation: pending 0.66s infinite cubic-bezier(0.24, 0.12, 0.36, 0.12);
+			stroke-width: 2px;
+			stroke-dasharray: 40px 172px;
+			animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38);
 
 		}
 	}
@@ -279,7 +313,7 @@ g.gasStations{
 
 .second-section-welcome{
 	position: relative;
-	background:rgba(197, 204, 184, 0.7);
+	background: rgba(253, 255, 254, 0.7);
 	height: 100%;
 	width: 100%;
 
@@ -337,7 +371,7 @@ g.gasStations{
 		bottom: 0;
 		left: 0;
 		width: 520px;
-		min-height: 330px;
+		min-height: 250px;
 		// -webkit-filter: blur(3px);
 		// -moz-filter: blur(3px);
 		// -o-filter: blur(3px);
@@ -473,6 +507,25 @@ g.gasStations{
 	}
 }
 
+.third-section{
+	opacity: 0;
+	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: 13;
+
+	&.visible{
+		height: 100%;
+		width: 100%;		
+		opacity: 1;
+		transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+	}
+}
+
 .second-section__item__image{
 	position: absolute;
 	top: 0;
@@ -509,8 +562,195 @@ g.gasStations{
 }
 
 .second-section__item__titles-list__item{
-	position: absolute;
-	opacity: 0;
+
+	.t-title{
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+		overflow: hidden;
+		height: 0;
+		width: 0;
+		padding: 0;
+		transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+
+		
+
+		// #nn-housing{
+		// 	top: 41%;
+		// 	left: 26%;
+		// }
+	}
+
+	&#suburbs-housing{
+
+		.t-title{
+			top: 41%;
+			left: 26%;
+		}
+	}
+
+	&#suburbs-walkability{
+
+		.t-title{
+			top: 41%;
+			left: 26%;
+		}
+	}
+
+	&#suburbs-emissions{
+
+		.t-title{
+			top: 41%;
+			left: 26%;
+		}
+	}
+
+	&#nn-housing{
+
+		.t-title{
+			top: 17%;
+			left: 37%;
+		}
+
+		.t-title_second{
+			top: 37%;
+			left: 41%;
+		}
+
+		.t-title_third{
+			top: 57%;
+			left: 61%;
+		}
+
+		.t-title_forth{
+			top: 47%;
+			left: 71%;
+
+			.t-title__main{
+				
+				&:before{
+					bottom: auto;
+					top: -68px;
+					left: auto;
+					right: 0;
+					@extend .s-ee_arow2;
+				}
+			}
+		}
+	}
+
+	&#nn-walkability{
+
+		.t-title{
+			top: 27%;
+			left: 34%;
+
+			// .t-title__main{
+
+			// 	&:before{
+			// 		bottom: auto;
+			// 		top: -68px;
+			// 		left: auto;
+			// 		right: 0;
+			// 		@extend .s-ee_arow2;
+			// 	}
+			// }
+		}
+
+		.t-title_second{
+			top: 26%;
+			left: 46%;
+		}
+
+		.t-title_third{
+			top: 47%;
+			left: 51%;
+		}
+
+		.t-title_forth{
+			top: 47%;
+			left: 71%;
+
+			.t-title__main{
+
+				&:before{
+					bottom: auto;
+					top: -68px;
+					left: auto;
+					right: 0;
+					@extend .s-ee_arow2;
+				}
+			}
+		}
+
+		.t-title_seventh{
+			top: 47%;
+			left: 71%;
+
+			.t-title__main{
+				
+				&:before{
+					bottom: auto;
+					top: -68px;
+					left: auto;
+					right: 0;
+					@extend .s-ee_arow2;
+				}
+			}
+		}
+
+		.t-title_six{
+			top: 57%;
+			left: 68%;
+
+			.t-title__main{
+
+				&:before{
+					bottom: auto;
+					top: -68px;
+					left: auto;
+					right: 0;
+					@extend .s-ee_arow2;
+				}
+			}
+		}
+
+		.t-title_fifth{
+			top: 57%;
+			left: 61%;
+
+			.t-title__main{
+
+				&:before{
+					bottom: auto;
+					top: -68px;
+					left: auto;
+					right: 0;
+					@extend .s-ee_arow2;
+				}
+			}
+		}
+	}
+
+	&.active{
+
+		.t-title{
+			width: auto;
+			height: auto;
+			opacity: 1;
+			transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+			z-index: 10;
+			padding-right: 32px;
+			overflow: visible;
+		}
+	}
+}
+
+.second-section__item__bott-list{
+
+}
+
+.second-section__item__bott-list__item{
 	z-index: -1;
 	overflow: hidden;
 	height: 0;
@@ -518,19 +758,20 @@ g.gasStations{
 	padding: 0;
 	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
 
-	&#suburbs-housing{
-		top: 41%;
-		left: 26%;
-	}
-
 	&.active{
-		width: auto;
-		height: auto;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 520px;
+		min-height: 330px;
+		z-index: 10;
 		opacity: 1;
 		transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
-		z-index: 10;
-		padding-right: 32px;
-		overflow: visible;
+
+		.bott-text{
+			height: 100%;
+			width: 100%;
+		}
 	}
 }
 
@@ -550,22 +791,38 @@ g.gasStations{
 	font-size: 15pt;
 	text-transform: uppercase;
 	padding: 0 5px;
+	transition: background-color 0.3s ease, color 0.3s ease-in-out;
 
 	&:before{
 		display: block;
-	    position: absolute;
-	    content: '';
-	    bottom: -43px;
-	    left: -2px;
-	    @extend .s-ee_arow;
+		position: absolute;
+		content: '';
+		bottom: -68px;
+		left: -2px;
+		@extend .s-ee_arow;
+	}
+
+	&:hover{
+		color: #fff;
+
+		#suburbs-housing &{
+			background: #D25627;
+		}
+
+		#suburbs-walkability &{
+			background: #3597d3;
+		}
+
+		#suburbs-emissions &{
+			background: #7f6585;
+		}
 	}
 }
-
 
 .t-title__plus{
 	position: absolute;
 	top: 0;
-	right: -32px;
+	right: 0;
 	width: 32px;
 	height: 32px;
 	background-color: rgba(0, 0, 0, 0.6);
@@ -605,19 +862,19 @@ g.gasStations{
 	left: 100%;
 	background-color: rgba(0,0,0,0.6);
 	padding: 0;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s;
 
-    .popup-active &{
-    	width: 160px;
-    	padding: 10px;
-    	height: auto;
-    	opacity: 1;
-    	transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
-    }
+	.popup-active &{
+		width: 160px;
+		padding: 10px;
+		height: auto;
+		opacity: 1;
+		transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
+	}
 }
 
 .t-title__popup__text{
@@ -670,9 +927,11 @@ g.gasStations{
 
 		.second-section__item_i{
 			position: relative;
+
 			.buttons-list{
 				position: fixed;
 			}
+
 			.button-list{
 				position: fixed;
 				left: 50%;
@@ -686,15 +945,19 @@ g.gasStations{
 				@media screen and (max-height: 768px){
 					top: 30px;
 				}
-			}
-		}
 
-		.bott-text{
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 520px;
-			min-height: 330px;
+				&.hidden{
+					display: none;
+				}
+			}
+
+			&>.bott-text{
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 520px;
+				min-height: 250px;
+			}
 		}
 	}
 }
@@ -845,29 +1108,50 @@ g.gasStations{
 }
 
 .bott-text__bott{
+	@extend .clearfix;
 	position: absolute;
 	bottom: 30px;
 	left: 25px;
 	right: 0;
+}
 
-	a{
-		position: relative;
-		font-size: 16px;
-		line-height: 18px;
-		text-decoration: underline;
-		color: #000;
-		padding: 0 0 0 20px;
+.bott-text__bott__link{
+	position: relative;
+	font-size: 16px;
+	line-height: 18px;
+	text-decoration: underline;
+	color: #000;
+	padding: 0 0 0 20px;
+	float: left;
 
-		&:before{
-			position: absolute;
-			bottom: 1px;
-			display: block;
-			content:"";
-			left: 0;
-			width: 9px;
-			height: 14px;
-			background: url('../img/arr-left.svg') 0 0 no-repeat;
-		}
+	&:before{
+		position: absolute;
+		bottom: 1px;
+		display: block;
+		content:"";
+		left: 0;
+		width: 9px;
+		height: 14px;
+		background: url('../img/arr-left.svg') 0 0 no-repeat;
+	}
+}
+
+.next-step{
+	position: relative;
+	margin: 0 55px 0 0;
+	float: right;
+	font-size: 16px;
+	line-height: 18px;
+	text-decoration: underline;
+	color: #000;
+
+	&:before{
+		@extend .s-m-glass;
+		position: absolute;
+		top: -6px;
+		right: -35px;
+		content:"";
+		display: block;
 	}
 }
 

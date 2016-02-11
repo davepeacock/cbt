@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M29.9613913,0.24873913 C13.5520435,0.24873913 0.249652174,13.5517826 0.249652174,29.9611304 C0.249652174,46.3704783 13.5520435,59.6741739 29.9613913,59.6741739 C46.3713913,59.6741739 59.6737826,46.3704783 59.6737826,29.9611304 C59.6737826,13.5517826 46.3713913,0.24873913 29.9613913,0.24873913 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Previous" sketch:type="MSArtboardGroup">
+            <g id="Group" sketch:type="MSLayerGroup">
+                <g id="Stroke-5">
+                    <use stroke="#4A4A4A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#FDFFFE" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(29.961717, 29.961457) scale(-1, 1) translate(-29.961717, -29.961457) " xlink:href="#path-1"></use>
+                    <use stroke="none" fill="none" xlink:href="#path-1"></use>
+                </g>
+                <path d="M36.8096087,29.9528478 L20.5052609,13.6485" id="Stroke-7" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 21.800674) scale(-1, 1) translate(-28.657435, -21.800674) "></path>
+                <path d="M36.8096087,29.9528478 L20.5052609,46.2571957" id="Stroke-9" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 38.105022) scale(-1, 1) translate(-28.657435, -38.105022) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
