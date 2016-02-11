@@ -235,8 +235,8 @@ function FirstSection(){
 		"fuelText": {
 			12900: "opacity: 0; transform: translate3d(-239px, 0, 0);",
 			13100: "opacity: 1;",
-			14600: "opacity: 1;",
-			14800: "opacity: 0;"
+			17000: "opacity: 1;",
+			17200: "opacity: 0;"
 		},
 		// six, seventh slide cloud
 		"fuelCloud": {
@@ -397,18 +397,18 @@ function FirstSection(){
 		},
 		"sixElem": {
 			9410: "opacity: 0;",
-			12600: "opacity: 0;"
+			12580: "opacity: 0;"
 		},
 		"seventhElem": {
-			12610: "opacity: 0;",
+			12600: "opacity: 0;",
 			17000: "opacity: 0;"
 		},
 		"eighthElem": {
-			17010: "opacity: 0;",
-			19100: "opacity: 0;"
+			18000: "opacity: 0;",
+			19000: "opacity: 0;"
 		},
 		"ninthElem": {
-			19110: "opacity: 0;",
+			21100: "opacity: 0;",
 			22900: "opacity: 0;"
 		}
 	};
@@ -434,6 +434,7 @@ function FirstSection(){
 			elmCount = $('.menus li').length,
 			nextElem = $('.menus li').eq((curIndex - 1) % elmCount),
 			nextAnchor = nextElem.find('a');
+			console.log(curIndex, nextElem);
 
 			if(id !== 'first'){
 				$(this).attr({
@@ -449,9 +450,9 @@ function FirstSection(){
 
 		$('.nextButton').on('click', function(e){
 			var curIndex = $('.menus a.active').closest('li').index(),
-			elmCount = $('.menus li').length,
-			nextElem = $('.menus li').eq((curIndex + 1) % elmCount),
-			nextAnchor = nextElem.find('a');
+				elmCount = $('.menus li').length,
+				nextElem = $('.menus li').eq((curIndex + 1) % elmCount),
+				nextAnchor = nextElem.find('a');
 
 			if(id !==  'ninth'){
 				$(this).attr({
@@ -486,12 +487,12 @@ function FirstSection(){
 					// }else {
 					// 	id = $el.attr('id')
 					// }
-					id = $el.attr('data-id');
+					id = $el.attr('id');
 					$('.menus a').removeClass('active');
 					$('.menus a[href=#'+id+']').addClass('active');
 				// }
 
-				console.log(element, name, direction, id);
+				// console.log(element, name, direction, id);
 			}
 		});
 
