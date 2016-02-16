@@ -111,7 +111,7 @@ gulp.task('connect', function() {
 // // watch
 gulp.task('watch', function(){
 	gulp.watch('./app/scss/**/*.scss', ['css']);
-	gulp.watch(['./app/js/**/*.js'], ['html']);
+	gulp.watch(['./app/js/main.js'], ['html']);
 	gulp.watch('app/index.html', ['html']);
 	gulp.watch(['./app/{videos,img}/*.html'], ['assets']);
 	gulp.watch('bower.json', ['bower']);
