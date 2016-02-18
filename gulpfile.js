@@ -55,7 +55,7 @@ gulp.task('html', function () {
 		// .pipe(gulpif('js/*.js', uglify()))
 		// .pipe(gulpif('css/*.css', minifyCss()))
 		.pipe(gulp.dest('www'));
-	});
+});
 
 // bower
 gulp.task('bower', function(){
