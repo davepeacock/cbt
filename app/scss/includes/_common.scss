@@ -145,6 +145,21 @@ label, input[type="button"], input[type="submit"], button {
 	@extend .s-orange_man;
 }
 
+.icon-red-person{
+	@extend .dib;
+	@extend .s-red_man;
+}
+
+.icon-red-house{
+	@extend .dib;
+	@extend .s-red_house;
+}
+
+.icon-blue-person{
+	@extend .dib;
+	@extend .s-blue_man;
+}
+
 .icon-info{
 	@extend .dib;
 	@extend .s-ico_info;

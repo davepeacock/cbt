@@ -9,19 +9,17 @@ var videoList = {
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_s_3.mp4" },
 			{ type: "video/webm", src: "videos/1920x1080/cbt_s_3.webm" }
 		]
-		
 	],
 	"neighbourhood": [[
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_1.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_1.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_1.webm" }
 		], [
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_2.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_2.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_2.webm" }
 		], [
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_3.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_3.webm" }
-		]
-			
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_3.webm" }
+		]	
 	],
 	"downtown": [[
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_1.mp4" },
@@ -35,14 +33,14 @@ var videoList = {
 		]		
 	],
 	"corner": [[
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_1.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_1.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_1.webm" }
 		], [
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_2.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_2.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_2.webm" }
 		], [
-			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_3.mp4" },
-			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_3.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_3.webm" }
 		]		
 	],
 }
@@ -51,8 +49,8 @@ var sectionItemBgList = {
 	"suburbs": [
 		'img/suburbs/scene_2_blank.jpg',
 		'img/suburbs/scene_2_housing.jpg',
-		'img/suburbs/scene_2_ee.jpg',
 		'img/suburbs/scene_2_transportation.jpg',
+		'img/suburbs/scene_2_ee.jpg',
 		'img/suburbs/Scene_3_S.jpg'
 	],
 	"neighbourhood": [
@@ -61,6 +59,20 @@ var sectionItemBgList = {
 		'img/centers/scene_2_transportation.jpg',
 		'img/centers/scene_2_ee.jpg',
 		'img/centers/Scene_3_NN.jpg'
+	],
+	"downtown": [
+		'img/downtown/scene_2_blank.jpg',
+		'img/downtown/scene_2_housing.jpg',
+		'img/downtown/scene_2_transportation.jpg',
+		'img/downtown/scene_2_ee.jpg',
+		'img/downtown/Scene_3_NN.jpg'
+	],
+	"corner": [
+		'img/corner/scene_2_blank.jpg',
+		'img/corner/scene_2_housing.jpg',
+		'img/corner/scene_2_transportation.jpg',
+		'img/corner/scene_2_ee.jpg',
+		'img/corner/Scene_3_NN.jpg'
 	]
 }
 
@@ -83,7 +95,8 @@ function FirstSection(){
 			// 0: "opacity: 0;",
 			2000: "opacity: 0;",
 			3000: "opacity: 1; transform:translate3d(-20%, 0, 0)",
-			4500: "transform:translate3d(-100%, 0, 0);"
+			4000: "opacity: 1; transform:translate3d(-20%, 0, 0)",
+			5500: "transform:translate3d(-100%, 0, 0);"
 		},
 		// first slide text
 		"mapText": {
@@ -95,284 +108,284 @@ function FirstSection(){
 			// 0: "opacity: 0;",
 			1900: "opacity: 0;",
 			2100: "opacity: 1;",
-			3400: "opacity: 1;",
-			3600: "opacity: 0;"
+			4700: "opacity: 1;",
+			5000: "opacity: 0;"
 		},
 		// third slide text
 		"carsText": {
 			// 0: "opacity: 0;",
-			4900: "opacity: 0;",
-			5000: "opacity: 1;",
+			5900: "opacity: 0;",
 			6000: "opacity: 1;",
-			6200: "opacity: 0"
+			7000: "opacity: 1;",
+			7200: "opacity: 0"
 		},
 		// third slide cars
 		"thirdFirstElements": {
 			0: "transform:translate3d(1920px, 0, 0);",
-			3000: "transform:translate3d(1920px, 0, 0);",
-			4500: "transform:translate3d(320px, 0, 0);",
+			4000: "transform:translate3d(1920px, 0, 0);",
+			5500: "transform:translate3d(320px, 0, 0);",
 			// 5500: "transform:translate3d(320px, 0, 0);",
-			6000: "transform:translate3d(320px, 0, 0);",
-			6200: "transform:translate3d(-1920px, 0, 0);"
+			7000: "transform:translate3d(320px, 0, 0);",
+			7200: "transform:translate3d(-1920px, 0, 0);"
 		},
 		// third slide wires and house
 		"thirdSlideElements": {
 			// 0: "transform:translate3d(0, 100%, 0); opacity:0;",
 			// 4500: "transform:translate3d(0, 100%, 0); opacity:0;",
-			4900: "transform:translate3d(320px, 100%, 0); opacity:0;",
-			5000: "transform:translate3d(320px, 0%, 0); opacity:1;",
-			5500: "transform:translate3d(320px, 0%, 0); opacity:1;",
+			5900: "transform:translate3d(320px, 100%, 0); opacity:0;",
 			6000: "transform:translate3d(320px, 0%, 0); opacity:1;",
-			6200: "transform:translate3d(320px, 100%, 0); opacity:0;"
+			6500: "transform:translate3d(320px, 0%, 0); opacity:1;",
+			7000: "transform:translate3d(320px, 0%, 0); opacity:1;",
+			7200: "transform:translate3d(320px, 100%, 0); opacity:0;"
 		},
 		// third slide gas station
 		"thirdGasStations": {
 			0: "opacity: 0;",
-			4500: "opacity: 0;",
-			5000: "opacity: 1;",
-			5500: "opacity: 1;",
+			5500: "opacity: 0;",
 			6000: "opacity: 1;",
-			6200: "opacity: 0;"
+			6500: "opacity: 1;",
+			7000: "opacity: 1;",
+			7200: "opacity: 0;"
 		},
 		// road slide third, forth, fifth, seventh
 		"thirdRoad": {
-			3000: "transform:translate3d(1920px, 0, 0); opacity: 1",
-			4500: "transform:translate3d(0px, 0, 0); opacity: 1",
-			13100: "transform:translate3d(0px, 0, 0); opacity: 1",
-			13200: "transform:translate3d(-1920px, 0, 0); opacity: 0",
+			4000: "transform:translate3d(1920px, 0, 0); opacity: 1",
+			5500: "transform:translate3d(0px, 0, 0); opacity: 1",
+			14100: "transform:translate3d(0px, 0, 0); opacity: 1",
+			14200: "transform:translate3d(-1920px, 0, 0); opacity: 0",
 
 			// for eight
-			17200: "transform:translate3d(-1920px, 0, 0); opacity: 0",
-			17500: "transform:translate3d(0px, 0, 0); opacity: 1",
-			19700: "transform:translate3d(0px, 0, 0); opacity: 1",
-			19900: "transform:translate3d(-1920px, 0, 0); opacity: 0"
+			18200: "transform:translate3d(-1920px, 0, 0); opacity: 0",
+			18500: "transform:translate3d(0px, 0, 0); opacity: 1",
+			20700: "transform:translate3d(0px, 0, 0); opacity: 1",
+			20900: "transform:translate3d(-1920px, 0, 0); opacity: 0"
 		},
 		// fourth slide house
 		"thirdHouseWithFlag": {
-			5500: "transform:translate3d(1920px, 0, 0); opacity:0;",
-			6200: "transform:translate3d(1920px, 0, 0); opacity:0;",
-			7000: "transform:translate3d(-380px, 0, 0); opacity:1;",
-			10200: "transform:translate3d(-380px, 0, 0); opacity:1;",
-			10700: "transform:translate3d(-1920px, 0, 0); opacity:0;"
+			6500: "transform:translate3d(1920px, 0, 0); opacity:0;",
+			7200: "transform:translate3d(1920px, 0, 0); opacity:0;",
+			8000: "transform:translate3d(-380px, 0, 0); opacity:1;",
+			11200: "transform:translate3d(-380px, 0, 0); opacity:1;",
+			11700: "transform:translate3d(-1920px, 0, 0); opacity:0;"
 		},
 		// fourth slide flag
 		"flagText" :{
-			7000: "transform:translate3d(0, 0px, 0);",
-			7300: "transform:translate3d(0, -30px, 0); opacity: 1;",
-			8800: "transform:translate3d(0, -30px, 0); opacity: 1;",
-			9000: "transform:translate3d(0, 40px, 0); opacity: 0;"
+			8000: "transform:translate3d(0, 0px, 0);",
+			8300: "transform:translate3d(0, -30px, 0); opacity: 1;",
+			9800: "transform:translate3d(0, -30px, 0); opacity: 1;",
+			10000: "transform:translate3d(0, 40px, 0); opacity: 0;"
 		},
 		// fourth slide text
 		"houseText": {
-			7000: "opacity: 0;",
-			7300: "opacity: 1",
-			8800: "opacity: 1",
-			9000: "opacity: 0"
+			8000: "opacity: 0;",
+			8300: "opacity: 1",
+			9800: "opacity: 1",
+			10000: "opacity: 0"
 		},
 		// fifth slide cloud
 		"cloudPart": {
-			9000: "transform:translate3d(0, -25px, 0); opacity: 0",
-			9200: "transform:translate3d(0, -75px, 0); opacity: 1",
-			10700: "transform:translate3d(0, -75px, 0); opacity: 1"
+			10000: "transform:translate3d(0, -25px, 0); opacity: 0",
+			10200: "transform:translate3d(0, -75px, 0); opacity: 1",
+			11700: "transform:translate3d(0, -75px, 0); opacity: 1"
 		},
 		// fifth slide people
 		"bigPeopleMove": {
-			9200: "transform:translate3d(0px, 0, 0);",
-			9400: "transform:translate3d(35px, 0, 0);"
+			10200: "transform:translate3d(0px, 0, 0);",
+			10400: "transform:translate3d(35px, 0, 0);"
 		},
 		// fifth slide hide people in house
 		"peopleHide": {
-			9200: "opacity: 1;",
-			9400: "opacity: 0;"
+			10200: "opacity: 1;",
+			10400: "opacity: 0;"
 		},
 		// fifth slide text
 		"peopleText": {
-			9000: "opacity: 0;",
-			9200: "opacity: 1;",
-			10700: "opacity: 1;",
-			10900: "opacity: 0;"
+			10000: "opacity: 0;",
+			10200: "opacity: 1;",
+			11700: "opacity: 1;",
+			11900: "opacity: 0;"
 		},
 		// six slide text
 		"coText": {
-			10900: "opacity: 0;",
-			11100: "opacity: 1;",
-			12600: "opacity: 1;",
-			12800: "opacity: 0;"
+			11900: "opacity: 0;",
+			12100: "opacity: 1;",
+			13600: "opacity: 1;",
+			13800: "opacity: 0;"
 		},
 		// six slide cloud
 		"coCloud": {
-			10900: "transform: translate3d(1920px, -97px, 0);",
-			11100: "transform: translate3d(-200px, -97px, 0);",
-			12600: "transform: translate3d(-200px, -97px, 0);",
-			12800: "transform: translate3d(-1920px, -97px, 0);"
+			11900: "transform: translate3d(1920px, -97px, 0);",
+			12100: "transform: translate3d(-200px, -97px, 0);",
+			13600: "transform: translate3d(-200px, -97px, 0);",
+			13800: "transform: translate3d(-1920px, -97px, 0);"
 		},
 		// six slide percents
 		"coCloudFade": {
-			10900: "opacity: 0; transform: translate3d(-240px, -97px, 0);",
-			11100: "opacity: 1; transform: translate3d(-240px, -97px, 0);",
-			12600: "opacity: 1; transform: translate3d(-240px, -97px, 0);",
-			12800: "opacity: 0; transform: translate3d(-240px, -97px, 0);"
+			11900: "opacity: 0; transform: translate3d(-240px, -97px, 0);",
+			12100: "opacity: 1; transform: translate3d(-240px, -97px, 0);",
+			13600: "opacity: 1; transform: translate3d(-240px, -97px, 0);",
+			13800: "opacity: 0; transform: translate3d(-240px, -97px, 0);"
 		},
 		// six slide cars
 		"coCloudCars": {
 			// 6200: "transform:translate3d(1920px, -97px, 0); opacity:0;",
 			// 7000: "transform:translate3d(-240px, -97px, 0); opacity:0;",
 			// 7700: "transform:translate3d(-240px, -97px, 0); opacity:0;",
-			11200: "transform:translate3d(1920px, -37px, 0); opacity: 0;",
+			12200: "transform:translate3d(1920px, -37px, 0); opacity: 0;",
 			// 9300: "transform:translate3d(-1080px, -37px, 0); opacity: 1;",
-			11400: "transform:translate3d(-1080px, -37px, 0); opacity: 1;",
-			12900: "transform:translate3d(-1080px, -37px, 0); opacity: 1;",
-			13100: "transform:translate3d(-1920px, -37px, 0); opacity:0;",
+			12400: "transform:translate3d(-1080px, -37px, 0); opacity: 1;",
+			13900: "transform:translate3d(-1080px, -37px, 0); opacity: 1;",
+			14100: "transform:translate3d(-1920px, -37px, 0); opacity:0;",
 		},
 		// six slide house
 		"coCloudHouse": {
-			11250: "opacity: 0; transform: translate3d(-900px, 500px, 0);",
-			11400: "opacity: 1; transform: translate3d(-900px, -37px, 0);",
-			12900: "opacity: 1; transform: translate3d(-900px, -37px, 0);",
-			13100: "opacity: 0; transform: translate3d(-900px, 500px, 0);"
+			12250: "opacity: 0; transform: translate3d(-900px, 500px, 0);",
+			12400: "opacity: 1; transform: translate3d(-900px, -37px, 0);",
+			13900: "opacity: 1; transform: translate3d(-900px, -37px, 0);",
+			14100: "opacity: 0; transform: translate3d(-900px, 500px, 0);"
 		},
 		// seventh slide text
 		"fuelText": {
-			12900: "opacity: 0; transform: translate3d(-239px, 0, 0);",
-			13100: "opacity: 1;",
-			17000: "opacity: 1;",
-			17200: "opacity: 0;"
+			13900: "opacity: 0; transform: translate3d(-239px, 0, 0);",
+			14100: "opacity: 1;",
+			18000: "opacity: 1;",
+			18200: "opacity: 0;"
 		},
 		// six, seventh slide cloud
 		"fuelCloud": {
-			11000: "opacity: 0; transform: translate3d(700px, -60px, 0);",
-			11200: "opacity: 1; transform: translate3d(700px, -60px, 0);",
+			12000: "opacity: 0; transform: translate3d(700px, -60px, 0);",
+			12200: "opacity: 1; transform: translate3d(700px, -60px, 0);",
 			// 10100: "opacity: 0; transform: translate3d(700px, -60px, 0);",
 			// 10100: "opacity: 0; transform: translate3d(700px, -60px, 0);",
 			// 10500: "opacity: 1;",
-			14600: "opacity: 1;",
+			15600: "opacity: 1;",
 			// 13000: "opacity: 1;",
-			17000: "opacity: 1;",
-			17200: "opacity: 0;"
+			18000: "opacity: 1;",
+			18200: "opacity: 0;"
 		},
 		// seventh element gas, case
 		"fuelCloudElems": {
-			14800: "opacity: 0; transform: translate3d(700px, -60px, 0);",
-			15000: "opacity: 1;",
-			17000: "opacity: 1;",
-			17200: "opacity: 0;"
+			15800: "opacity: 0; transform: translate3d(700px, -60px, 0);",
+			16000: "opacity: 1;",
+			18000: "opacity: 1;",
+			18200: "opacity: 0;"
 		},
 		// seventh case
 		"moneyCase": {
-			15000: "transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;",
-			15300: "transform: matrix(2, 0, 0, 2, -230, -348); opacity: 1;",
-			16000: "transform: matrix(2, 0, 0, 2, -230, -348); opacity: 1;",
+			16000: "transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;",
+			16300: "transform: matrix(2, 0, 0, 2, -230, -348); opacity: 1;",
+			17000: "transform: matrix(2, 0, 0, 2, -230, -348); opacity: 1;",
 			// 16200: "transform: matrix(2, 0, 0, 2, -230, -348); opacity: 0;"
 		},
 		// seventh case dol
 		"leftDol": {
-			15300: "opacity: 1; transform: translate3d(0px, 0px, 0);",
-			15700: "opacity: 1; transform: translate3d(140px, 130px, 0);",
-			16000: "opacity: 0; transform: translate3d(140px, 130px, 0);"
+			16300: "opacity: 1; transform: translate3d(0px, 0px, 0);",
+			16700: "opacity: 1; transform: translate3d(140px, 130px, 0);",
+			17000: "opacity: 0; transform: translate3d(140px, 130px, 0);"
 		},
 		// seventh case dol
 		"rightDol": {
-			15300: "opacity: 1; transform: translate3d(0px, 0px, 0);",
-			15700: "opacity: 1; transform: translate3d(-140px, 130px, 0);",
-			16000: "opacity: 0; transform: translate3d(-140px, 130px, 0);"
+			16300: "opacity: 1; transform: translate3d(0px, 0px, 0);",
+			16700: "opacity: 1; transform: translate3d(-140px, 130px, 0);",
+			17000: "opacity: 0; transform: translate3d(-140px, 130px, 0);"
 		},
 		// eighth slide house
 		"eighthHouses": {
 			// 11050: "transform:translate3d(0, 100%, 0); opacity: 0;",
-			17400: "transform:translate3d(0, 100%, 0); opacity: 0;",
-			17600: "transform:translate3d(0, 0%, 0); opacity: 1;",
-			19100: "transform:translate3d(0, 0%, 0); opacity: 1;",
-			19300: "transform:translate3d(0, 100%, 0); opacity: 0;"
+			18400: "transform:translate3d(0, 100%, 0); opacity: 0;",
+			18600: "transform:translate3d(0, 0%, 0); opacity: 1;",
+			20100: "transform:translate3d(0, 0%, 0); opacity: 1;",
+			20300: "transform:translate3d(0, 100%, 0); opacity: 0;"
 		},
 		// eighth slide man
 		"constractionMan": {
-			17400: "opacity: 0; transform:translate3d(0, 80px, 0);",
-			17700: "opacity: 1; transform:translate3d(0, 80px, 0);",
-			19100: "opacity: 1; transform:translate3d(0, 80px, 0);",
-			19300: "opacity: 0; transform:translate3d(0, 80px, 0);"
+			18400: "opacity: 0; transform:translate3d(0, 80px, 0);",
+			18700: "opacity: 1; transform:translate3d(0, 80px, 0);",
+			20100: "opacity: 1; transform:translate3d(0, 80px, 0);",
+			20300: "opacity: 0; transform:translate3d(0, 80px, 0);"
 		},
 		// eighth slide 
 		"rightCar": {
-			17700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
-			17900: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19500: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19700: "transform:translate3d(-1920px, 0, 0); opacity: 0;"
+			18700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
+			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20700: "transform:translate3d(-1920px, 0, 0); opacity: 0;"
 		},
 		// eighth slide 
 		"cycle": {
-			17700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
-			17900: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19500: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19700: "transform:translate3d(1920px, 0, 0); opacity: 1;"
+			18700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
+			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20700: "transform:translate3d(1920px, 0, 0); opacity: 1;"
 		},
 		// eighth slide 
 		"manRight": {
-			17700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
-			17900: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19500: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
+			18700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
+			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
 		},
 		// eighth slide 
 		"manLeft": {
-			17700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
-			17900: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19500: "transform:translate3d(0px, 0, 0); opacity: 1;",
-			19700: "transform:translate3d(1920px, 0, 0); opacity: 1;"
+			18700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
+			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
+			20700: "transform:translate3d(1920px, 0, 0); opacity: 1;"
 		},
 		// eighth slide text
 		"constractionText": {
-			17700: "opacity: 0;",
-			17900: "opacity: 1;",
-			19500: "opacity: 1;",
-			19700: "opacity: 0;"
+			18700: "opacity: 0;",
+			18900: "opacity: 1;",
+			20500: "opacity: 1;",
+			20700: "opacity: 0;"
 		},
 		// nine slide
 		"firstRow": {
-			19800: "opacity: 0;",
-			21000: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
+			20800: "opacity: 0;",
+			22000: "opacity: 1",
+			23900: "opacity: 1",
+			25000: "opacity: 0"
 		},
 		"secondRow": {
-			21000: "opacity: 0;",
-			21200: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
-		},
-		"thirdRow": {
-			21400: "opacity: 0;",
-			21600: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
-		},
-		"fourthRow": {
-			21600: "opacity: 0;",
-			21800: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
-		},
-		"fifthRow": {
-			21800: "opacity: 0;",
-			22000: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
-		},
-		"sixRow": {
 			22000: "opacity: 0;",
 			22200: "opacity: 1",
-			22900: "opacity: 1",
-			24000: "opacity: 0"
+			23900: "opacity: 1",
+			25000: "opacity: 0"
+		},
+		"thirdRow": {
+			22400: "opacity: 0;",
+			22600: "opacity: 1",
+			23900: "opacity: 1",
+			25000: "opacity: 0"
+		},
+		"fourthRow": {
+			22600: "opacity: 0;",
+			22800: "opacity: 1",
+			23900: "opacity: 1",
+			25000: "opacity: 0"
+		},
+		"fifthRow": {
+			22800: "opacity: 0;",
+			23000: "opacity: 1",
+			23900: "opacity: 1",
+			25000: "opacity: 0"
+		},
+		"sixRow": {
+			23000: "opacity: 0;",
+			23200: "opacity: 1",
+			23900: "opacity: 1",
+			25000: "opacity: 0"
 		},
 		// nine slide text
 		"menText": {
-			19800: "opacity: 0;",
-			20000: "opacity: 1;",
-			22900: "opacity: 1;",
-			24000: "opacity: 0;"
+			20800: "opacity: 0;",
+			21000: "opacity: 1;",
+			23900: "opacity: 1;",
+			25000: "opacity: 0;"
 		},
 		"secondSectionWelcome": {
-			24100: "opacity: 0;",
-			24300: "opacity: 1"
+			25100: "opacity: 0;",
+			25300: "opacity: 1"
 		},
 		// helpers
 		"firstElem": {
@@ -381,35 +394,35 @@ function FirstSection(){
 		},
 		"secondElem": {
 			2010: "opacity: 0;",
-			3000: "opacity: 0;"
+			4810: "opacity: 0;"
 		},
 		"thirdElem": {
-			3010: "opacity: 0;",
-			6000: "opacity: 0;"
+			5000: "opacity: 0;",
+			6800: "opacity: 0;"
 		},
 		"fourthElem": {
-			6010: "opacity: 0;",
-			8800: "opacity: 0;"
+			7000: "opacity: 0;",
+			9100: "opacity: 0;"
 		},
 		"fifthElem": {
-			8810: "opacity: 0;",
-			9400: "opacity: 0;"
+			9500: "opacity: 0;",
+			11000: "opacity: 0;"
 		},
 		"sixElem": {
-			9410: "opacity: 0;",
-			12580: "opacity: 0;"
+			12000: "opacity: 0;",
+			14580: "opacity: 0;"
 		},
 		"seventhElem": {
-			12600: "opacity: 0;",
+			15000: "opacity: 0;",
 			17000: "opacity: 0;"
 		},
 		"eighthElem": {
 			18000: "opacity: 0;",
-			19000: "opacity: 0;"
+			21000: "opacity: 0;"
 		},
 		"ninthElem": {
-			21100: "opacity: 0;",
-			22900: "opacity: 0;"
+			22100: "opacity: 0;",
+			23900: "opacity: 0;"
 		}
 	};
 
@@ -425,44 +438,61 @@ function FirstSection(){
 
 	function addMenuButtonsHandlers(){
 		$('.menus a').on('click', function(e){
+			var $this = $(this);
+
 			$('.menus a').removeClass('active');
-			$(this).addClass('active');
+			$this.addClass('active');
 		});
 
 		$('.prevButton').on('click', function(e){
+			var $this = $(this);
 			var curIndex = $('.menus a.active').closest('li').index(),
 			elmCount = $('.menus li').length,
 			nextElem = $('.menus li').eq((curIndex - 1) % elmCount),
 			nextAnchor = nextElem.find('a');
-			console.log(curIndex, nextElem);
+			// console.log(curIndex, nextElem);
 
-			if(id !== 'first'){
-				$(this).attr({
-					'href': nextAnchor.attr('href'),
-					'data-menu-top': nextAnchor.attr('data-menu-top'),
-					'data-anchor-target': nextAnchor.attr('data-anchor-target')
-				});
+			if(!$this.hasClass('disabled')){
+				$this.addClass('disabled');
 
-				$('.menus a').removeClass('active');
-				nextAnchor.addClass('active');
+				if(id !== 'first'){
+					$(this).attr({
+						'href': nextAnchor.attr('href'),
+						'data-menu-top': nextAnchor.attr('data-menu-top'),
+						'data-anchor-target': nextAnchor.attr('data-anchor-target')
+					});
+
+					$('.menus a').removeClass('active');
+					nextAnchor.addClass('active');
+				}
+			}else {
+				e.preventDefault();
 			}
 		});
 
 		$('.nextButton').on('click', function(e){
+			var $this = $(this);
 			var curIndex = $('.menus a.active').closest('li').index(),
 				elmCount = $('.menus li').length,
 				nextElem = $('.menus li').eq((curIndex + 1) % elmCount),
 				nextAnchor = nextElem.find('a');
 
-			if(id !==  'ninth'){
-				$(this).attr({
-					'href': nextAnchor.attr('href'),
-					'data-menu-top': nextAnchor.attr('data-menu-top'),
-					'data-anchor-target': nextAnchor.attr('data-anchor-target')
-				});
 
-				$('.menus a').removeClass('active');
-				nextAnchor.addClass('active');
+			if(!$this.hasClass('disabled')){
+				$this.addClass('disabled');
+
+				if(id !==  'ninth'){
+					$(this).attr({
+						'href': nextAnchor.attr('href'),
+						'data-menu-top': nextAnchor.attr('data-menu-top'),
+						'data-anchor-target': nextAnchor.attr('data-anchor-target')
+					});
+
+					$('.menus a').removeClass('active');
+					nextAnchor.addClass('active');
+				}
+			}else {
+				e.preventDefault();
 			}
 		});
 	}
@@ -494,13 +524,18 @@ function FirstSection(){
 
 				// console.log(element, name, direction, id);
 			}
+
 		});
 
 		skrollr.menu.init(skrollrItem, {
 			change: function(hash, top) {
 				console.log('hash', hash);
+			},
+			done: function(){
+				$('.c-btns.disabled').removeClass('disabled');
 			}
 		});
+
 
 		skrollrInialized = true;
 	}
@@ -518,6 +553,15 @@ function FirstSection(){
 	addBreakPoints();
 	addMenuButtonsHandlers();
 
+	$(window).on('scroll', function(){
+		var $prevBtn = $('.prevButton');
+		if(window.scrollY > 2800){
+			$prevBtn.removeClass('hidden');
+		}else {
+			$prevBtn.addClass('hidden');
+		}
+	});
+
 	$(window).resize(function(){
 		var $windowH = $(window).height();
 		var $windowHOffset = -(($windowH/2)-130);
@@ -533,7 +577,7 @@ function SecondSection(){
 
 	this.init = function(hash){
 		$container.addClass('visible');
-		setHash(hash);
+		setSectionHash(hash);
 	}
 
 	this.destroy = function(){
@@ -621,9 +665,11 @@ function SecondSection(){
 
 	$('.second-section-start .bott-text__bott__link').on('click', function(e){
 		e.preventDefault();
+		$('.button-list.open').removeClass('open');
 		$('.second-section__item').removeClass('visible');
 		$('.second-section__choices').fadeIn();
 		$('.second-section__item__image-list').children().remove();
+		$('.second-section__item__bott-list__item').removeClass('active');
 		BV.dispose();
 	});
 
@@ -642,9 +688,15 @@ function SecondSection(){
 	});
 
 	$('.t-title__main').on('click', function(e){
-		var $this = $(this);
+		var $this = $(this),
+			$parent = $this.closest('.t-title');
 
-		$this.closest('.t-title').toggleClass('popup-active');
+		if($parent.hasClass('popup-active')){
+			$parent.removeClass('popup-active');
+		}else {
+			$parent.closest('.second-section__item__titles-list__item').find('.t-title').not($parent).removeClass('popup-active');
+			$parent.addClass('popup-active');
+		}
 	});
 
 	$('.next-step').on('click', function(e){
@@ -658,19 +710,22 @@ function SecondSection(){
 
 		var sectionId = $this.attr('href').slice(1);
 		var bgImgLink = sectionItemBgList[sectionId][0];
+		var sectionName = $this.attr('data-section-name');
 		var $sectionItem = $('.second-section__item[data-section-item-id="'+sectionId+'"] .second-section__item_i');
-		BV = new $.BigVideo({useFlashForFirefox:false});
+		// BV = new $.BigVideo({useFlashForFirefox:false});
 
-		BV.init();
-		BV.show(
-			videoList[sectionId][1]
-		);
-		BV.getPlayer().on('ended' , function(){
-			$('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');
-			$this.closest('.second-section__item').find('.button-list').addClass('hidden');
-			$('#big-video-wrap').addClass('hidden');
-			$container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
-		});
+		$('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');
+		$('.second-section__item__bott-list__item[data-section-name="'+sectionName+'"]').addClass('active');
+		$this.closest('.second-section__item').find('.button-list').addClass('hidden');
+		$container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
+
+		// BV.init();
+		// BV.show(
+		// 	videoList[sectionId][1]
+		// );
+		// BV.getPlayer().on('ended' , function(){
+			
+		// });
 	});
 
 	$('.play-section-video').on('click', function(e){
@@ -718,10 +773,14 @@ function SecondSection(){
 				}).closest('.second-section__item').find('.button-list__drop__item .btn').on('click', function(e){
 					e.preventDefault();
 
+
+
 					var $this = $(this);
 					var $sectionN = $this.attr('href').slice(1);
 
 					$this.closest('.button-list').removeClass('open');
+
+					$('.button-list').removeClass('hidden');
 					
 					$container.find('.second-section__item__image').removeClass('show-titles');
 					$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('show-titles');
@@ -747,7 +806,7 @@ function loadSection(location){
 	var firstSection;
 	var secondSection;
 
-	if(hash === 'secondSection'){
+	if(hash === 'simulation'){
 		secondSection = new SecondSection();
 		secondSection.init(hash);
 	}else {
@@ -777,7 +836,14 @@ function setHash(hashStr){
 			document.location.hash = "";
 		}
 	}
-	
+}
+
+function setSectionHash(hashStr){
+	if(hashStr !== undefined){
+		document.location.hash = hashStr;
+	}else{
+		document.location.hash = "";
+	}
 }
 
 jQuery(window).load(function(){
