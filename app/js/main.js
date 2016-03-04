@@ -19,7 +19,7 @@ var videoList = {
 		], [
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_3.mp4" },
 			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_3.webm" }
-		]	
+		]
 	],
 	"downtown": [[
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_1.mp4" },
@@ -30,7 +30,7 @@ var videoList = {
 		], [
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_3.mp4" },
 			{ type: "video/webm", src: "videos/1920x1080/cbt_dt_3.webm" }
-		]		
+		]
 	],
 	"corner": [[
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_1.mp4" },
@@ -41,9 +41,9 @@ var videoList = {
 		], [
 			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_3.mp4" },
 			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_3.webm" }
-		]		
+		]
 	],
-}
+};
 
 var sectionItemBgList = {
 	"suburbs": [
@@ -74,7 +74,7 @@ var sectionItemBgList = {
 		'img/corner/scene_2_ee.jpg',
 		'img/corner/Scene_3_NN.jpg'
 	]
-}
+};
 
 function FirstSection(){
 
@@ -304,28 +304,28 @@ function FirstSection(){
 			20100: "opacity: 1; transform:translate3d(0, 80px, 0);",
 			20300: "opacity: 0; transform:translate3d(0, 80px, 0);"
 		},
-		// eighth slide 
+		// eighth slide
 		"rightCar": {
 			18700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
 			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20700: "transform:translate3d(-1920px, 0, 0); opacity: 0;"
 		},
-		// eighth slide 
+		// eighth slide
 		"cycle": {
 			18700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
 			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20700: "transform:translate3d(1920px, 0, 0); opacity: 1;"
 		},
-		// eighth slide 
+		// eighth slide
 		"manRight": {
 			18700: "transform:translate3d(1920px, 0, 0); opacity: 0;",
 			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20500: "transform:translate3d(0px, 0, 0); opacity: 1;",
 			20700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
 		},
-		// eighth slide 
+		// eighth slide
 		"manLeft": {
 			18700: "transform:translate3d(-1920px, 0, 0); opacity: 0;",
 			18900: "transform:translate3d(0px, 0, 0); opacity: 1;",
@@ -384,8 +384,8 @@ function FirstSection(){
 			25000: "opacity: 0;"
 		},
 		"secondSectionWelcome": {
-			25100: "opacity: 0;",
-			25300: "opacity: 1"
+			25300: "opacity: 0;",
+			26000: "opacity: 1; z-index: 10"
 		},
 		// helpers
 		"firstElem": {
@@ -423,6 +423,10 @@ function FirstSection(){
 		"ninthElem": {
 			22100: "opacity: 0;",
 			23900: "opacity: 0;"
+		},
+		"tenthElem": {
+			24000: "opacity: 0;",
+			26000: "opacity: 0;"
 		}
 	};
 
@@ -477,11 +481,11 @@ function FirstSection(){
 				nextElem = $('.menus li').eq((curIndex + 1) % elmCount),
 				nextAnchor = nextElem.find('a');
 
-
+			console.log(nextAnchor);
 			if(!$this.hasClass('disabled')){
 				$this.addClass('disabled');
 
-				if(id !==  'ninth'){
+				if(id !==  'tenth'){
 					$(this).attr({
 						'href': nextAnchor.attr('href'),
 						'data-menu-top': nextAnchor.attr('data-menu-top'),
@@ -506,6 +510,7 @@ function FirstSection(){
 
 		skrollrItem = skrollr.init({
 			keyframe: function(element, name, direction) {
+
 				// if(!skrollInit && count !== 0){
 				// 	skrollInit = !skrollInit;
 				// 	count--;
@@ -520,6 +525,8 @@ function FirstSection(){
 					id = $el.attr('id');
 					$('.menus a').removeClass('active');
 					$('.menus a[href=#'+id+']').addClass('active');
+					console.log($el);
+
 				// }
 
 				// console.log(element, name, direction, id);
@@ -638,7 +645,7 @@ function SecondSection(){
 
 	$('.button-list__main').on('click', function(){
 		var $buttonList = $(this).closest('.button-list');
-		
+
 		if($buttonList.hasClass('open')){
 			$buttonList.removeClass('open');
 		}else {
@@ -712,20 +719,26 @@ function SecondSection(){
 		var bgImgLink = sectionItemBgList[sectionId][0];
 		var sectionName = $this.attr('data-section-name');
 		var $sectionItem = $('.second-section__item[data-section-item-id="'+sectionId+'"] .second-section__item_i');
-		// BV = new $.BigVideo({useFlashForFirefox:false});
+		BV = new $.BigVideo({useFlashForFirefox:false});
 
-		$('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');
-		$('.second-section__item__bott-list__item[data-section-name="'+sectionName+'"]').addClass('active');
-		$this.closest('.second-section__item').find('.button-list').addClass('hidden');
-		$container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
+		// $('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');
+		// $('.second-section__item__bott-list__item[data-section-name="'+sectionName+'"]').addClass('active');
+		// $this.closest('.second-section__item').find('.button-list').addClass('hidden');
+		// $container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
 
-		// BV.init();
-		// BV.show(
-		// 	videoList[sectionId][1]
-		// );
-		// BV.getPlayer().on('ended' , function(){
-			
-		// });
+		BV.init();
+		BV.show(
+			videoList[sectionId][1]
+		);
+		
+		BV.getPlayer().on('ended' , function(){
+			$('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');		 +		// BV.init();
+			$this.closest('.second-section__item').find('.button-list').addClass('hidden');
+			$('.second-section__item__bott-list__item[data-section-name="'+sectionName+'"]').addClass('active');
+			$('#big-video-wrap').addClass('hidden');
+			$container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
+		});
+
 	});
 
 	$('.play-section-video').on('click', function(e){
@@ -735,10 +748,10 @@ function SecondSection(){
 		var bgImgLink = sectionItemBgList[sectionId][0];
 		var $sectionItem = $('.second-section__item[data-section-item-id="'+sectionId+'"] .second-section__item_i');
 		BV = new $.BigVideo({useFlashForFirefox:false});
-		
+
 		$('.second-section__choices').fadeOut();
 		$('#big-video-wrap').removeClass('hidden');
-		
+
 		BV.init();
 		BV.show(
 			videoList[sectionId][0]
@@ -773,23 +786,23 @@ function SecondSection(){
 				}).closest('.second-section__item').find('.button-list__drop__item .btn').on('click', function(e){
 					e.preventDefault();
 
-
-
 					var $this = $(this);
 					var $sectionN = $this.attr('href').slice(1);
 
 					$this.closest('.button-list').removeClass('open');
 
 					$('.button-list').removeClass('hidden');
-					
+
 					$container.find('.second-section__item__image').removeClass('show-titles');
 					$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('show-titles');
 					$('.second-section__item__titles-list__item, .second-section__item__bott-list__item').removeClass('active');
 					$('.second-section__item__titles-list__item#'+$this.attr('data-section-name')+'').addClass('active');
 					$('.second-section__item__bott-list__item[data-section-name="'+$this.attr('data-section-name')+'"]').addClass('active');
 				});
-			}			
+			}
 		});
+
+
 
 		$(window).on('resize', function(){
 
@@ -801,14 +814,89 @@ function SecondSection(){
 	});
 }
 
+function ThirdSection(){
+	var $container = $('#thirdSection');
+
+	this.init = function(hash, itemId){
+		var $checkBoxList = $container.find('.check-box-list'),
+			 $checkBoxListItem = $checkBoxList.find('.check-box'),
+			 checkedCount = 0,
+			 swiperInst;
+
+		$container.addClass('visible');
+		setSectionHash(hash);
+		$container.children('[data-prevSection="'+itemId+'"]').addClass('visible');
+		$container.find('.third-section__item__img').css('background-image', 'url('+sectionItemBgList[itemId][4]+')');
+		$container.find('.third-section__item__step').eq(0).addClass('visible');
+
+		$container.find('.check-step').on('click', function(e){
+			e.preventDefault();
+			var $this = $(this),
+				$parent = $this.closest('.third-section__item__step'),
+				$nextStep = $parent.next('.third-section__item__step');
+
+			if($nextStep.hasClass('swiper-box')){
+				$parent.removeClass('visible');
+				$nextStep.addClass('visible');
+
+				initSwiper(swiperInst, $nextStep);
+			}else {
+				$parent.removeClass('visible');
+				$nextStep.addClass('visible');
+			}
+		});
+
+		$checkBoxListItem.find('input').on('change', function(){
+			checkedCount = $checkBoxListItem.find('input:checked').length;
+			if(checkedCount >= 3 ){
+				$checkBoxListItem.find('input:not(:checked)').attr('disabled', 'disabled');
+				$checkBoxList.next('.r-text').removeClass('hidden');
+			}else {
+				$checkBoxListItem.find('input:not(:checked)').removeAttr('disabled');
+				$checkBoxList.next('.r-text').addClass('hidden');
+			}
+		});
+	};
+
+	function initSwiper(sw, $container){
+		var $swContainer = $container.find('.swiper-container'),
+			$pagination = $container.find('.swiper-pagination');
+			console.log($container);
+		sw = new Swiper($swContainer, {
+			pagination: $pagination,
+			effect: 'cube',
+			grabCursor: true,
+			paginationClickable: true,
+			onSlideChangeEnd: function(swiper){
+				console.log("SS", swiper);
+			},
+			cube: {
+				shadow: false,
+				slideShadows: false,
+				shadowOffset: 0,
+				shadowScale: 0.94
+			}
+		});
+	}
+
+	this.destroy = function() {
+		$container.children('div').removeClass('visible').find('.third-section__item__img').removeClass('visible');
+		$container.find('.third-section__item__step').removeClass('visible');
+	}
+}
+
 function loadSection(location){
 	var hash = location;
 	var firstSection;
 	var secondSection;
+	var thirdSection;
 
 	if(hash === 'simulation'){
 		secondSection = new SecondSection();
 		secondSection.init(hash);
+	}else if(hash == 'priorities'){
+		thirdSection = new ThirdSection();
+		thirdSection.init(hash, 'downtown');
 	}else {
 		firstSection = new FirstSection();
 		firstSection.init();
@@ -821,6 +909,15 @@ function loadSection(location){
 
 		secondSection = new SecondSection();
 		secondSection.init($(this).attr('href'));
+	});
+
+	$('.loadThirdSection').on('click', function(e){
+		e.preventDefault();
+		$('.second-section').removeClass('visible');
+		secondSection.destroy();
+
+		thirdSection = new ThirdSection();
+		thirdSection.init('priorities', $(this).attr('href').slice(1));
 	});
 }
 
@@ -853,26 +950,3 @@ jQuery(window).load(function(){
 		$('body').addClass('content-loaded');
 	}, 1500);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -11138,8 +11138,7 @@ return jQuery;
 		if(_animate && !fake) {
 			_skrollrInstance.animateTo(targetTop, {
 				duration: animationDuration,
-				easing: _easing,
-				done: _doneF
+				easing: _easing
 			});
 		} else {
 			defer(function() {
@@ -11185,7 +11184,6 @@ return jQuery;
 		_complexLinks = options.complexLinks === true;
 		_change = options.change;
 		_updateUrl = options.updateUrl !== false;
-		_doneF = options.done;
 
 		if(typeof _duration === 'number') {
 			_duration = (function(duration) {
@@ -11229,7 +11227,6 @@ return jQuery;
 	var _complexLinks;
 	var _change;
 	var _updateUrl;
-	var _doneF;
 
 	//In case the page was opened with a hash, prevent jumping to it.
 	//http://stackoverflow.com/questions/3659072/jquery-disable-anchor-jump-when-loading-a-page
