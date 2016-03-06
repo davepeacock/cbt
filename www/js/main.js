@@ -473,7 +473,6 @@ function FirstSection(){
 			elmCount = $('.menus li').length,
 			nextElem = $('.menus li').eq((curIndex - 1) % elmCount),
 			nextAnchor = nextElem.find('a');
-			// console.log(curIndex, nextElem);
 
 			if(!$this.hasClass('disabled')){
 				$this.addClass('disabled');
@@ -500,7 +499,6 @@ function FirstSection(){
 				nextElem = $('.menus li').eq((curIndex + 1) % elmCount),
 				nextAnchor = nextElem.find('a');
 
-			console.log(nextAnchor);
 			if(!$this.hasClass('disabled')){
 				$this.addClass('disabled');
 
@@ -529,33 +527,15 @@ function FirstSection(){
 
 		skrollrItem = skrollr.init({
 			keyframe: function(element, name, direction) {
-
-				// if(!skrollInit && count !== 0){
-				// 	skrollInit = !skrollInit;
-				// 	count--;
-				// 	skrollInit = count !== 0 ? false : true;
-				// }else {
 					$el = $(element);
-					// if(($el.attr('id') === undefined) || ($el.attr('id') === '')){
-					// 	id = $el.closest('.slide-wrap').attr('id');
-					// }else {
-					// 	id = $el.attr('id')
-					// }
 					id = $el.attr('id');
 					$('.menus a').removeClass('active');
 					$('.menus a[href=#'+id+']').addClass('active');
-					console.log($el);
-
-				// }
-
-				// console.log(element, name, direction, id);
 			}
-
 		});
 
 		skrollr.menu.init(skrollrItem, {
 			change: function(hash, top) {
-				console.log('hash', hash);
 			},
 			done: function(){
 				$('.c-btns.disabled').removeClass('disabled');
@@ -616,7 +596,6 @@ function SecondSection(){
 	function updateSize(container, elem, mediaAspect) {
 		var containerW = container.outerWidth() < $(window).width() ? container.outerWidth() : $(window).width(),
 			containerH = container.outerHeight() < $(window).height() ? container.outerHeight() : $(window).height(),
-			// containerH = container.outerHeight() < $(window).height() ? $(window).height() : container.outerHeight(),
 			containerAspect = containerW/containerH;
 
 
@@ -653,9 +632,7 @@ function SecondSection(){
 	}
 
 	function changeImgSrc(src, img){
-		// console.log(src);
 		img.src = src;
-		// console.log(img);
 	}
 
 	$container.children('.second-section__choices').find('.button-list__drop__item .btn').on('mouseenter', function(){
@@ -696,6 +673,12 @@ function SecondSection(){
 		$('.second-section__choices').fadeIn();
 		$('.second-section__item__image-list').children().remove();
 		$('.second-section__item__bott-list__item').removeClass('active');
+		BV.dispose();
+	});
+
+	$('.second-section-start .loadThirdSection').on('click', function(e){
+		e.preventDefault();
+		$('#big-video-wrap').remove();
 		BV.dispose();
 	});
 
@@ -749,7 +732,7 @@ function SecondSection(){
 		BV.show(
 			videoList[sectionId][1]
 		);
-		
+
 		BV.getPlayer().on('ended' , function(){
 			$('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');		 +		// BV.init();
 			$this.closest('.second-section__item').find('.button-list').addClass('hidden');
@@ -834,13 +817,14 @@ function SecondSection(){
 }
 
 function ThirdSection(){
-	var $container = $('#thirdSection');
+	var $container = $('#thirdSection'),
+		swiperInst;
 
 	this.init = function(hash, itemId){
 		var $checkBoxList = $container.find('.check-box-list'),
 			 $checkBoxListItem = $checkBoxList.find('.check-box'),
 			 checkedCount = 0,
-			 swiperInst;
+			 checkArrIndex = [];
 
 		$container.addClass('visible');
 		setSectionHash(hash);
@@ -858,36 +842,89 @@ function ThirdSection(){
 				$parent.removeClass('visible');
 				$nextStep.addClass('visible');
 
-				initSwiper(swiperInst, $nextStep);
+				if(swiperInst === undefined){
+					initSwiper($nextStep);
+				}
 			}else {
 				$parent.removeClass('visible');
 				$nextStep.addClass('visible');
 			}
 		});
 
+		$('.next-slide-step').on('click', function(e){
+			e.preventDefault();
+			swiperInst.slideNext(true);
+		});
+
 		$checkBoxListItem.find('input').on('change', function(){
-			checkedCount = $checkBoxListItem.find('input:checked').length;
-			if(checkedCount >= 3 ){
-				$checkBoxListItem.find('input:not(:checked)').attr('disabled', 'disabled');
-				$checkBoxList.next('.r-text').removeClass('hidden');
+			var $this = $(this),
+				thisIndex = $this.closest('.check-box').index();
+
+			if(checkArrIndex.indexOf(thisIndex) === -1 && $this.find('input').prop('checked', true)){
+				if(checkArrIndex.length >= 3 ){
+					checkedCount = checkedCount % checkArrIndex.length;
+					$checkBoxListItem.eq(checkArrIndex[checkedCount]).find('input').prop('checked', false);
+					checkArrIndex[checkedCount] = thisIndex;
+					checkedCount++;
+				}else {
+					checkArrIndex.push($this.closest('.check-box').index());
+					checkedCount++;
+				}
 			}else {
-				$checkBoxListItem.find('input:not(:checked)').removeAttr('disabled');
-				$checkBoxList.next('.r-text').addClass('hidden');
+				checkArrIndex.splice(checkArrIndex.indexOf(thisIndex), 1);
 			}
+
+			if(checkArrIndex.length < 3){
+				$checkBoxList.next('.r-text').addClass('hidden');
+			}else {
+				$checkBoxList.next('.r-text').removeClass('hidden');
+			}
+		});
+
+		$('.prev-link').on('click', function(e){
+			e.preventDefault();
+
+			$('#big-video-wrap').remove();
+
+			$('.button-list.open').removeClass('open');
+			$('.second-section__item').removeClass('visible');
+			$('.second-section__choices').fadeIn();
+			$('.second-section__item__image-list').children().remove();
+			$('.second-section__item__bott-list__item').removeClass('active');
+			$('.second-section').removeClass('visible');
+			$('.third-section__item__step').removeClass('visible');
+			$('#thirdSection').removeClass('visible');
+
+			$('.button-list').off('click');
+			$('.second-section').children('.second-section__choices').find('.button-list__drop__item .btn').off('mouseenter mouseleave click');
+
+			$('.i-popup__close, .second-section-start .bott-text__bott__link,.first-section-start,.play-section-video').off('click');
+
+			loadSection("");
 		});
 	};
 
-	function initSwiper(sw, $container){
+	function initSwiper($container){
 		var $swContainer = $container.find('.swiper-container'),
 			$pagination = $container.find('.swiper-pagination');
-			console.log($container);
-		sw = new Swiper($swContainer, {
+
+		swiperInst = new Swiper($swContainer, {
 			pagination: $pagination,
 			effect: 'cube',
 			grabCursor: true,
+			noSwiping: true,
 			paginationClickable: true,
 			onSlideChangeEnd: function(swiper){
-				console.log("SS", swiper);
+				if(swiper.activeIndex !== 0 && swiper.activeIndex <= 3){
+					swiper.container.find('.swiper-pagination').removeClass('hidden');
+				}else {
+					swiper.container.find('.swiper-pagination').addClass('hidden');
+				}
+			},
+			onInit: function(swiper){
+				if(swiper.activeIndex === 0){
+					swiper.container.find('.swiper-pagination').addClass('hidden');
+				}
 			},
 			cube: {
 				shadow: false,
