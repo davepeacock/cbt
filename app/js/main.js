@@ -887,23 +887,40 @@ function ThirdSection(){
 
 	function initSwiper($container){
 		var $swContainer = $container.find('.swiper-container'),
-			$pagination = $container.find('.swiper-pagination');
+			$pagination = $container.find('.swiper-pagination'),
+			$nextBtn = $container.find('.swiper-next'),
+			$prevBtn = $container.find('.swiper-prev');
 
 		swiperInst = new Swiper($swContainer, {
 			pagination: $pagination,
 			effect: 'cube',
 			grabCursor: true,
 			noSwiping: true,
+			nextButton: $nextBtn,
+        	prevButton: $prevBtn,
 			paginationClickable: true,
 			onSlideChangeEnd: function(swiper){
+				console.log(swiper.slides.length);
 				if(swiper.activeIndex !== 0 && swiper.activeIndex <= 3){
 					swiper.container.find('.swiper-pagination').removeClass('hidden');
 				}else {
 					swiper.container.find('.swiper-pagination').addClass('hidden');
 				}
+
+				if(swiper.activeIndex === swiper.slides.length - 1){
+					$nextBtn.addClass('hidden');
+				}else if(swiper.activeIndex === 0) {
+					$prevBtn.addClass('hidden');
+					$nextBtn.addClass('hidden');
+				}else {
+					$nextBtn.removeClass('hidden');
+					$prevBtn.removeClass('hidden');
+				}
 			},
 			onInit: function(swiper){
 				if(swiper.activeIndex === 0){
+					$nextBtn.addClass('hidden');
+					$prevBtn.addClass('hidden');
 					swiper.container.find('.swiper-pagination').addClass('hidden');
 				}
 			},
