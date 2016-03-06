@@ -31,7 +31,7 @@ var gulp = require('gulp'),
 // });
 
 gulp.task('sprite', function() {
-	var spriteData = 
+	var spriteData =
 		gulp.src('./app/sprImage/*.*') // source path of the sprite images
 			.pipe(spritesmith({
                 imgName: '../img/sprite.png',
@@ -127,4 +127,3 @@ gulp.task('watch', function(){
 gulp.task('go', function(done) {
 	runSequence(['connect', 'watch'], done);
 });
-
