@@ -262,6 +262,7 @@ g.gasStations{
 		height: 0;
 		width: 0;
 		overflow: hidden;
+		transition: opacity 0.4s ease, width 0s ease 0.4s, height 0s ease 0.4s;
 	}
 
 	&:active{
@@ -526,7 +527,6 @@ g.gasStations{
 	// padding: 0 20px;
 	width: 100%;
 	height: 100%;
-	padding-bottom: 150px;
 	box-sizing: border-box;
 
 	svg{
@@ -544,13 +544,32 @@ g.gasStations{
 			text-anchor: middle;
 		}
 	}
+}
+
+.second-section-welcome-content_i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 500px;
+	transform: translate(-50%, -50%);
+
+	p{
+		text-align: center;
+		padding: 0 0 80px;
+		font-family: 'OpenSansLight';
+		font-size: 20px;
+		line-height: 27px;
+		font-weight: normal;
+		text-align: center;
+		text-anchor: middle;
+	}
 
 	.btn{
-		position: absolute;
+		//position: absolute;
 		z-index: 20;
-		bottom: 50px;
-		left: 50%;
-		transform: translate(-50%, 0);
+		//bottom: 50px;
+		//left: 50%;
+		//transform: translate(-50%, 0);
 		display: block;
 		margin: 0 auto;
 		width: 170px;
@@ -872,7 +891,8 @@ g.gasStations{
 	height: 0;
 	width: 0;
 	padding: 0;
-	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
+	visibility: hidden;
+	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0.4s;
 
 	.r-graph{
 		position: fixed;
@@ -903,7 +923,8 @@ g.gasStations{
 		min-height: 220px;
 		z-index: 10;
 		opacity: 1;
-		transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
+		visibility: visible;
+		transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s, visibility 0s ease 0s;
 
 		.bott-text{
 			height: 100%;
@@ -1150,6 +1171,39 @@ g.gasStations{
 	background-size: cover;
 	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
 
+	.button-list__drop__item{
+
+		&:first-child{
+
+			.btn{
+
+				&:hover{
+					background: #F58F23;
+				}
+			}
+
+			&+.button-list__drop__item{
+
+				.btn{
+
+					&:hover{
+						background: #2980B9;
+					}
+				}
+
+				&+.button-list__drop__item{
+
+					.btn{
+
+						&:hover{
+							background: #884A9D;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.buttons-list{
 		position: absolute;
 		left: 50%;
@@ -1315,34 +1369,54 @@ g.gasStations{
 		.vjs-tech{
 			display: none;
 		}
+
+		.vjs-loading-spinner{
+
+			.loading-screen{
+				height: 100%;
+				width: 100%;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 	}
 
 	.vjs-loading-spinner{
-		// border: 2px solid  #13a085;
-		background: #F6FAFC;
+		//background: #F6FAFC;
+		//border: 0;
+		background-color: transparent;
+		top: 0;
+		left: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
 		border: 0;
 
+		.loading-screen{
+			//position: absolute;
+			height: 0;
+			width: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+
 		&:before, &:after{
-			display: none;
-			margin: 0;
-			border: 2px solid rgb(253, 255, 254);
-			// border: 2px solid  #13a085;
-			// transform-origin: 50% 50% 0;
-			// fill: #F6FAFC;
-			// stroke: #13a085;
-			// stroke-width: 2px;
-			// stroke-dasharray: 40px 172px;
-			// animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38);
-
+			display: none !important;
 		}
 
-		&:after{
-			display: block;
-			border: 2px solid #F6FAFC;
-		    background: #F6FAFC;
-		    border-top-color: #13a085;
-		    animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade-new 1.1s linear infinite;
-		}
+		//&:before, &:after{
+		//	display: none;
+		//	margin: 0;
+		//	border: 2px solid rgb(253, 255, 254);
+		//}
+		//
+		//&:after{
+		//	display: block;
+		//	border: 2px solid #F6FAFC;
+		//    background: #F6FAFC;
+		//    border-top-color: #13a085;
+		//    animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade-new 1.1s linear infinite;
+		//}
 	}
 }
 
