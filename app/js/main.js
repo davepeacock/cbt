@@ -776,10 +776,12 @@ function SecondSection(){
 
 				if(i === 0){
 					$img.on('load', function(){
+						console.log("img loaded");
 						$sectionItem.closest('.second-section__item').addClass('visible');
 						$('#big-video-wrap').addClass('hidden');
 						addEvents($img, $sectionItem.children('.second-section__item__image-list'));
 						updateSize($sectionItem.closest('.second-section__item'), $sectionItem, 16/9);
+						$(window).resize();
 					});
 				}
 				$img.attr({'src': sectionItemBgList[sectionId][i], 'eq': [i]})
@@ -814,10 +816,6 @@ function SecondSection(){
 					$('.second-section__item__bott-list__item[data-section-name="'+$this.attr('data-section-name')+'"]').addClass('active');
 				});
 			}
-
-			setTimeout(function(){
-				$(window).resize();
-			}, 300);
 		});
 
 		$(window).on('resize', function(){
