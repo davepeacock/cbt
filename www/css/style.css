@@ -86,7 +86,7 @@ label, input[type="button"], input[type="submit"], button {
   cursor: pointer;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  font-family: 'OpenSansRegular';
+  font-family: 'OpenSans';
   text-align: center; }
   .btn:hover {
     background-color: #0E9F84;
@@ -105,7 +105,7 @@ label, input[type="button"], input[type="submit"], button {
   cursor: pointer;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  font-family: 'OpenSansRegular';
+  font-family: 'OpenSans';
   text-align: center;
   border: 2px solid  #000;
   background: #fff;
@@ -132,7 +132,7 @@ label, input[type="button"], input[type="submit"], button {
   cursor: pointer;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  font-family: 'OpenSansRegular';
+  font-family: 'OpenSans';
   text-align: center;
   background-color: #0E9F84; }
 
@@ -851,7 +851,8 @@ g.gasStations {
   text-transform: none; }
 
 .second-slide {
-  font-weight: bold; }
+  font-weight: normal;
+  line-height: 30px; }
 
 .main-nav {
   position: absolute;
@@ -901,7 +902,7 @@ g.gasStations {
   .c-btns svg {
     width: 100%;
     height: 100%; }
-    .c-btns svg .g {
+    .c-btns svg g {
       -webkit-transition: fill 0.3s ease;
       transition: fill 0.3s ease; }
   .c-btns.hidden {
@@ -913,19 +914,21 @@ g.gasStations {
     overflow: hidden;
     -webkit-transition: opacity 0.4s ease, width 0s ease 0.4s, height 0s ease 0.4s;
     transition: opacity 0.4s ease, width 0s ease 0.4s, height 0s ease 0.4s; }
-  .c-btns:focus svg .g {
+  .c-btns:focus svg g {
     -webkit-transition: fill 0.3s ease;
     transition: fill 0.3s ease;
     fill: #F6FAFC; }
+  .c-btns:hover svg g {
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+    fill: #F7FAF9; }
   .c-btns.disabled {
-    width: 30px;
-    height: 30px;
     opacity: 0.4;
     cursor: default; }
     .c-btns.disabled.nextButton {
-      right: 35px; }
+      right: 5px; }
     .c-btns.disabled.prevButton {
-      left: 35px; }
+      left: 5px; }
 
 .nextButton {
   right: 20px; }
@@ -1110,7 +1113,7 @@ g.gasStations {
     height: 100%; }
     .second-section-welcome-content svg text {
       padding: 0 0 25px;
-      font-family: 'OpenSansLight';
+      font-family: 'OpenSans';
       font-size: 22pt;
       line-height: 50pt;
       font-weight: normal;
@@ -1128,7 +1131,7 @@ g.gasStations {
   .second-section-welcome-content_i p {
     text-align: center;
     padding: 0 0 80px;
-    font-family: 'OpenSansLight';
+    font-family: 'OpenSans';
     font-size: 20px;
     line-height: 27px;
     font-weight: normal;
@@ -1138,7 +1141,8 @@ g.gasStations {
     z-index: 20;
     display: block;
     margin: 0 auto;
-    width: 170px; }
+    width: 170px;
+    text-transform: uppercase; }
     .second-section-welcome-content_i .btn:hover {
       background: #000;
       color: #fff;
@@ -1186,8 +1190,7 @@ g.gasStations {
   position: absolute;
   top: 0;
   left: 0;
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
   display: block;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
@@ -1227,7 +1230,7 @@ g.gasStations {
 
 .second-section__item__titles-list__item#suburbs-housing .t-title {
   top: 41%;
-  left: 25%; }
+  left: 23%; }
 
 .second-section__item__titles-list__item#suburbs-walkability .t-title {
   top: 41%;
@@ -1298,8 +1301,8 @@ g.gasStations {
   left: 27%; }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_second {
-  top: 31%;
-  left: 52%; }
+  top: 35%;
+  left: 42%; }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_third {
   top: 57%;
@@ -1349,6 +1352,18 @@ g.gasStations {
   transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
   z-index: 10;
   overflow: visible; }
+  .second-section__item__titles-list__item.active .t-title.popup-active {
+    z-index: 11; }
+
+.second-section__item__titles-list__item.hidden .t-title {
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0.4s;
+  transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0.4s; }
 
 .second-section__item__bott-list__item {
   z-index: -1;
@@ -1394,6 +1409,13 @@ g.gasStations {
       height: auto;
       width: 370px;
       padding: 30px; }
+  .second-section__item__bott-list__item.hidden {
+    height: 0;
+    width: 0;
+    padding: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0s;
+    transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0s; }
 
 .t-title {
   position: relative; }
@@ -1414,6 +1436,8 @@ g.gasStations {
   .t-title.t-title_purple:hover .t-title__main, .t-title.t-title_purple.popup-active .t-title__main {
     background: #884A9D;
     color: #fff; }
+  .t-title.popup-active {
+    z-index: 99999; }
 
 .t-title__main {
   position: relative;
@@ -1426,7 +1450,7 @@ g.gasStations {
   cursor: pointer;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  font-family: 'OpenSansLight';
+  font-family: 'OpenSans';
   font-size: 20px;
   font-weight: 200;
   padding: 0 20px;
@@ -1850,15 +1874,19 @@ g.gasStations {
   font-weight: normal;
   padding-bottom: 20px;
   font-size: 20px;
-  line-height: 22px; }
+  line-height: 22px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 300; }
 
 .info-text p {
   font-size: 14px;
   line-height: 16px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 300; }
 
 .bott-text {
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.65); }
 
 .bott-text_i {
   position: relative; }
@@ -2010,7 +2038,7 @@ g.gasStations {
     opacity: 1;
     -webkit-transition: opacity 0.4s ease 0.3s, height 0s ease 0s, width 0s ease 0s;
     transition: opacity 0.4s ease 0.3s, height 0s ease 0s, width 0s ease 0s; }
-  .third-section__item__step .prev-link {
+  .third-section__item__step .prev-link, .third-section__item__step .l-link {
     position: absolute;
     bottom: 40px;
     left: 30px;
@@ -2019,7 +2047,7 @@ g.gasStations {
     text-decoration: underline;
     color: #000;
     padding: 0 0 0 20px; }
-    .third-section__item__step .prev-link:before {
+    .third-section__item__step .prev-link:before, .third-section__item__step .l-link:before {
       position: absolute;
       bottom: 1px;
       display: block;
@@ -2086,9 +2114,11 @@ g.gasStations {
     font-weight: normal;
     font-size: 36px;
     line-height: 40px;
-    letter-spacing: -2px;
+    letter-spacing: 0.6px;
     padding: 0 0 20px;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; }
   .r-text p {
     text-align: center;
     color: #000;
@@ -2132,7 +2162,8 @@ g.gasStations {
   color: #000;
   font-weight: 600;
   padding: 0 0 0 40px;
-  margin: 0 0 25px; }
+  margin: 0 0 25px;
+  font-family: 'OpenSans', sans-serif; }
   .check-box label:before {
     position: absolute;
     top: 50%;
@@ -2173,7 +2204,8 @@ g.gasStations {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.4s ease, visibility 0s ease 0s;
-  transition: opacity 0.4s ease, visibility 0s ease 0s; }
+  transition: opacity 0.4s ease, visibility 0s ease 0s;
+  cursor: pointer; }
   .swiper-slider .swiper-next.hidden, .swiper-slider .swiper-prev.hidden {
     opacity: 0;
     visibility: hidden;

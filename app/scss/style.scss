@@ -193,7 +193,8 @@ g.gasStations{
 }
 
 .second-slide{
-	font-weight: bold;
+	font-weight: normal;
+	line-height: 30px;
 }
 
 .main-nav{
@@ -251,7 +252,7 @@ g.gasStations{
 	svg{
 		width: 100%;
 		height: 100%;
-		.g{
+		g{
 			transition: fill 0.3s ease;
 		}
 	}
@@ -267,7 +268,7 @@ g.gasStations{
 
 	&:active{
 		svg{
-			.g{
+			g{
 				// transition: fill 0.3s ease;
 				// fill: #fff;
 			}
@@ -276,25 +277,32 @@ g.gasStations{
 
 	&:focus{
 		svg{
-			.g{
+			g{
 				transition: fill 0.3s ease;
 				fill: #F6FAFC;
 			}
 		}
 	}
 
+	&:hover{
+		svg{
+			g{
+				transition: fill 0.3s ease;
+				fill: #F7FAF9;
+			}
+		}
+	}
+
 	&.disabled{
-		width: 30px;
-		height: 30px;
 		opacity: 0.4;
 		cursor: default;
 
 		&.nextButton{
-			right: 35px;
+			right: 5px;
 		}
 
 		&.prevButton{
-			left: 35px;
+			left: 5px;
 		}
 	}
 }
@@ -536,7 +544,7 @@ g.gasStations{
 
 		text{
 			padding: 0 0 25px;
-			font-family: 'OpenSansLight';
+			font-family: 'OpenSans';
 			font-size: 22pt;
 			line-height: 50pt;
 			font-weight: normal;
@@ -556,7 +564,7 @@ g.gasStations{
 	p{
 		text-align: center;
 		padding: 0 0 80px;
-		font-family: 'OpenSansLight';
+		font-family: 'OpenSans';
 		font-size: 20px;
 		line-height: 27px;
 		font-weight: normal;
@@ -573,6 +581,7 @@ g.gasStations{
 		display: block;
 		margin: 0 auto;
 		width: 170px;
+		text-transform: uppercase;
 
 		&:hover{
 			background: #000;
@@ -626,8 +635,7 @@ g.gasStations{
 	position: absolute;
 	top: 0;
 	left: 0;
-	max-height: 100%;
-	max-width: 100%;
+	width: 100%;
 	display: block;
 	opacity: 0;
 	transition: opacity 0.2s ease;
@@ -681,7 +689,7 @@ g.gasStations{
 
 		.t-title{
 			top: 41%;
-			left: 25%;
+			left: 23%;
 		}
 	}
 
@@ -796,8 +804,8 @@ g.gasStations{
 		}
 
 		.t-title_second{
-			top: 31%;
-			left: 52%;
+			top: 35%;
+			left: 42%;
 		}
 
 		.t-title_third{
@@ -877,6 +885,23 @@ g.gasStations{
 			transition: opacity 0.4s ease, height 0s ease 0s, width 0s ease 0s;
 			z-index: 10;
 			overflow: visible;
+
+			&.popup-active{
+				z-index: 11;
+			}
+		}
+	}
+
+	&.hidden{
+
+		.t-title{
+			opacity: 0;
+			overflow: hidden;
+			height: 0;
+			width: 0;
+			padding: 0;
+			visibility: hidden;
+			transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0.4s;
 		}
 	}
 }
@@ -936,6 +961,14 @@ g.gasStations{
 			width: 370px;
 			padding: 30px;
 		}
+	}
+
+	&.hidden{
+		height: 0;
+		width: 0;
+		padding: 0;
+		visibility: hidden;
+		transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s, visibility 0s ease 0s;
 	}
 }
 
@@ -1006,6 +1039,10 @@ g.gasStations{
 			}
 		}
 	}
+
+	&.popup-active{
+		z-index: 99999;
+	}
 }
 
 
@@ -1019,7 +1056,7 @@ g.gasStations{
 	border-bottom: 2px solid #4A4A4A;
 	cursor: pointer;
 	transition: all 300ms;
-	font-family: 'OpenSansLight';
+	font-family: 'OpenSans';
 	font-size: 20px;
 	font-weight: 200;
 	padding: 0 20px;
@@ -1461,18 +1498,21 @@ g.gasStations{
 		padding-bottom: 20px;
 		font-size: 20px;
 		line-height: 22px;
+		font-family: 'OpenSans', sans-serif;
+		font-weight: 300;
 	}
 
 	p{
 		font-size: 14px;
 		line-height: 16px;
 		padding-bottom: 10px;
+		font-family: 'OpenSans', sans-serif;
+		font-weight: 300;
 	}
 }
 
 .bott-text{
-	background: rgba(255, 255, 255, 0.5);
-	// filter: blur(3px);
+	background: rgba(255, 255, 255, 0.65);
 }
 
 .bott-text_i{
@@ -1671,7 +1711,7 @@ g.gasStations{
 		transition: opacity 0.4s ease 0.3s, height 0s ease 0s, width 0s ease 0s;
 	}
 
-	.prev-link{
+	.prev-link, .l-link{
 		position: absolute;
 		bottom: 40px;
 		left: 30px;
@@ -1764,9 +1804,11 @@ g.gasStations{
 		font-weight: normal;
 		font-size: 36px;
 		line-height: 40px;
-		letter-spacing: -2px;
+		letter-spacing: 0.6px;
 		padding: 0 0 20px;
 		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700;
 	}
 
 	p{
@@ -1845,6 +1887,7 @@ g.gasStations{
 		font-weight: 600;
 		padding: 0 0 0 40px;
 		margin: 0 0 25px;
+		font-family: 'OpenSans', sans-serif;
 
 		&:before{
 			position: absolute;
@@ -1899,6 +1942,7 @@ g.gasStations{
 		opacity: 1;
 		visibility: visible;
 		transition: opacity 0.4s ease, visibility 0s ease 0s;
+		cursor: pointer;
 
 		&.hidden{
 			opacity: 0;
