@@ -707,37 +707,34 @@ function SecondSection(){
 		$(this).closest('.i-popup').removeClass('visible');
 	});
 
-	$('.second-section-start .bott-text__bott__link').on('click', function(e){
+	$('.second-section-start .back-to-section').on('click', function(e){
 		e.preventDefault();
-
-		// var $this = $(this);
-		//
-		// var sectionId = $this.attr('href').slice(1);
-		// var bgImgLink = sectionItemBgList[sectionId][0];
-		// var sectionName = $this.attr('data-section-name');
-		// var $sectionItem = $('.second-section__item[data-section-item-id="'+sectionId+'"] .second-section__item_i');
-		//
-		// $('.second-section__item__bott-list__item, .second-section__item__titles-list__item').removeClass('active');
-		// $this.closest('.second-section__item').find('.button-list').addClass('hidden');
-		// $('.second-section__item__bott-list__item[data-section-name="'+sectionName+'"]').addClass('active');
-		// $('#big-video-wrap').addClass('hidden');
-		// $container.find('.second-section__item__image[eq="'+4+'"]').addClass('active');
-		//
-		// setTimeout(function(){
-		// 	$(window).resize();
-		// }, 300);
 
 		var $this = $(this),
 		$parent = $this.closest('.second-section__item.visible');
-
+		console.log($this.attr('href').slice(1), $('.second-section__item'));
 		$parent.find('.button-list').removeClass('hidden');
+		$parent.removeClass('visible');
 		$parent.find('.second-section__item__image').removeClass('active show-titles');
 		$parent.find('.second-section__item__image[eq=0]').addClass('active');
 		$parent.find('.second-section__item__bott-list__item').removeClass('active');
+		$('.second-section__item[data-section-item-id="'+$this.attr('href').slice(1)+'"]').addClass('visible');
 
-		// if(BV){
-		// 	BV.dispose();
-		// }
+		if($('#big-video-wrap').length){
+			$('#big-video-wrap').remove();
+		}
+	});
+
+	$('.second-section-start .bott-text__bott__link').on('click', function(e){
+		e.preventDefault();
+		$('.button-list.open').removeClass('open');
+		$('.second-section__item').removeClass('visible');
+		$('.second-section__choices').fadeIn();
+		$('.second-section__item__image-list').children().remove();
+		$('.second-section__item__bott-list__item').removeClass('active');
+		if(BV){
+			BV.dispose();
+		}
 	});
 
 	// $('.second-section-start .loadThirdSection').on('click', function(e){

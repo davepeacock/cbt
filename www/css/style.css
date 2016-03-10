@@ -1209,6 +1209,8 @@ g.gasStations {
     z-index: 10;
     max-width: auto;
     max-height: auto; }
+    .second-section__item__image.active[eq="0"], .second-section__item__image.active[eq="1"], .second-section__item__image.active[eq="2"], .second-section__item__image.active[eq="3"] {
+      z-index: 11; }
   .second-section__item__image.show-titles {
     opacity: 1;
     -webkit-transition: opacity 0.2s ease;
@@ -1901,6 +1903,23 @@ g.gasStations {
   bottom: 30px;
   left: 25px;
   right: 0; }
+  .bott-text__bott .back-to-section {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #000;
+    padding: 0 0 0 20px;
+    float: left; }
+    .bott-text__bott .back-to-section:before {
+      position: absolute;
+      bottom: 1px;
+      display: block;
+      content: "";
+      left: 0;
+      width: 9px;
+      height: 14px;
+      background: url("../img/arr-left.svg") 0 0 no-repeat; }
 
 .bott-text__bott__link {
   position: relative;
