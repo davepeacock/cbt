@@ -136,8 +136,9 @@ label, input[type="button"], input[type="submit"], button {
 	text-transform: none;
 
 	&:hover{
-		background-color: #0E9F84;
+		background-color: #000;
 		border-color: #000;
+		color: #fff;
 	}
 }
 
