@@ -113,8 +113,9 @@ label, input[type="button"], input[type="submit"], button {
   color: #000;
   text-transform: none; }
   .main-btn:hover {
-    background-color: #0E9F84;
-    border-color: #000; }
+    background-color: #000;
+    border-color: #000;
+    color: #fff; }
 
 .btn_green {
   position: relative;
@@ -792,7 +793,7 @@ g.gasStations {
 .t-text {
   position: absolute;
   top: 50%;
-  right: 100px;
+  right: 120px;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -851,8 +852,11 @@ g.gasStations {
   text-transform: none; }
 
 .second-slide {
-  font-weight: normal;
-  line-height: 30px; }
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 12px;
+  color: #000;
+  font-family: 'OpenSans'; }
 
 .main-nav {
   position: absolute;
@@ -924,11 +928,13 @@ g.gasStations {
     fill: #F7FAF9; }
   .c-btns.disabled {
     opacity: 0.4;
-    cursor: default; }
+    cursor: default;
+    width: 55px;
+    height: 55px; }
     .c-btns.disabled.nextButton {
-      right: 5px; }
+      right: 15px; }
     .c-btns.disabled.prevButton {
-      left: 5px; }
+      left: 15px; }
 
 .nextButton {
   right: 20px; }
@@ -1058,7 +1064,21 @@ g.gasStations {
     content: "";
     display: block;
     background: url("../img/arr-bott.svg") 0 0 no-repeat; }
+  .button-list__main:hover {
+    position: relative;
+    background: #F7FAF9;
+    height: 61px;
+    line-height: 61px;
+    border: 2px solid  #4A4A4A;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0 25px;
+    font-size: 20px;
+    -webkit-transition: border 0.2s ease;
+    transition: border 0.2s ease; }
   .open .button-list__main {
+    background: #F7FAF9;
     border: 2px solid  #fff;
     -webkit-transition: border 0.2s ease;
     transition: border 0.2s ease;
@@ -1233,14 +1253,26 @@ g.gasStations {
 .second-section__item__titles-list__item#suburbs-housing .t-title {
   top: 41%;
   left: 23%; }
+  @media screen and (min-height: 1500px) {
+    .second-section__item__titles-list__item#suburbs-housing .t-title {
+      top: 38%;
+      left: 30%; } }
 
 .second-section__item__titles-list__item#suburbs-walkability .t-title {
   top: 41%;
   left: 41%; }
+  @media screen and (min-height: 1500px) {
+    .second-section__item__titles-list__item#suburbs-walkability .t-title {
+      top: 38%;
+      left: 30%; } }
 
 .second-section__item__titles-list__item#suburbs-emissions .t-title {
   top: 41%;
   left: 41%; }
+  @media screen and (min-height: 1500px) {
+    .second-section__item__titles-list__item#suburbs-emissions .t-title {
+      top: 38%;
+      left: 30%; } }
 
 .second-section__item__titles-list__item#nn-housing .t-title_first {
   top: 18%;
@@ -1258,6 +1290,20 @@ g.gasStations {
   top: 31%;
   left: 66%; }
 
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#nn-housing .t-title_first {
+    top: 20%;
+    left: 25%; }
+  .second-section__item__titles-list__item#nn-housing .t-title_second {
+    top: 37%;
+    left: 37%; }
+  .second-section__item__titles-list__item#nn-housing .t-title_third {
+    top: 42%;
+    left: 20%; }
+  .second-section__item__titles-list__item#nn-housing .t-title_forth {
+    top: 37%;
+    left: 69%; } }
+
 .second-section__item__titles-list__item#nn-walkability .t-title_first {
   top: 18%;
   left: 19%; }
@@ -1273,6 +1319,20 @@ g.gasStations {
 .second-section__item__titles-list__item#nn-walkability .t-title_forth {
   top: 47%;
   left: 71%; }
+
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#nn-walkability .t-title_first {
+    top: 20%;
+    left: 25%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_second {
+    top: 49%;
+    left: 47%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_third {
+    top: 42%;
+    left: 62%; }
+  .second-section__item__titles-list__item#nn-walkability .t-title_forth {
+    top: 37%;
+    left: 69%; } }
 
 .second-section__item__titles-list__item#nn-emissions .t-title_first {
   top: 18%;
@@ -1290,6 +1350,20 @@ g.gasStations {
   top: 47%;
   left: 71%; }
 
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#nn-emissions .t-title_first {
+    top: 21%;
+    left: 24%; }
+  .second-section__item__titles-list__item#nn-emissions .t-title_second {
+    top: 37%;
+    left: 41%; }
+  .second-section__item__titles-list__item#nn-emissions .t-title_third {
+    top: 37%;
+    left: 70%; }
+  .second-section__item__titles-list__item#nn-emissions .t-title_forth {
+    top: 37%;
+    left: 69%; } }
+
 .second-section__item__titles-list__item#dt-housing .t-title_first {
   top: 46%;
   left: 33%; }
@@ -1297,6 +1371,14 @@ g.gasStations {
 .second-section__item__titles-list__item#dt-housing .t-title_second {
   top: 35%;
   left: 49%; }
+
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#dt-housing .t-title_first {
+    top: 43%;
+    left: 38%; }
+  .second-section__item__titles-list__item#dt-housing .t-title_second {
+    top: 35%;
+    left: 55%; } }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_first {
   top: 37%;
@@ -1310,6 +1392,17 @@ g.gasStations {
   top: 57%;
   left: 47%; }
 
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#dt-walkability .t-title_first {
+    top: 40%;
+    left: 30%; }
+  .second-section__item__titles-list__item#dt-walkability .t-title_second {
+    top: 35%;
+    left: 56%; }
+  .second-section__item__titles-list__item#dt-walkability .t-title_third {
+    top: 57%;
+    left: 53%; } }
+
 .second-section__item__titles-list__item#dt-emissions .t-title_first {
   top: 46%;
   left: 33%; }
@@ -1317,6 +1410,14 @@ g.gasStations {
 .second-section__item__titles-list__item#dt-emissions .t-title_second {
   top: 35%;
   left: 49%; }
+
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#dt-emissions .t-title_first {
+    top: 43%;
+    left: 38%; }
+  .second-section__item__titles-list__item#dt-emissions .t-title_second {
+    top: 35%;
+    left: 55%; } }
 
 .second-section__item__titles-list__item#corner-housing .t-title_second {
   top: 29%;
@@ -1330,9 +1431,25 @@ g.gasStations {
   top: 39%;
   left: 34%; }
 
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#corner-housing .t-title_second {
+    top: 32%;
+    left: 55%; }
+  .second-section__item__titles-list__item#corner-housing .t-title_first {
+    top: 21%;
+    left: 22%; }
+  .second-section__item__titles-list__item#corner-housing .t-title_third {
+    top: 42%;
+    left: 44%; } }
+
 .second-section__item__titles-list__item#corner-walkability .t-title_first {
   top: 29%;
   left: 24%; }
+
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#corner-walkability .t-title_first {
+    top: 29%;
+    left: 33%; } }
 
 .second-section__item__titles-list__item#corner-emissions .t-title_second {
   top: 29%;
@@ -1345,6 +1462,17 @@ g.gasStations {
 .second-section__item__titles-list__item#corner-emissions .t-title_third {
   top: 39%;
   left: 34%; }
+
+@media screen and (min-height: 1500px) {
+  .second-section__item__titles-list__item#corner-emissions .t-title_second {
+    top: 32%;
+    left: 55%; }
+  .second-section__item__titles-list__item#corner-emissions .t-title_first {
+    top: 21%;
+    left: 22%; }
+  .second-section__item__titles-list__item#corner-emissions .t-title_third {
+    top: 42%;
+    left: 44%; } }
 
 .second-section__item__titles-list__item.active .t-title {
   width: auto;
@@ -1513,7 +1641,7 @@ g.gasStations {
   transition: opacity 0.4s ease 0s, height 0s ease 0.4s, width 0s ease 0.4s, padding 0s ease 0.4s; }
   .popup-active .t-title__popup {
     width: 230px;
-    padding: 20px 10px 20px 20px;
+    padding: 15px 10px 20px 20px;
     height: auto;
     opacity: 1;
     -webkit-transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
@@ -1524,14 +1652,13 @@ g.gasStations {
   font-size: 14px;
   text-align: left;
   line-height: 16px;
-  padding: 0 0 25px; }
+  padding: 0 0 20px; }
 
 .t-title__popup__icons__row {
   display: block;
   font-size: 14px;
   line-height: 16px;
   font-weight: 200;
-  color: #000;
   padding: 0 0 20px; }
   .t-title__popup__icons__row i {
     vertical-align: middle;
@@ -1875,14 +2002,14 @@ g.gasStations {
 .info-text h4 {
   font-weight: normal;
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 22px;
   font-family: 'OpenSans', sans-serif;
   font-weight: 300; }
 
 .info-text p {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 18px;
   padding-bottom: 10px;
   font-family: 'OpenSans', sans-serif;
   font-weight: 300; }
@@ -2137,14 +2264,14 @@ g.gasStations {
     padding: 0 0 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    font-weight: 700; }
+    font-weight: 100; }
   .r-text p {
     text-align: center;
     color: #000;
     font-size: 20px;
     line-height: 22px;
     font-weight: 200;
-    padding: 0 0 20px; }
+    padding: 0 0 40px; }
   .r-text .main-btn {
     font-size: 20px;
     padding: 0 35px; }
@@ -2179,7 +2306,7 @@ g.gasStations {
   font-size: 16px;
   line-height: 18px;
   color: #000;
-  font-weight: 600;
+  font-weight: 100;
   padding: 0 0 0 40px;
   margin: 0 0 25px;
   font-family: 'OpenSans', sans-serif; }
@@ -2230,6 +2357,10 @@ g.gasStations {
     visibility: hidden;
     -webkit-transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
     transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s; }
+  .swiper-slider .swiper-next:hover svg g, .swiper-slider .swiper-prev:hover svg g {
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+    fill: #F7FAF9; }
 
 .swiper-slider .swiper-next {
   right: 30px; }

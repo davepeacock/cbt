@@ -120,7 +120,7 @@ g.gasStations{
 .t-text{
 	position: absolute;
 	top: 50%;
-	right: 100px;
+	right: 120px;
 	transform: translate(0, -50%);
 	z-index: 12;
 
@@ -193,8 +193,11 @@ g.gasStations{
 }
 
 .second-slide{
-	font-weight: normal;
+	font-weight: 600;
 	line-height: 30px;
+	font-size: 12px;
+	color: #000;
+	font-family: 'OpenSans';
 }
 
 .main-nav{
@@ -296,13 +299,15 @@ g.gasStations{
 	&.disabled{
 		opacity: 0.4;
 		cursor: default;
+		width: 55px;
+    	height: 55px;
 
 		&.nextButton{
-			right: 5px;
+			right: 15px;
 		}
 
 		&.prevButton{
-			left: 5px;
+			left: 15px;
 		}
 	}
 }
@@ -472,7 +477,23 @@ g.gasStations{
 		background: url('../img/arr-bott.svg') 0 0 no-repeat;
 	}
 
+	&:hover{
+		position: relative;
+		background: #F7FAF9;
+		height: 61px;
+		line-height: 61px;
+		border: 2px solid  #4A4A4A;
+		border-radius: 3px;
+		cursor: pointer;
+		text-align: left;
+		padding: 0 25px;
+		font-size: 20px;
+		-webkit-transition: border 0.2s ease;
+		transition: border 0.2s ease;
+	}
+
 	.open &{
+		background: #F7FAF9;
 		border: 2px solid  #fff;
 		transition: border 0.2s ease;
 		border-radius: 3px 3px 0 0;
@@ -694,6 +715,11 @@ g.gasStations{
 		.t-title{
 			top: 41%;
 			left: 23%;
+
+			@media screen and (min-height: 1500px){
+				top: 38%;
+				left: 30%;
+			}
 		}
 	}
 
@@ -702,6 +728,11 @@ g.gasStations{
 		.t-title{
 			top: 41%;
 			left: 41%;
+
+			@media screen and (min-height: 1500px){
+				top: 38%;
+				left: 30%;
+			}
 		}
 	}
 
@@ -710,6 +741,11 @@ g.gasStations{
 		.t-title{
 			top: 41%;
 			left: 41%;
+
+			@media screen and (min-height: 1500px){
+				top: 38%;
+				left: 30%;
+			}
 		}
 	}
 
@@ -733,10 +769,28 @@ g.gasStations{
 		.t-title_forth{
 			top: 31%;
 			left: 66%;
+		}
 
-			.t-title__main{
+		@media screen and (min-height: 1500px){
 
+			.t-title_first{
+				top: 20%;
+				left: 25%;
+			}
 
+			.t-title_second{
+				top: 37%;
+				left: 37%;
+			}
+
+			.t-title_third{
+				top: 42%;
+				left: 20%;
+			}
+
+			.t-title_forth{
+				top: 37%;
+				left: 69%;
 			}
 		}
 	}
@@ -762,6 +816,29 @@ g.gasStations{
 			top: 47%;
 			left: 71%;
 		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 20%;
+				left: 25%;
+			}
+
+			.t-title_second{
+				top: 49%;
+				left: 47%;
+			}
+
+			.t-title_third{
+				top: 42%;
+				left: 62%;
+			}
+
+			.t-title_forth{
+				top: 37%;
+				left: 69%;
+			}
+		}
 	}
 
 	&#nn-emissions{
@@ -785,6 +862,29 @@ g.gasStations{
 			top: 47%;
 			left: 71%;
 		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 21%;
+				left: 24%;
+			}
+
+			.t-title_second{
+				top: 37%;
+				left: 41%;
+			}
+
+			.t-title_third{
+				top: 37%;
+				left: 70%;
+			}
+
+			.t-title_forth{
+				top: 37%;
+				left: 69%;
+			}
+		}
 	}
 
 	&#dt-housing{
@@ -797,6 +897,19 @@ g.gasStations{
 		.t-title_second{
 			top: 35%;
 			left: 49%;
+		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 43%;
+				left: 38%;
+			}
+
+			.t-title_second{
+				top: 35%;
+				left: 55%;
+			}
 		}
 	}
 
@@ -816,6 +929,24 @@ g.gasStations{
 			top: 57%;
 			left: 47%;
 		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 40%;
+				left: 30%;
+			}
+
+			.t-title_second{
+				top: 35%;
+				left: 56%;
+			}
+
+			.t-title_third{
+				top: 57%;
+				left: 53%;
+			}
+		}
 	}
 
 	&#dt-emissions{
@@ -829,14 +960,22 @@ g.gasStations{
 			top: 35%;
 			left: 49%;
 		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 43%;
+				left: 38%;
+			}
+
+			.t-title_second{
+				top: 35%;
+				left: 55%;
+			}
+		}
 	}
 
 	&#corner-housing{
-
-		.t-title{
-			// top: 17%;
-			// left: 37%;
-		}
 
 		.t-title_second{
 			top: 29%;
@@ -852,6 +991,24 @@ g.gasStations{
 			top: 39%;
 			left: 34%;
 		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_second{
+				top: 32%;
+				left: 55%;
+			}
+
+			.t-title_first{
+				top: 21%;
+				left: 22%;
+			}
+
+			.t-title_third{
+				top: 42%;
+				left: 44%;
+			}
+		}
 	}
 
 	&#corner-walkability{
@@ -859,6 +1016,14 @@ g.gasStations{
 		.t-title_first{
 			top: 29%;
 			left: 24%;
+		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_first{
+				top: 29%;
+				left: 33%;
+			}
 		}
 	}
 
@@ -877,6 +1042,24 @@ g.gasStations{
 		.t-title_third{
 			top: 39%;
 			left: 34%;
+		}
+
+		@media screen and (min-height: 1500px){
+
+			.t-title_second{
+				top: 32%;
+				left: 55%;
+			}
+
+			.t-title_first{
+				top: 21%;
+				left: 22%;
+			}
+
+			.t-title_third{
+				top: 42%;
+				left: 44%;
+			}
 		}
 	}
 
@@ -1154,7 +1337,7 @@ g.gasStations{
 
 	.popup-active &{
 		width: 230px;
-		padding: 20px 10px 20px 20px;
+		padding: 15px 10px 20px 20px;
 		height: auto;
 		opacity: 1;
 		transition: opacity 0.4s ease 0s, height 0s ease 0s, width 0s ease 0s, padding 0s ease 0s;
@@ -1166,7 +1349,7 @@ g.gasStations{
 	font-size: 14px;
 	text-align: left;
 	line-height: 16px;
-	padding: 0 0 25px;
+	padding: 0 0 20px;
 }
 
 .t-title__popup__icons{
@@ -1179,7 +1362,6 @@ g.gasStations{
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 200;
-	color: #000;
 	padding: 0 0 20px;
 
 	i{
@@ -1500,7 +1682,7 @@ g.gasStations{
 	h4{
 		font-weight: normal;
 		padding-bottom: 20px;
-		font-size: 20px;
+		font-size: 15px;
 		line-height: 22px;
 		font-family: 'OpenSans', sans-serif;
 		font-weight: 300;
@@ -1508,7 +1690,7 @@ g.gasStations{
 
 	p{
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 18px;
 		padding-bottom: 10px;
 		font-family: 'OpenSans', sans-serif;
 		font-weight: 300;
@@ -1833,7 +2015,7 @@ g.gasStations{
 		padding: 0 0 20px;
 		text-align: center;
 		font-family: 'Oswald', sans-serif;
-		font-weight: 700;
+		font-weight: 100;
 	}
 
 	p{
@@ -1842,7 +2024,7 @@ g.gasStations{
 		font-size: 20px;
 		line-height: 22px;
 		font-weight: 200;
-		padding: 0 0 20px;
+		padding: 0 0 40px;
 	}
 
 	.main-btn{
@@ -1909,7 +2091,7 @@ g.gasStations{
 		font-size: 16px;
 		line-height: 18px;
 		color: #000;
-		font-weight: 600;
+		font-weight: 100;
 		padding: 0 0 0 40px;
 		margin: 0 0 25px;
 		font-family: 'OpenSans', sans-serif;
@@ -1973,6 +2155,16 @@ g.gasStations{
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
+		}
+
+		&:hover{
+
+			svg{
+				g{
+					transition: fill 0.3s ease;
+					fill: #F7FAF9;
+				}
+			}
 		}
 	}
 

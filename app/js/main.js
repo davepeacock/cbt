@@ -580,41 +580,11 @@ function SecondSection(){
 		$container.children('.second-section__choices').find('.button-list__drop__item .btn').off('mouseenter mouseleave click');
 
 		if(BV){
-			console.log("destroy");
 			BV.dispose();
 		}
 
 		$('.i-popup__close, .second-section-start .bott-text__bott__link,.first-section-start,.play-section-video, .second-section, .button-list__main').off('click');
 	}
-
-	// function updateSize(container, elem, mediaAspect) {
-	// 	var containerW = container.outerWidth() < $(window).width() ? container.outerWidth() : $(window).width(),
-	// 		containerH = container.outerHeight() < $(window).height() ? container.outerHeight() : $(window).height(),
-	// 		containerAspect = containerW/containerH;
-	//
-	// 	if (containerAspect < mediaAspect) {
-	// 		console.log("taller");
-	// 		// taller
-	// 		$(container)
-	// 			.css('top',0)
-	// 			.css('left',-(containerH*mediaAspect-containerW)/2)
-	// 			.css('height',containerH);
-	//
-	// 		$(elem)
-	// 			.css('width',containerH*mediaAspect)
-	// 			.css('height',containerH);
-	// 	} else {
-	// 		// wider
-	// 		console.log("wider");
-	// 		$(container)
-	// 			.css('top',-(containerW/mediaAspect-containerH)/2)
-	// 			.css('left',0)
-	// 			.css('height',containerW/mediaAspect);
-	// 		$(elem)
-	// 			.css('width',$(elem).parent().width()+"px")
-	// 			.css('height','auto');
-	// 	}
-	// }
 
 	function updateSize(container, elem, mediaAspect) {
 		var containerW = container.outerWidth() < $(window).width() ? container.outerWidth() : $(window).width(),
@@ -693,7 +663,6 @@ function SecondSection(){
 
 		var $this = $(this),
 		$parent = $this.closest('.second-section__item.visible');
-		console.log($this.attr('href').slice(1), $('.second-section__item'));
 		$parent.find('.button-list').removeClass('hidden');
 		$parent.removeClass('visible');
 		$parent.find('.second-section__item__image').removeClass('active show-titles');
@@ -825,7 +794,6 @@ function SecondSection(){
 
 				if(i === 0){
 					$img.on('load', function(){
-						console.log("img loaded");
 						$sectionItem.closest('.second-section__item').addClass('visible');
 						$('#big-video-wrap').addClass('hidden');
 						addEvents($img, $sectionItem.children('.second-section__item__image-list'));
@@ -865,10 +833,12 @@ function SecondSection(){
 					$('.button-list').removeClass('hidden');
 
 					$container.find('.second-section__item__image').removeClass('show-titles');
-					$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('show-titles');
+					$container.find('.second-section__item__image[eq="'+$sectionN+'"]').addClass('show-titles').removeClass('active');
 					$('.second-section__item__titles-list__item, .second-section__item__bott-list__item').removeClass('active');
 					$('.second-section__item__titles-list__item#'+$this.attr('data-section-name')+'').addClass('active');
 					$('.second-section__item__bott-list__item[data-section-name="'+$this.attr('data-section-name')+'"]').addClass('active');
+
+
 				});
 			}
 		});
@@ -885,21 +855,26 @@ function SecondSection(){
 
 function ThirdSection(){
 	var $container = $('#thirdSection'),
-		swiperInst;
+		$section,
+		swiperInst,
+		checkArrIndex = [],
+		checkedCount = 0;
 
 	this.init = function(hash, itemId){
-		var $checkBoxList = $container.find('.check-box-list'),
-			 $checkBoxListItem = $checkBoxList.find('.check-box'),
-			 checkedCount = 0,
-			 checkArrIndex = [];
 
-		$container.addClass('visible');
-		setSectionHash(hash);
-		$container.children('[data-prevSection="'+itemId+'"]').addClass('visible');
-		$container.find('.third-section__item__img').css('background-image', 'url('+sectionItemBgList[itemId][4]+')');
-		$container.find('.third-section__item__step').eq(0).addClass('visible');
+		var $checkBoxList,
+			 $checkBoxListItem;
 
-		$container.find('.check-step').on('click', function(e){
+	 	$container.addClass('visible');
+ 		setSectionHash(hash);
+		$section = $container.children('[data-prevSection="'+itemId+'"]').addClass('visible');
+
+		changeBg($section, itemId);
+
+		$checkBoxList = $section.find('.check-box-list');
+		$checkBoxListItem = $section.find('.check-box');
+
+		$section.find('.check-step').on('click', function(e){
 			e.preventDefault();
 			var $this = $(this),
 				$parent = $this.closest('.third-section__item__step'),
@@ -918,7 +893,7 @@ function ThirdSection(){
 			}
 		});
 
-		$('.next-slide-step').on('click', function(e){
+		$section.find('.next-slide-step').on('click', function(e){
 			e.preventDefault();
 			swiperInst.slideNext(true);
 		});
@@ -948,21 +923,26 @@ function ThirdSection(){
 			}
 		});
 
-		$('.pr-start').on('click', function(e){
+		$section.find('.pr-start').on('click', function(e){
 			e.preventDefault();
 
-			$('.third-section__item__step').removeClass('visible').first().addClass('visible');
+			$(this).closest('.third-section__item.visible').find('.third-section__item__step').removeClass('visible').first().addClass('visible');
 			setTimeout(function(){
 				swiperInst.slideTo(0, 0, true);
 			}, 400);
 		});
 	};
 
+	function changeBg($container, itemName){
+		$container.find('.third-section__item__img').css('background-image', 'url('+sectionItemBgList[itemName][4]+')');
+		$container.find('.third-section__item__step').eq(0).addClass('visible');
+	}
+
 	function initSwiper($container){
-		var $swContainer = $container.find('.swiper-container'),
-			$pagination = $container.find('.swiper-pagination'),
-			$nextBtn = $container.find('.swiper-next'),
-			$prevBtn = $container.find('.swiper-prev');
+		var $swContainer = $section.find('.swiper-container'),
+			$pagination = $section.find('.swiper-pagination'),
+			$nextBtn = $section.find('.swiper-next'),
+			$prevBtn = $section.find('.swiper-prev');
 
 		swiperInst = new Swiper($swContainer, {
 			pagination: $pagination,
@@ -973,7 +953,7 @@ function ThirdSection(){
         	prevButton: $prevBtn,
 			paginationClickable: true,
 			onSlideChangeEnd: function(swiper){
-				if(swiper.activeIndex !== 0 && swiper.activeIndex <= 3){
+				if(swiper.activeIndex !== 0 && swiper.activeIndex <= swiper.slides.length - 2){
 					swiper.container.find('.swiper-pagination').removeClass('hidden');
 				}else {
 					swiper.container.find('.swiper-pagination').addClass('hidden');
@@ -1008,6 +988,21 @@ function ThirdSection(){
 	this.destroy = function() {
 		$container.children('div').removeClass('visible').find('.third-section__item__img').removeClass('visible');
 		$container.find('.third-section__item__step').removeClass('visible');
+
+		if(swiperInst !== undefined){
+			swiperInst.destroy(true, true);
+			swiperInst = undefined;
+		}
+
+		checkedCount = 0;
+		checkArrIndex = [];
+
+		$section.find('.next-slide-step').off('click');
+
+		$('.pr-start').off('click');
+
+		$section.find('.check-step').off('click');
+		$section.find('.check-box').find('input').off('change').prop('checked', false);
 	}
 }
 
@@ -1058,6 +1053,7 @@ function loadSection(location){
 		$('.second-section__item__image-list').children().remove();
 		$('.second-section__item__bott-list__item').removeClass('active');
 		$('.second-section').removeClass('visible');
+		$('.third-section__item').removeClass('visible');
 		$('.third-section__item__step').removeClass('visible');
 		$('#thirdSection').removeClass('visible');
 
@@ -1073,6 +1069,8 @@ function loadSection(location){
 		$('.second-section__choices').fadeIn();
 		$('.second-section__item__image-list').children().remove();
 		$('.second-section__item__bott-list__item').removeClass('active');
+
+		thirdSection.destroy();
 
 		secondSection = new SecondSection();
 		secondSection.init('simulation');
