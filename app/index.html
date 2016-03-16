@@ -25,6 +25,7 @@
 	<!-- endbuild -->
 	<!-- build:js js/main.js -->
 	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/main.js"></script>
 	<!-- endbuild -->
 	<link rel="stylesheet" href="css/style.css" />
@@ -34497,8 +34498,8 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
-												View Walkability Map
+											<a href="#suburbs-walk" class="suburbs-popup fancy-popup">
+												 View Walkability Map
 											</a>
 										</span>
 									</div>
@@ -34756,7 +34757,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#nn" class="nn-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -34776,7 +34777,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#nn" class="nn-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -34795,7 +34796,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#nn" class="nn-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -35057,7 +35058,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#down" class="down-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -35076,7 +35077,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#down" class="down-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -35095,7 +35096,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#down" class="down-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -35185,7 +35186,7 @@
 									35% trips taken by walking
 								</div>
 								<div class="r-graph__row">
-									<div class="graph graph_white" style="width: 50%;"></div>
+									<div class="graph graph_white" style="width: 41%;"></div>
 									65% trips taken by other means
 								</div>
 							</div>
@@ -35352,7 +35353,7 @@
 									<div class="t-title__popup__icons">
 										<span class="t-title__popup__icons__row">
 											<i class="icon-blue-person"></i>
-											<a href="#">
+											<a href="#corner-walk" class="walkability-popup fancy-popup">
 												 View Walkability Map
 											</a>
 										</span>
@@ -35453,7 +35454,7 @@
 									5% trips taken by walking
 								</div>
 								<div class="r-graph__row">
-									<div class="graph graph_white" style="width: 70%;"></div>
+									<div class="graph graph_white" style="width: 42%;"></div>
 									90% trips taken by other means
 								</div>
 							</div>
@@ -35548,8 +35549,135 @@
 					</div>
 					<a href="#" class="prev-link">Return to Simulation</a>
 				</div>
+
+
 				<div class="third-section__item__step swiper-box">
 					<div class="third-section__item__step_i">
+						<!-- swiper slider -->
+						<div class="swiper-slides-list">
+							<div class="swiper-slide" data-input-id="town1">
+								<div class="swiper-slide_i">
+									<img src="img/slider/1.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Infilling Downtown
+											</h4>
+											<p>
+												The downtown option accommodates 500 people within the smallest land area, over 5 times smaller than the Suburban option.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="more1">
+								<div class="swiper-slide_i">
+									<img src="img/slider/2.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Downtown Housing Types
+											</h4>
+											<p>
+												The Downtown option has less diverse housing choices because it has only apartment or town homes.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="daily1">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Downtown Services
+											</h4>
+											<p>
+												The Downtown option provides the greatest diversity of shops and services near a large number of people.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="transit1">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Downtown Mobility
+											</h4>
+											<p>
+												The Downtown option provides a high diversity of shops and services that are very accessible by walking and biking.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="boundary1">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Downtown Development
+											</h4>
+											<p>
+												To avoid impacting the existing neighbourhood, the Downtown option can meet this priority by directing new development to underdeveloped downtown sites such as parking lots.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide swiper-no-swiping" data-input-id="last-slide">
+								<div class="swiper-slide_i">
+									<div class="r-text r-text_diff">
+										<h2>CHOOSE THREE PRIORITIES FOR DOWNTOWN</h2>
+										<p>
+											Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
+											<br>
+											<br>
+										</p>
+										<p>
+											<a href="#" class="">
+												Start Again
+											</a>
+											<br>
+										</p>
+									</div>
+								</div>
+								<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
+								<a href="#" class="credits">
+									Site Credits
+								</a>
+							</div>
+						</div>
 						<div class="swiper-slider">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
@@ -35584,129 +35712,6 @@
 												</p>
 											</div>
 										</div>
-									</div>
-
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/1.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Infilling Downtown
-													</h4>
-													<p>
-														The downtown option accommodates 500 people within the smallest land area, over 5 times smaller than the Suburban option.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/2.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Downtown Housing Types
-													</h4>
-													<p>
-														The Downtown option has less diverse housing choices because it has only apartment or town homes.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Downtown Services
-													</h4>
-													<p>
-														The Downtown option provides the greatest diversity of shops and services near a large number of people.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Downtown Mobility
-													</h4>
-													<p>
-														The Downtown option provides a high diversity of shops and services that are very accessible by walking and biking.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Downtown Development
-													</h4>
-													<p>
-														To avoid impacting the existing neighbourhood, the Downtown option can meet this priority by directing new development to underdeveloped downtown sites such as parking lots.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-no-swiping">
-										<div class="swiper-slide_i">
-											<div class="r-text r-text_diff">
-												<h2>CHOOSE THREE PRIORITIES FOR DOWNTOWN</h2>
-												<p>
-													Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
-													<br>
-													<br>
-												</p>
-												<p>
-													<a href="#" class="">
-														Start Again
-													</a>
-													<br>
-												</p>
-											</div>
-										</div>
-										<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
-										<a href="#" class="credits">
-											Site Credits
-										</a>
 									</div>
 								</div>
 								<!-- Add Pagination -->
@@ -35765,6 +35770,131 @@
 				</div>
 				<div class="third-section__item__step swiper-box">
 					<div class="third-section__item__step_i">
+						<!-- swiper slider -->
+						<div class="swiper-slides-list">
+							<div class="swiper-slide" data-input-id="town2">
+								<div class="swiper-slide_i">
+									<img src="img/slider/1.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Infilling Neighbourhood Nodes
+											</h4>
+											<p>
+												The Neighbourhood Node accommodates 500 people in land area. That is about 3 times smaller than the Suburban option.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="more2">
+								<div class="swiper-slide_i">
+									<img src="img/slider/2.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Neighbourhood Nodes  Housing Types
+											</h4>
+											<p>
+												The Neighbourhood Node option provides the greatest diversity of housing types by including apartments, town homes and duplexes, and single family detached homes nearby.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="daily2">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Neighbourhood Nodes Services
+											</h4>
+											<p>
+												The Neighbourhood Centre option provides a modest selection of shops and services near a significant number of people.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="transit2">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Neighbourhood Nodes Mobility
+											</h4>
+											<p>
+												The Neighbourhood Center option provides a diversity of shops and services that are accessible by walking and cycling for residents who are nearby.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="boundary2">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Neighbourhood Nodes Development
+											</h4>
+											<p>
+												The Neighbourhood Nodes option accommodates growth by redeveloping sites in existing neighbourhoods, which will impact those neighbourhoods.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide swiper-no-swiping" data-input-id="last-slide">
+								<div class="swiper-slide_i">
+									<div class="r-text r-text_diff">
+										<h2>CHOOSE THREE PRIORITIES FOR neighbourhood</h2>
+										<p>
+											Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
+											<br>
+											<br>
+										</p>
+										<p>
+											<a href="#" class="">
+												Start Again
+											</a>
+											<br>
+										</p>
+									</div>
+								</div>
+								<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
+								<a href="#" class="credits">
+									Site Credits
+								</a>
+							</div>
+						</div>
 						<div class="swiper-slider">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
@@ -35800,129 +35930,6 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/1.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Infilling Neighbourhood Nodes
-													</h4>
-													<p>
-														The Neighbourhood Node accommodates 500 people in land area. That is about 3 times smaller than the Suburban option.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/2.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Neighbourhood Nodes  Housing Types
-													</h4>
-													<p>
-														The Neighbourhood Node option provides the greatest diversity of housing types by including apartments, town homes and duplexes, and single family detached homes nearby.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Neighbourhood Nodes Services
-													</h4>
-													<p>
-														The Neighbourhood Centre option provides a modest selection of shops and services near a significant number of people.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Neighbourhood Nodes Mobility
-													</h4>
-													<p>
-														The Neighbourhood Center option provides a diversity of shops and services that are accessible by walking and cycling for residents who are nearby.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Neighbourhood Nodes Development
-													</h4>
-													<p>
-														The Neighbourhood Nodes option accommodates growth by redeveloping sites in existing neighbourhoods, which will impact those neighbourhoods.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-no-swiping">
-										<div class="swiper-slide_i">
-											<div class="r-text r-text_diff">
-												<h2>CHOOSE THREE PRIORITIES FOR neighbourhood</h2>
-												<p>
-													Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
-													<br>
-													<br>
-												</p>
-												<p>
-													<a href="#" class="">
-														Start Again
-													</a>
-													<br>
-												</p>
-											</div>
-										</div>
-										<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
-										<a href="#" class="credits">
-											Site Credits
-										</a>
-									</div>
 								</div>
 								<!-- Add Pagination -->
 								<div class="swiper-pagination"></div>
@@ -35939,7 +35946,6 @@
 										</g>
 									</svg>
 								</div>
-
 		 						<div class="swiper-prev">
 									<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 										<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -35964,6 +35970,7 @@
 				<div class="third-section__item__img"></div>
 				<div class="third-section__item__step">
 					<div class="third-section__item__step_i">
+
 						<div class="r-text">
 							<h2>SELECT THREE PRIORITIES FOR Corner</h2>
 							<p>
@@ -35980,6 +35987,131 @@
 				</div>
 				<div class="third-section__item__step swiper-box">
 					<div class="third-section__item__step_i">
+						<!-- swiper slider -->
+						<div class="swiper-slides-list">
+							<div class="swiper-slide" data-input-id="town3">
+								<div class="swiper-slide_i">
+									<img src="img/slider/1.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Infilling Corner Retail
+											</h4>
+											<p>
+												The Corner Retail option accommodates 500 people in a land area twice as big as the Downtown option, but less than half that of the Suburban option.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="more3">
+								<div class="swiper-slide_i">
+									<img src="img/slider/2.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Corner Retail  Housing Types
+											</h4>
+											<p>
+												The Corner Retail option is moderately diverse with town homes, duplexes and single family detached homes nearby.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="daily3">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Corner Retail Services
+											</h4>
+											<p>
+												The Corner Retail option provides access for many people to one corner store.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="transit3">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Corner Retail Mobility
+											</h4>
+											<p>
+												The Corner Retail option provides very limited services within walking and cycling distance for residents who are nearby.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="boundary3">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Corner Retail Development
+											</h4>
+											<p>
+												The Corner Retail option accommodates growth by infilling smaller buildings in existing neighbourhoods, which can have minimal impact.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide swiper-no-swiping" data-input-id="last-slide">
+								<div class="swiper-slide_i">
+									<div class="r-text r-text_diff">
+										<h2>CHOOSE THREE PRIORITIES FOR corner</h2>
+										<p>
+											Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
+											<br>
+											<br>
+										</p>
+										<p>
+											<a href="#" class="">
+												Start Again
+											</a>
+											<br>
+										</p>
+									</div>
+								</div>
+								<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
+								<a href="#" class="credits">
+									Site Credits
+								</a>
+							</div>
+						</div>
 						<div class="swiper-slider">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
@@ -36015,129 +36147,6 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/1.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Infilling Corner Retail
-													</h4>
-													<p>
-														The Corner Retail option accommodates 500 people in a land area twice as big as the Downtown option, but less than half that of the Suburban option.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/2.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Corner Retail  Housing Types
-													</h4>
-													<p>
-														The Corner Retail option is moderately diverse with town homes, duplexes and single family detached homes nearby.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Corner Retail Services
-													</h4>
-													<p>
-														The Corner Retail option provides access for many people to one corner store.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Corner Retail Mobility
-													</h4>
-													<p>
-														The Corner Retail option provides very limited services within walking and cycling distance for residents who are nearby.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Corner Retail Development
-													</h4>
-													<p>
-														The Corner Retail option accommodates growth by infilling smaller buildings in existing neighbourhoods, which can have minimal impact.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-no-swiping">
-										<div class="swiper-slide_i">
-											<div class="r-text r-text_diff">
-												<h2>CHOOSE THREE PRIORITIES FOR corner</h2>
-												<p>
-													Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
-													<br>
-													<br>
-												</p>
-												<p>
-													<a href="#" class="">
-														Start Again
-													</a>
-													<br>
-												</p>
-											</div>
-										</div>
-										<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
-										<a href="#" class="credits">
-											Site Credits
-										</a>
-									</div>
 								</div>
 								<!-- Add Pagination -->
 								<div class="swiper-pagination"></div>
@@ -36154,7 +36163,6 @@
 										</g>
 									</svg>
 								</div>
-
 		 						<div class="swiper-prev">
 									<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 										<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -36193,10 +36201,133 @@
 					</div>
 					<a href="#" class="prev-link">Return to Simulation</a>
 				</div>
-
-
 				<div class="third-section__item__step swiper-box">
 					<div class="third-section__item__step_i">
+						<!-- swiper slider -->
+						<div class="swiper-slides-list">
+							<div class="swiper-slide" data-input-id="town4">
+								<div class="swiper-slide_i">
+									<img src="img/slider/1.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Infilling  the Suburbs
+											</h4>
+											<p>
+												The Suburb option accommodates 500 people in an area over 5 times larger than the Downtown option and converts open land to urban land uses.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="more4">
+								<div class="swiper-slide_i">
+									<img src="img/slider/2.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Suburban  Housing Types
+											</h4>
+											<p>
+												The Suburb option is the least diverse housing because it has only single family detached homes.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="daily4">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Suburban Services
+											</h4>
+											<p>
+												The Suburb option has no nearby shops and services and necessitates driving to these.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="transit4">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Suburban Mobility
+											</h4>
+											<p>
+												The Suburb option has no shops or services within walking distance.  Most people will drive to most destinations.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-input-id="boundary4">
+								<div class="swiper-slide_i">
+									<img src="img/slider/3.svg" alt="">
+								</div>
+								<div class="bott-text">
+									<div class="bott-text_i">
+										<div class="info-text">
+											<h4>
+												Suburban  Development
+											</h4>
+											<p>
+												By developing on a new site at the edge of town, the Suburb has the least direct impact on existing neighbourhoods.
+											</p>
+										</div>
+									</div>
+									<div class="bott-text__bott">
+										<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide swiper-no-swiping" data-input-id="last-slide">
+								<div class="swiper-slide_i">
+									<div class="r-text r-text_diff">
+										<h2>CHOOSE THREE PRIORITIES FOR suburbs</h2>
+										<p>
+											Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
+											<br>
+											<br>
+										</p>
+										<p>
+											<a href="#" class="">
+												Start Again
+											</a>
+											<br>
+										</p>
+									</div>
+								</div>
+								<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
+								<a href="#" class="credits">
+									Site Credits
+								</a>
+							</div>
+						</div>
 						<div class="swiper-slider">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
@@ -36232,129 +36363,6 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/1.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Infilling  the Suburbs
-													</h4>
-													<p>
-														The Suburb option accommodates 500 people in an area over 5 times larger than the Downtown option and converts open land to urban land uses.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/2.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Suburban  Housing Types
-													</h4>
-													<p>
-														The Suburb option is the least diverse housing because it has only single family detached homes.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Suburban Services
-													</h4>
-													<p>
-														The Suburb option has no nearby shops and services and necessitates driving to these.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Suburban Mobility
-													</h4>
-													<p>
-														The Suburb option has no shops or services within walking distance.  Most people will drive to most destinations.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-slide_i">
-											<img src="img/slider/3.svg" alt="">
-										</div>
-										<div class="bott-text">
-											<div class="bott-text_i">
-												<div class="info-text">
-													<h4>
-														Suburban  Development
-													</h4>
-													<p>
-														By developing on a new site at the edge of town, the Suburb has the least direct impact on existing neighbourhoods.
-													</p>
-												</div>
-											</div>
-											<div class="bott-text__bott">
-												<a href="#" class="bott-text__bott__link pr-start">Set my Priorities</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-no-swiping">
-										<div class="swiper-slide_i">
-											<div class="r-text r-text_diff">
-												<h2>CHOOSE THREE PRIORITIES FOR suburbs</h2>
-												<p>
-													Energy, emissions reduction and livability are all priorities crucial to the sustainability of Columbia Basin communities. Progress toward or away from these priorities is deeply embedded in the choices a community makes about its future (<b>text about effect on climate</b>).
-													<br>
-													<br>
-												</p>
-												<p>
-													<a href="#" class="">
-														Start Again
-													</a>
-													<br>
-												</p>
-											</div>
-										</div>
-										<a href="#" class="bott-text__bott__link pr-start l-link">Set my Priorities</a>
-										<a href="#" class="credits">
-											Site Credits
-										</a>
-									</div>
 								</div>
 								<!-- Add Pagination -->
 								<div class="swiper-pagination"></div>
@@ -36371,7 +36379,6 @@
 										</g>
 									</svg>
 								</div>
-
 		 						<div class="swiper-prev">
 									<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 										<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -36391,6 +36398,297 @@
 				</div>
 			</div>
 			<!-- end of suburbs -->
+		</div>
+	</div>
+
+	<div class="f-overlay">
+	</div>
+
+	<div class="hide">
+		<div id="corner-walk" class="popup">
+			<div class="swiper-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 2 minute walk radius
+								</p>
+								<img src="img/slider/w-corner.png" alt="">
+								<p>
+									Almost 4000 residents are within a 2 minute walk of a corner store in eight neighbourhoods.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 5 minute walk radius
+								</p>
+								<img src="img/slider/w-corner1.png" alt="">
+								<p>
+									About 2033 residents may live within a 5 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 10 minute walk radius
+								</p>
+								<img src="img/slider/w-corner2.png" alt="">
+								<p>
+									About 3218 residents may live within a 10 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+
+				</div>
+				
+				<div class="swiper-next">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="b-page2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Next1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group3" sketch:type="MSLayerGroup">
+									<circle id="Oval-2" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M39.4947391,29.9528478 L23.1903913,13.6485" id="Stroke-7" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+									<path d="M39.4947391,29.9528478 L23.1903913,46.2571957" id="Stroke-9" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="swiper-prev">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Previous1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group2">
+									<circle id="Oval-1" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M36.8096087,29.9528478 L20.5052609,13.6485" id="Stroke-7" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 21.800674) scale(-1, 1) translate(-28.657435, -21.800674) "></path>
+									<path d="M36.8096087,29.9528478 L20.5052609,46.2571957" id="Stroke-9" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 38.105022) scale(-1, 1) translate(-28.657435, -38.105022) "></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="suburbs-walk" class="popup">
+			<div class="swiper-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 2 minute walk radius
+								</p>
+								<img src="img/slider/w-corner.png" alt="">
+								<p>
+									Almost 4000 residents are within a 2 minute walk of a corner store in eight neighbourhoods.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 5 minute walk radius
+								</p>
+								<img src="img/slider/w-corner1.png" alt="">
+								<p>
+									About 2033 residents may live within a 5 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Corner Retail Walkability Map : 10 minute walk radius
+								</p>
+								<img src="img/slider/w-corner2.png" alt="">
+								<p>
+									About 3218 residents may live within a 10 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+
+				</div>
+				
+				<div class="swiper-next">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="b-page2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Next1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group3" sketch:type="MSLayerGroup">
+									<circle id="Oval-2" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M39.4947391,29.9528478 L23.1903913,13.6485" id="Stroke-7" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+									<path d="M39.4947391,29.9528478 L23.1903913,46.2571957" id="Stroke-9" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="swiper-prev">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Previous1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group2">
+									<circle id="Oval-1" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M36.8096087,29.9528478 L20.5052609,13.6485" id="Stroke-7" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 21.800674) scale(-1, 1) translate(-28.657435, -21.800674) "></path>
+									<path d="M36.8096087,29.9528478 L20.5052609,46.2571957" id="Stroke-9" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 38.105022) scale(-1, 1) translate(-28.657435, -38.105022) "></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="nn" class="popup">
+			<div class="swiper-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Neighbourhood Nodes  Walkability Map : 2 minute walk radius
+								</p>
+								<img src="img/slider/nn.png" alt="">
+								<p>
+									About 2500 residents are within a 5 minute walk of shops, services and offices in two neighbourhood nodes.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Neighbourhood Nodes Walkability Map : 5 minute walk radius
+								</p>
+								<img src="img/slider/nn1.png" alt="">
+								<p>
+									About 2500 residents are within a 5 minute walk of shops, services and offices in two neighbourhood nodes.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Neighbourhood Nodes Walkability Map : 10 minute walk radius
+								</p>
+								<img src="img/slider/nn2.png" alt="">
+								<p>
+									About 2500 residents are within a 5 minute walk of shops, services and offices in two neighbourhood nodes.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+
+				</div>
+				
+				<div class="swiper-next">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="b-page2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Next1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group3" sketch:type="MSLayerGroup">
+									<circle id="Oval-2" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M39.4947391,29.9528478 L23.1903913,13.6485" id="Stroke-7" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+									<path d="M39.4947391,29.9528478 L23.1903913,46.2571957" id="Stroke-9" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="swiper-prev">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Previous1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group2">
+									<circle id="Oval-1" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M36.8096087,29.9528478 L20.5052609,13.6485" id="Stroke-7" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 21.800674) scale(-1, 1) translate(-28.657435, -21.800674) "></path>
+									<path d="M36.8096087,29.9528478 L20.5052609,46.2571957" id="Stroke-9" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 38.105022) scale(-1, 1) translate(-28.657435, -38.105022) "></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="down" class="popup">
+			<div class="swiper-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Downtown Walkability Map : 2 minute walk radius
+								</p>
+								<img src="img/slider/down.png" alt="">
+								<p>
+									About 635 residents may live within a 2 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Downtown Walkability Map : 5 minute walk radius
+								</p>
+								<img src="img/slider/down1.png" alt="">
+								<p>
+									About 2000 residents are within a 5 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+						
+						<div class="swiper-slide">
+							<div class="sw-text">
+								<p>
+									Downtown Walkability Map : 10 minute walk radius
+								</p>
+								<img src="img/slider/down2.png" alt="">
+								<p>
+									About 3218 residents may live within a 10 minute walk of shops, services and offices in the downtown area.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+
+				</div>
+				
+				<div class="swiper-next">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="b-page2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Next1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group3" sketch:type="MSLayerGroup">
+									<circle id="Oval-2" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M39.4947391,29.9528478 L23.1903913,13.6485" id="Stroke-7" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+									<path d="M39.4947391,29.9528478 L23.1903913,46.2571957" id="Stroke-9" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div class="swiper-prev">
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						<g id="pp4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Previous1" sketch:type="MSArtboardGroup" stroke="#4A4A4A">
+								<g id="Group2">
+									<circle id="Oval-1" sketch:type="MSShapeGroup" cx="30" cy="30" r="29"></circle>
+									<path d="M36.8096087,29.9528478 L20.5052609,13.6485" id="Stroke-7" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 21.800674) scale(-1, 1) translate(-28.657435, -21.800674) "></path>
+									<path d="M36.8096087,29.9528478 L20.5052609,46.2571957" id="Stroke-9" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(28.657435, 38.105022) scale(-1, 1) translate(-28.657435, -38.105022) "></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

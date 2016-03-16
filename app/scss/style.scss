@@ -1,4 +1,5 @@
 @import "includes/settings";
+@import "includes/fancybox";
 @import "includes/common";
 @import "includes/sprite";
 @import "includes/swiper";
@@ -138,8 +139,8 @@ g.gasStations{
 
 	h2{
 		font-family: Open Sans, sans-serif;
-		font-size: 15px;
-		line-height: 22px;
+		font-size: 18px;
+		line-height: 28px;
 		color: #454545;
 		font-weight: 100;
 		text-align: right;
@@ -156,8 +157,8 @@ g.gasStations{
 
 	p{
 		font-family: Open Sans, sans-serif;
-		font-size: 15px;
-		line-height: 22px;
+		font-size: 18px;
+		line-height: 28px;
 		letter-spacing: 0.6px;
 		color: #454545;
 		font-weight: 100;
@@ -588,7 +589,7 @@ g.gasStations{
 		font-family: 'OpenSans';
 		font-size: 20px;
 		line-height: 27px;
-		font-weight: normal;
+		font-weight: 300;
 		text-align: center;
 		text-anchor: middle;
 	}
@@ -908,7 +909,8 @@ g.gasStations{
 
 			.t-title_second{
 				top: 35%;
-				left: 55%;
+				left: auto;
+				right: 43%;
 			}
 		}
 	}
@@ -939,7 +941,8 @@ g.gasStations{
 
 			.t-title_second{
 				top: 35%;
-				left: 56%;
+				left: auto;
+				right: 43%;
 			}
 
 			.t-title_third{
@@ -970,7 +973,8 @@ g.gasStations{
 
 			.t-title_second{
 				top: 35%;
-				left: 55%;
+				left: auto;
+				right: 42%;
 			}
 		}
 	}
@@ -996,7 +1000,8 @@ g.gasStations{
 
 			.t-title_second{
 				top: 32%;
-				left: 55%;
+				left: auto;
+				right: 38%;
 			}
 
 			.t-title_first{
@@ -1006,7 +1011,8 @@ g.gasStations{
 
 			.t-title_third{
 				top: 42%;
-				left: 44%;
+				left: auto;
+				right: 53%;
 			}
 		}
 	}
@@ -1031,7 +1037,8 @@ g.gasStations{
 
 		.t-title_second{
 			top: 29%;
-			left: 44%;
+			left: auto;
+			right: 39%;
 		}
 
 		.t-title_first{
@@ -1900,6 +1907,134 @@ g.gasStations{
 	}
 }
 
+#container {
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+}
+.f-overlay img {
+  height: 100%;
+  width: 100%;
+}
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  color: rgba(130, 130, 130, 0.5);
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fancybox-overlay{
+	background: none;
+}
+
+.f-overlay{
+	position: absolute;
+	z-index: 999;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease 0s, visibility 0s ease 0.3s;
+	filter: blur(3px);
+	background: rgba(255, 255, 255, 0.8);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	&.visible{
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.3s ease 0s, visibility 0s ease 0s;
+	}
+}
+
+.fancybox-opened .fancybox-skin{
+	background-color: transparent;
+	padding: 0;
+	box-shadow: none;
+}
+
+.fancybox-inner{
+	//padding: 0 80px;
+	//box-sizing: border-box;
+}
+
+.fancybox-close{
+	background: none;
+	width: 41px;
+	height: 47px;
+	top: 12px;
+	right: 12px;
+}
+
+.popup{
+	padding: 0 80px;
+
+	.swiper-slider {
+		position: relative;
+
+		.swiper-next{
+			right: -80px;
+		}
+
+		.swiper-prev{
+			left: -80px;
+		}
+
+		.swiper-pagination-bullets{
+			bottom: 0;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.4s ease, visibility 0s ease 0s;
+
+			.swiper-pagination-bullet{
+				height: 18px;
+				width: 18px;
+				background: #fff;
+				border: 1px solid  #000;
+
+				&.swiper-pagination-bullet-active{
+					background: #D8D8D8;
+					border: 1px solid  #979797;
+				}
+			}
+
+			&.hidden{
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
+			}
+		}
+	}
+
+	.swiper-slider .swiper-container .swiper-slide img{
+		max-width: 100%;
+		margin: 0 0 25px;
+	}
+}
+
+.sw-text{
+
+	p{
+		font-size: 20px;
+		line-height: 24px;
+		color: #000;
+		padding: 0 0 30px;
+		text-align: center;
+		font-weight: 300;
+	}
+
+	img{
+		width: 100%;
+		margin: 0 0 30px;
+	}
+}
+
 .third-section__item__step{
 	opacity: 0;
 	transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s;
@@ -1969,6 +2104,10 @@ g.gasStations{
 			bottom: 0;
 			right: 0;
 
+			.swiper-slides-list{
+				display: none;
+			}
+
 			.swiper-slider{
 				width: 100%;
 				height: 100%;
@@ -1980,6 +2119,7 @@ g.gasStations{
 
 				.swiper-slide{
 					position: relative;
+					opacity: 0;
 
 					.swiper-slide_i{
 						position: absolute;
@@ -1987,6 +2127,39 @@ g.gasStations{
 						left: 50%;
 						transform: translate(-50%, -50%);
 					}
+
+					&.swiper-slide-active{
+						opacity: 1;
+					}
+				}
+			}
+
+			.swiper-pagination-bullets{
+				bottom: 60px;
+				opacity: 1;
+				visibility: visible;
+				transition: opacity 0.4s ease, visibility 0s ease 0s;
+
+				.swiper-pagination-bullet{
+					height: 18px;
+					width: 18px;
+					background: #fff;
+					border: 1px solid  #000;
+
+					&.swiper-pagination-bullet-active{
+						background: #D8D8D8;
+						border: 1px solid  #979797;
+					}
+
+					&:first-child{
+						display: none;
+					}
+				}
+
+				&.hidden{
+					opacity: 0;
+					visibility: hidden;
+					transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
 				}
 			}
 		}
@@ -2021,8 +2194,8 @@ g.gasStations{
 	p{
 		text-align: center;
 		color: #000;
-		font-size: 20px;
-		line-height: 22px;
+		font-size: 18px;
+		line-height: 28px;
 		font-weight: 200;
 		padding: 0 0 40px;
 	}
@@ -2175,33 +2348,8 @@ g.gasStations{
 	.swiper-prev{
 		left: 30px;
 	}
+}
 
-	.swiper-pagination-bullets{
-		bottom: 60px;
-		opacity: 1;
-		visibility: visible;
-		transition: opacity 0.4s ease, visibility 0s ease 0s;
-
-		.swiper-pagination-bullet{
-			height: 18px;
-			width: 18px;
-			background: #fff;
-			border: 1px solid  #000;
-
-			&.swiper-pagination-bullet-active{
-				background: #D8D8D8;
-				border: 1px solid  #979797;
-			}
-
-			&:first-child{
-				display: none;
-			}
-		}
-
-		&.hidden{
-			opacity: 0;
-			visibility: hidden;
-			transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
-		}
-	}
+.hide{
+	display: none;
 }

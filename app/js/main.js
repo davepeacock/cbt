@@ -583,7 +583,7 @@ function SecondSection(){
 			BV.dispose();
 		}
 
-		$('.i-popup__close, .second-section-start .bott-text__bott__link,.first-section-start,.play-section-video, .second-section, .button-list__main').off('click');
+		$('.i-popup__close, .second-section-start .bott-text__bott__link,.first-section-start,.play-section-video, .second-section, .button-list__main, .t-title__main').off('click');
 	}
 
 	function updateSize(container, elem, mediaAspect) {
@@ -895,25 +895,37 @@ function ThirdSection(){
 
 		$section.find('.next-slide-step').on('click', function(e){
 			e.preventDefault();
+			var arrOfElements = [];
+
+			var $list = $(this).closest('.third-section__item__step').find('.swiper-slides-list');
+
+			for(i = 0; i < checkArrIndex.length; i++){
+				arrOfElements.push($list.find('.swiper-slide[data-input-id="'+checkArrIndex[i]+'"]').clone());
+			}
+
+			arrOfElements.push($list.find('.swiper-slide[data-input-id="last-slide"]').clone());
+
+			swiperInst.appendSlide(arrOfElements);
 			swiperInst.slideNext(true);
 		});
 
 		$checkBoxListItem.find('input').on('change', function(){
 			var $this = $(this),
-				thisIndex = $this.closest('.check-box').index();
+				thisIndex = $this.closest('.check-box').index(),
+				thisId = $this.attr('id');
 
-			if(checkArrIndex.indexOf(thisIndex) === -1 && $this.find('input').prop('checked', true)){
+			if(checkArrIndex.indexOf(thisId) === -1 && $this.prop('checked', true)){
 				if(checkArrIndex.length >= 3 ){
 					checkedCount = checkedCount % checkArrIndex.length;
-					$checkBoxListItem.eq(checkArrIndex[checkedCount]).find('input').prop('checked', false);
-					checkArrIndex[checkedCount] = thisIndex;
+					$checkBoxListItem.find('input#'+checkArrIndex[checkedCount]).prop('checked', false);
+					checkArrIndex[checkedCount] = thisId;
 					checkedCount++;
 				}else {
-					checkArrIndex.push($this.closest('.check-box').index());
+					checkArrIndex.push(thisId);
 					checkedCount++;
 				}
 			}else {
-				checkArrIndex.splice(checkArrIndex.indexOf(thisIndex), 1);
+				checkArrIndex.splice(checkArrIndex.indexOf(thisId), 1);
 			}
 
 			if(checkArrIndex.length < 3){
@@ -923,7 +935,7 @@ function ThirdSection(){
 			}
 		});
 
-		$section.find('.pr-start').on('click', function(e){
+		$section.on('click', '.pr-start', function(e){
 			e.preventDefault();
 
 			$(this).closest('.third-section__item.visible').find('.third-section__item__step').removeClass('visible').first().addClass('visible');
@@ -967,6 +979,10 @@ function ThirdSection(){
 				}else {
 					$nextBtn.removeClass('hidden');
 					$prevBtn.removeClass('hidden');
+				}
+
+				if(swiper.activeIndex === 0){
+					swiperInst.removeSlide([1, 2, 3, 4]);
 				}
 			},
 			onInit: function(swiper){
@@ -1044,6 +1060,45 @@ function loadSection(location){
 		thirdSection.init('priorities', $(this).attr('href').slice(1));
 	});
 
+	function fancyPopup(){
+		var swiper;
+		$('.fancy-popup').fancybox({
+			afterShow: function(){
+				var $pagination = $(this.inner).find('.swiper-pagination'),
+					$nextBtn = $(this.inner).find('.swiper-next'),
+					$prevBtn = $(this.inner).find('.swiper-prev');
+
+				swiper = new Swiper($(this.inner).find('.swiper-container'), {
+					pagination: $pagination,
+					nextButton: $nextBtn,
+					prevButton: $prevBtn,
+					paginationClickable: true,
+					onDestroy: function(){
+					}
+				});
+
+				$('.f-overlay').addClass('visible');
+			},
+			afterClose: function(){
+				swiper.destroy(true, true);
+				$('.f-overlay').removeClass('visible');
+			},
+			width: 'auto',
+			height: 'auto',
+			autoSize: true,
+			autoHeight: true,
+			autoWidth: true,
+			autoResize: true,
+			padding: [20, 0],
+			margin: 0,
+			tpl: {
+				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"><svg width="41px" height="47px" viewBox="0 0 41 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><g id="Corner-Retail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="Corner-Retail-:-Walkability-Active-:-pop-up-3" sketch:type="MSArtboardGroup" transform="translate(-1104.000000, -208.000000)"><g id="Group-2" sketch:type="MSLayerGroup" transform="translate(1101.000000, 207.000000)"><g id="Rectangle-1-+-Rectangle-1" transform="translate(10.000000, 0.000000)" stroke="#000000" sketch:type="MSShapeGroup"><rect id="Rectangle-1" transform="translate(13.500000, 14.000000) rotate(-315.000000) translate(-13.500000, -14.000000) " x="-4" y="13" width="35" height="2"></rect><rect id="Rectangle-1" transform="translate(13.500000, 14.000000) rotate(-225.000000) translate(-13.500000, -14.000000) " x="-4" y="13" width="35" height="2"></rect></g><text id="CLOSE" sketch:type="MSTextLayer" font-family="Open Sans" font-size="14" font-weight="260" sketch:alignment="middle" fill="#000000"><tspan x="3.17431641" y="47">CLOSE</tspan></text></g></g></g></svg></a>'
+			}
+		});
+	}
+
+	fancyPopup();
+
 	$('.prev-link').off('click').on('click', function(e){
 		e.preventDefault();
 
@@ -1069,6 +1124,8 @@ function loadSection(location){
 		$('.second-section__choices').fadeIn();
 		$('.second-section__item__image-list').children().remove();
 		$('.second-section__item__bott-list__item').removeClass('active');
+
+		$('.next-slide-step').find('.r-text').addClass('hidden');
 
 		thirdSection.destroy();
 
