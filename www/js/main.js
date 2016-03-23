@@ -3197,7 +3197,6 @@ jQuery(window).load(function(){
 
 	function fancyPopup(){
 		fancyInit = true;
-		console.log("fancy", fancyInit);
 		var swiper;
 		$('.fancy-popup').fancybox({
 			afterShow: function(){
@@ -3205,19 +3204,24 @@ jQuery(window).load(function(){
 					$nextBtn = $(this.inner).find('.swiper-next'),
 					$prevBtn = $(this.inner).find('.swiper-prev');
 
-				swiper = new Swiper($(this.inner).find('.swiper-container'), {
-					pagination: $pagination,
-					nextButton: $nextBtn,
-					prevButton: $prevBtn,
-					paginationClickable: true,
-					onDestroy: function(){
-					}
-				});
+				if($(this.inner).find('.swiper-container').length){
+					swiper = new Swiper($(this.inner).find('.swiper-container'), {
+						pagination: $pagination,
+						nextButton: $nextBtn,
+						prevButton: $prevBtn,
+						paginationClickable: true,
+						onDestroy: function(){
+						}
+					});
+				}
 
 				$('.f-overlay').addClass('visible');
 			},
 			afterClose: function(){
-				swiper.destroy(true, true);
+				if(swiper !== undefined){
+					swiper.destroy(true, true);
+				}
+				
 				$('.f-overlay').removeClass('visible');
 			},
 			width: 'auto',

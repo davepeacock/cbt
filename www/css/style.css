@@ -1021,10 +1021,12 @@ body:after {
   height: 100%;
   -webkit-perspective: 1000;
   z-index: 10; }
+  .svg.svg-correct, .svg-correct.svg-map, .svg-correct.svg-map-zoomed {
+    overflow: visible; }
 
 g.men {
-  -webkit-transform: translate3d(0, -105px, 0);
-  transform: translate3d(0, -105px, 0); }
+  -webkit-transform: translate3d(15px, 0, 0);
+  transform: translate3d(15px, 0, 0); }
 
 g.gasStations {
   -webkit-transform: translate3d(310px, 0, 0);
@@ -1511,234 +1513,132 @@ g.gasStations {
   transition: opacity 0.4s ease, height 0s ease 0.4s, width 0s ease 0.4s; }
 
 .second-section__item__titles-list__item#suburbs-housing .t-title {
-  top: 41%;
-  left: 23%; }
+  top: 42%;
+  right: 64%; }
   @media screen and (min-height: 1500px) {
     .second-section__item__titles-list__item#suburbs-housing .t-title {
       top: 38%;
-      left: 30%; } }
+      right: 64%; } }
 
 .second-section__item__titles-list__item#suburbs-walkability .t-title {
   top: 41%;
-  left: 41%; }
+  right: 47%; }
   @media screen and (min-height: 1500px) {
     .second-section__item__titles-list__item#suburbs-walkability .t-title {
       top: 38%;
-      left: 30%; } }
+      right: 47%; } }
 
 .second-section__item__titles-list__item#suburbs-emissions .t-title {
   top: 41%;
-  left: 41%; }
+  right: 47%; }
   @media screen and (min-height: 1500px) {
     .second-section__item__titles-list__item#suburbs-emissions .t-title {
       top: 38%;
-      left: 30%; } }
+      right: 47%; } }
 
 .second-section__item__titles-list__item#nn-housing .t-title_first {
   top: 18%;
-  left: 19%; }
+  right: 69%; }
 
 .second-section__item__titles-list__item#nn-housing .t-title_second {
   top: 32%;
-  left: 32%; }
+  right: 59%; }
 
 .second-section__item__titles-list__item#nn-housing .t-title_third {
   top: 45%;
-  left: 15%; }
+  right: 78%; }
 
 .second-section__item__titles-list__item#nn-housing .t-title_forth {
   top: 31%;
-  left: 66%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#nn-housing .t-title_first {
-    top: 20%;
-    left: 25%; }
-  .second-section__item__titles-list__item#nn-housing .t-title_second {
-    top: 37%;
-    left: 37%; }
-  .second-section__item__titles-list__item#nn-housing .t-title_third {
-    top: 42%;
-    left: 20%; }
-  .second-section__item__titles-list__item#nn-housing .t-title_forth {
-    top: 37%;
-    left: 69%; } }
+  right: 27%; }
 
 .second-section__item__titles-list__item#nn-walkability .t-title_first {
-  top: 18%;
-  left: 19%; }
+  bottom: 79%;
+  right: 73%; }
 
 .second-section__item__titles-list__item#nn-walkability .t-title_second {
-  top: 44%;
-  left: 39%; }
+  bottom: 50%;
+  right: 51%; }
 
 .second-section__item__titles-list__item#nn-walkability .t-title_third {
-  top: 37%;
-  left: 61%; }
+  bottom: 66%;
+  right: 32%; }
 
 .second-section__item__titles-list__item#nn-walkability .t-title_forth {
   top: 47%;
   left: 71%; }
 
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#nn-walkability .t-title_first {
-    top: 20%;
-    left: 25%; }
-  .second-section__item__titles-list__item#nn-walkability .t-title_second {
-    top: 49%;
-    left: 47%; }
-  .second-section__item__titles-list__item#nn-walkability .t-title_third {
-    top: 42%;
-    left: 62%; }
-  .second-section__item__titles-list__item#nn-walkability .t-title_forth {
-    top: 37%;
-    left: 69%; } }
-
 .second-section__item__titles-list__item#nn-emissions .t-title_first {
-  top: 18%;
-  left: 19%; }
+  bottom: 78%;
+  right: 71%; }
 
 .second-section__item__titles-list__item#nn-emissions .t-title_second {
-  top: 35%;
-  left: 34%; }
+  bottom: 64%;
+  right: 59%; }
 
 .second-section__item__titles-list__item#nn-emissions .t-title_third {
-  top: 34%;
-  left: 66%; }
+  bottom: 63%;
+  right: 28%; }
 
 .second-section__item__titles-list__item#nn-emissions .t-title_forth {
   top: 47%;
   left: 71%; }
 
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#nn-emissions .t-title_first {
-    top: 21%;
-    left: 24%; }
-  .second-section__item__titles-list__item#nn-emissions .t-title_second {
-    top: 37%;
-    left: 41%; }
-  .second-section__item__titles-list__item#nn-emissions .t-title_third {
-    top: 37%;
-    left: 70%; }
-  .second-section__item__titles-list__item#nn-emissions .t-title_forth {
-    top: 37%;
-    left: 69%; } }
-
 .second-section__item__titles-list__item#dt-housing .t-title_first {
   top: 46%;
-  left: 33%; }
+  right: 59%; }
 
 .second-section__item__titles-list__item#dt-housing .t-title_second {
   top: 35%;
-  left: 49%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#dt-housing .t-title_first {
-    top: 43%;
-    left: 38%; }
-  .second-section__item__titles-list__item#dt-housing .t-title_second {
-    top: 35%;
-    left: auto;
-    right: 43%; } }
+  right: 44%; }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_first {
-  top: 37%;
-  left: 27%; }
+  top: 33%;
+  right: 72%; }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_second {
   top: 35%;
-  left: 42%; }
+  right: 45%; }
 
 .second-section__item__titles-list__item#dt-walkability .t-title_third {
   top: 57%;
-  left: 47%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#dt-walkability .t-title_first {
-    top: 40%;
-    left: 30%; }
-  .second-section__item__titles-list__item#dt-walkability .t-title_second {
-    top: 35%;
-    left: auto;
-    right: 43%; }
-  .second-section__item__titles-list__item#dt-walkability .t-title_third {
-    top: 57%;
-    left: 53%; } }
+  right: 47%; }
 
 .second-section__item__titles-list__item#dt-emissions .t-title_first {
   top: 46%;
-  left: 33%; }
+  right: 59%; }
 
 .second-section__item__titles-list__item#dt-emissions .t-title_second {
   top: 35%;
-  left: 49%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#dt-emissions .t-title_first {
-    top: 43%;
-    left: 38%; }
-  .second-section__item__titles-list__item#dt-emissions .t-title_second {
-    top: 35%;
-    left: auto;
-    right: 42%; } }
+  right: 44%; }
 
 .second-section__item__titles-list__item#corner-housing .t-title_second {
   top: 29%;
-  left: 44%; }
+  right: 40%; }
 
 .second-section__item__titles-list__item#corner-housing .t-title_first {
   top: 21%;
-  left: 20%; }
+  right: 74%; }
 
 .second-section__item__titles-list__item#corner-housing .t-title_third {
   top: 39%;
-  left: 34%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#corner-housing .t-title_second {
-    top: 32%;
-    left: auto;
-    right: 38%; }
-  .second-section__item__titles-list__item#corner-housing .t-title_first {
-    top: 21%;
-    left: 22%; }
-  .second-section__item__titles-list__item#corner-housing .t-title_third {
-    top: 42%;
-    left: auto;
-    right: 53%; } }
+  right: 56%; }
 
 .second-section__item__titles-list__item#corner-walkability .t-title_first {
-  top: 29%;
-  left: 24%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#corner-walkability .t-title_first {
-    top: 29%;
-    left: 33%; } }
+  top: 27%;
+  right: 66%; }
 
 .second-section__item__titles-list__item#corner-emissions .t-title_second {
-  top: 29%;
-  left: auto;
-  right: 39%; }
+  top: 27%;
+  right: 40%; }
 
 .second-section__item__titles-list__item#corner-emissions .t-title_first {
   top: 21%;
-  left: 20%; }
+  right: 74%; }
 
 .second-section__item__titles-list__item#corner-emissions .t-title_third {
   top: 39%;
-  left: 34%; }
-
-@media screen and (min-height: 1500px) {
-  .second-section__item__titles-list__item#corner-emissions .t-title_second {
-    top: 32%;
-    left: 55%; }
-  .second-section__item__titles-list__item#corner-emissions .t-title_first {
-    top: 21%;
-    left: 22%; }
-  .second-section__item__titles-list__item#corner-emissions .t-title_third {
-    top: 42%;
-    left: 44%; } }
+  right: 55%; }
 
 .second-section__item__titles-list__item.active .t-title {
   width: auto;
@@ -2941,6 +2841,13 @@ g.gasStations {
         padding: 0 0 20px;
         color: #000;
         font-weight: 700; }
+
+.wrap-message {
+  font-size: 20px;
+  text-align: center;
+  padding: 35px 20px;
+  line-height: 22px;
+  font-weight: 300; }
 
 .hide {
   display: none; }

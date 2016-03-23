@@ -89,10 +89,14 @@ body:after {
 	.svg-offset{
 		// transform: translate(1px, -50%);
 	}
+
+	&.svg-correct{
+		overflow: visible;
+	}
 }
 
 g.men{
-	transform: translate3d(0, -105px, 0);
+	transform: translate3d(15px, 0, 0);
 }
 
 g.gasStations{
@@ -715,12 +719,12 @@ g.gasStations{
 	&#suburbs-housing{
 
 		.t-title{
-			top: 41%;
-			left: 23%;
+			top: 42%;
+			right: 64%;
 
 			@media screen and (min-height: 1500px){
 				top: 38%;
-				left: 30%;
+				right: 64%;
 			}
 		}
 	}
@@ -729,11 +733,11 @@ g.gasStations{
 
 		.t-title{
 			top: 41%;
-			left: 41%;
+			right: 47%;
 
 			@media screen and (min-height: 1500px){
 				top: 38%;
-				left: 30%;
+				right: 47%;
 			}
 		}
 	}
@@ -742,11 +746,11 @@ g.gasStations{
 
 		.t-title{
 			top: 41%;
-			left: 41%;
+			right: 47%;
 
 			@media screen and (min-height: 1500px){
 				top: 38%;
-				left: 30%;
+				right: 47%;
 			}
 		}
 	}
@@ -755,63 +759,63 @@ g.gasStations{
 
 		.t-title_first{
 			top: 18%;
-			left: 19%;
+			right: 69%;
 		}
 
 		.t-title_second{
 			top: 32%;
-			left: 32%;
+			right: 59%;
 		}
 
 		.t-title_third{
 			top: 45%;
-			left: 15%;
+			right: 78%;
 		}
 
 		.t-title_forth{
 			top: 31%;
-			left: 66%;
+			right: 27%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 20%;
-				left: 25%;
-			}
+		// 	.t-title_first{
+		// 		top: 20%;
+		// 		left: 25%;
+		// 	}
 
-			.t-title_second{
-				top: 37%;
-				left: 37%;
-			}
+		// 	.t-title_second{
+		// 		top: 37%;
+		// 		left: 37%;
+		// 	}
 
-			.t-title_third{
-				top: 42%;
-				left: 20%;
-			}
+		// 	.t-title_third{
+		// 		top: 42%;
+		// 		left: 20%;
+		// 	}
 
-			.t-title_forth{
-				top: 37%;
-				left: 69%;
-			}
-		}
+		// 	.t-title_forth{
+		// 		top: 37%;
+		// 		left: 69%;
+		// 	}
+		// }
 	}
 
 	&#nn-walkability{
 
 		.t-title_first{
-			top: 18%;
-			left: 19%;
+			bottom: 79%;
+			right: 73%;
 		}
 
 		.t-title_second{
-			top: 44%;
-			left: 39%;
+			bottom: 50%;
+			right: 51%;
 		}
 
 		.t-title_third{
-			top: 37%;
-			left: 61%;
+			bottom: 66%;
+			right: 32%;
 		}
 
 		.t-title_forth{
@@ -819,45 +823,45 @@ g.gasStations{
 			left: 71%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 20%;
-				left: 25%;
-			}
+		// 	.t-title_first{
+		// 		top: 20%;
+		// 		left: 25%;
+		// 	}
 
-			.t-title_second{
-				top: 49%;
-				left: 47%;
-			}
+		// 	.t-title_second{
+		// 		top: 49%;
+		// 		left: 47%;
+		// 	}
 
-			.t-title_third{
-				top: 42%;
-				left: 62%;
-			}
+		// 	.t-title_third{
+		// 		top: 42%;
+		// 		left: 62%;
+		// 	}
 
-			.t-title_forth{
-				top: 37%;
-				left: 69%;
-			}
-		}
+		// 	.t-title_forth{
+		// 		top: 37%;
+		// 		left: 69%;
+		// 	}
+		// }
 	}
 
 	&#nn-emissions{
 
 		.t-title_first{
-			top: 18%;
-			left: 19%;
+			bottom: 78%;
+			right: 71%;
 		}
 
 		.t-title_second{
-			top: 35%;
-			left: 34%;
+			bottom: 64%;
+			right: 59%;
 		}
 
 		.t-title_third{
-			top: 34%;
-			left: 66%;
+			bottom: 63%;
+			right: 28%;
 		}
 
 		.t-title_forth{
@@ -865,210 +869,209 @@ g.gasStations{
 			left: 71%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 21%;
-				left: 24%;
-			}
+		// 	.t-title_first{
+		// 		top: 21%;
+		// 		left: 24%;
+		// 	}
 
-			.t-title_second{
-				top: 37%;
-				left: 41%;
-			}
+		// 	.t-title_second{
+		// 		top: 37%;
+		// 		left: 41%;
+		// 	}
 
-			.t-title_third{
-				top: 37%;
-				left: 70%;
-			}
+		// 	.t-title_third{
+		// 		top: 37%;
+		// 		left: 70%;
+		// 	}
 
-			.t-title_forth{
-				top: 37%;
-				left: 69%;
-			}
-		}
+		// 	.t-title_forth{
+		// 		top: 37%;
+		// 		left: 69%;
+		// 	}
+		// }
 	}
 
 	&#dt-housing{
 
 		.t-title_first{
 			top: 46%;
-			left: 33%;
+			right: 59%;
 		}
 
 		.t-title_second{
 			top: 35%;
-			left: 49%;
+			right: 44%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 43%;
-				left: 38%;
-			}
+		// 	.t-title_first{
+		// 		top: 43%;
+		// 		left: 38%;
+		// 	}
 
-			.t-title_second{
-				top: 35%;
-				left: auto;
-				right: 43%;
-			}
-		}
+		// 	.t-title_second{
+		// 		top: 35%;
+		// 		left: auto;
+		// 		right: 43%;
+		// 	}
+		// }
 	}
 
 	&#dt-walkability{
 
 		.t-title_first{
-			top: 37%;
-			left: 27%;
+			top: 33%;
+			right: 72%;
 		}
 
 		.t-title_second{
 			top: 35%;
-			left: 42%;
+			right: 45%;
 		}
 
 		.t-title_third{
 			top: 57%;
-			left: 47%;
+			right: 47%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 40%;
-				left: 30%;
-			}
+		// 	.t-title_first{
+		// 		top: 40%;
+		// 		left: 30%;
+		// 	}
 
-			.t-title_second{
-				top: 35%;
-				left: auto;
-				right: 43%;
-			}
+		// 	.t-title_second{
+		// 		top: 35%;
+		// 		left: auto;
+		// 		right: 43%;
+		// 	}
 
-			.t-title_third{
-				top: 57%;
-				left: 53%;
-			}
-		}
+		// 	.t-title_third{
+		// 		top: 57%;
+		// 		left: 53%;
+		// 	}
+		// }
 	}
 
 	&#dt-emissions{
 
 		.t-title_first{
 			top: 46%;
-			left: 33%;
+			right: 59%;
 		}
 
 		.t-title_second{
 			top: 35%;
-			left: 49%;
+			right: 44%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 43%;
-				left: 38%;
-			}
+		// 	.t-title_first{
+		// 		top: 43%;
+		// 		left: 38%;
+		// 	}
 
-			.t-title_second{
-				top: 35%;
-				left: auto;
-				right: 42%;
-			}
-		}
+		// 	.t-title_second{
+		// 		top: 35%;
+		// 		left: auto;
+		// 		right: 42%;
+		// 	}
+		// }
 	}
 
 	&#corner-housing{
 
 		.t-title_second{
 			top: 29%;
-			left: 44%;
+			right: 40%;
 		}
 
 		.t-title_first{
 			top: 21%;
-			left: 20%;
+			right: 74%;
 		}
 
 		.t-title_third{
 			top: 39%;
-			left: 34%;
+			right: 56%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_second{
-				top: 32%;
-				left: auto;
-				right: 38%;
-			}
+		// 	.t-title_second{
+		// 		top: 32%;
+		// 		left: auto;
+		// 		right: 38%;
+		// 	}
 
-			.t-title_first{
-				top: 21%;
-				left: 22%;
-			}
+		// 	.t-title_first{
+		// 		top: 21%;
+		// 		left: 22%;
+		// 	}
 
-			.t-title_third{
-				top: 42%;
-				left: auto;
-				right: 53%;
-			}
-		}
+		// 	.t-title_third{
+		// 		top: 42%;
+		// 		left: auto;
+		// 		right: 53%;
+		// 	}
+		// }
 	}
 
 	&#corner-walkability{
 
 		.t-title_first{
-			top: 29%;
-			left: 24%;
+			top: 27%;
+			right: 66%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_first{
-				top: 29%;
-				left: 33%;
-			}
-		}
+		// 	.t-title_first{
+		// 		top: 29%;
+		// 		left: 33%;
+		// 	}
+		// }
 	}
 
 	&#corner-emissions{
 
 		.t-title_second{
-			top: 29%;
-			left: auto;
-			right: 39%;
+			top: 27%;
+			right: 40%;
 		}
 
 		.t-title_first{
 			top: 21%;
-			left: 20%;
+			right: 74%;
 		}
 
 		.t-title_third{
 			top: 39%;
-			left: 34%;
+			right: 55%;
 		}
 
-		@media screen and (min-height: 1500px){
+		// @media screen and (min-height: 1500px){
 
-			.t-title_second{
-				top: 32%;
-				left: 55%;
-			}
+		// 	.t-title_second{
+		// 		top: 32%;
+		// 		left: 55%;
+		// 	}
 
-			.t-title_first{
-				top: 21%;
-				left: 22%;
-			}
+		// 	.t-title_first{
+		// 		top: 21%;
+		// 		left: 22%;
+		// 	}
 
-			.t-title_third{
-				top: 42%;
-				left: 44%;
-			}
-		}
+		// 	.t-title_third{
+		// 		top: 42%;
+		// 		left: 44%;
+		// 	}
+		// }
 	}
 
 	&.active{
@@ -2594,6 +2597,14 @@ g.gasStations{
 			}
 		}
 	}
+}
+
+.wrap-message{
+	font-size: 20px;
+	text-align: center;
+	padding: 35px 20px;
+	line-height: 22px;
+	font-weight: 300;
 }
 
 .hide{
