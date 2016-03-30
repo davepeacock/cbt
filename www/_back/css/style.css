@@ -295,7 +295,7 @@ body {
 label, input[type="button"], input[type="submit"], button {
   cursor: pointer; }
 
-.dib, .icon-orange-house, .icon-orange-person, .icon-red-person, .icon-red-house, .icon-blue-person, .icon-yellow-house, .icon-yellow-person, .icon-info, .icon-arr-right, .graph {
+.dib, .icon-orange-house, .icon-orange-person, .icon-red-person, .icon-red-house, .icon-blue-person, .icon-yellow-house, .icon-yellow-person, .icon-info, .graph {
   display: inline-block; }
 
 .btn {
@@ -368,16 +368,6 @@ label, input[type="button"], input[type="submit"], button {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   background-color: #0E9F84; }
-
-.icon-arr-right {
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  width: 4px;
-  height: 6px;
-  vertical-align: middle;
-  background: url(../img/arr-right-small.svg) 0 0 no-repeat; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -1031,12 +1021,10 @@ body:after {
   height: 100%;
   -webkit-perspective: 1000;
   z-index: 10; }
-  .svg.svg-correct, .svg-correct.svg-map, .svg-correct.svg-map-zoomed {
-    overflow: visible; }
 
 g.men {
-  -webkit-transform: translate3d(15px, 0, 0);
-  transform: translate3d(15px, 0, 0); }
+  -webkit-transform: translate3d(0, -105px, 0);
+  transform: translate3d(0, -105px, 0); }
 
 g.gasStations {
   -webkit-transform: translate3d(310px, 0, 0);
@@ -1072,8 +1060,7 @@ g.gasStations {
     text-transform: uppercase;
     color: #454545;
     font-weight: 100;
-    text-rendering: optimizelegibility;
-    text-align: right; }
+    text-rendering: optimizelegibility; }
   .t-text h2 {
     font-family: Open Sans, sans-serif;
     font-size: 18px;
@@ -1189,7 +1176,7 @@ g.gasStations {
   .c-btns:focus svg g {
     -webkit-transition: fill 0.3s ease;
     transition: fill 0.3s ease;
-    fill: #fff; }
+    fill: #F6FAFC; }
   .c-btns:hover svg g {
     -webkit-transition: fill 0.3s ease;
     transition: fill 0.3s ease;
@@ -1265,7 +1252,7 @@ g.gasStations {
   width: 100%;
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  background: url("http://res.cloudinary.com/dsibfgci1/image/upload/v1458733614/bg_default_nkw0c5.jpg") 0 0 no-repeat;
+  background: url("../img/bg_default.jpg") 0 0 no-repeat;
   background-size: cover; }
 
 .second-section-welcome_i {
@@ -1452,7 +1439,7 @@ g.gasStations {
   height: 0;
   overflow: hidden;
   z-index: 12;
-  background: url("http://res.cloudinary.com/dsibfgci1/image/upload/v1458733614/bg_default_nkw0c5.jpg") 0 0 no-repeat;
+  background: url("../img/bg_default.jpg") 0 0 no-repeat;
   background-size: cover; }
   .second-section.visible {
     height: 100%;
@@ -1992,6 +1979,7 @@ g.gasStations {
   bottom: 0;
   padding: 10px;
   width: 100%;
+  background: rgba(0, 0, 0, 0.25);
   -webkit-transition-duration: 0.6s;
   transition-duration: 0.6s; }
 
@@ -2183,7 +2171,7 @@ g.gasStations {
   font-size: 15px;
   line-height: 22px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600; }
+  font-weight: 300; }
 
 .info-text p {
   font-size: 14px;
@@ -2329,13 +2317,6 @@ g.gasStations {
     opacity: 1;
     -webkit-transition: opacity 0.4s ease;
     transition: opacity 0.4s ease; }
-  .third-section__item .third-section__item__step {
-    -webkit-transition: opacity 0.4s ease;
-    transition: opacity 0.4s ease; }
-    .third-section__item .third-section__item__step.hidden {
-      opacity: 0;
-      -webkit-transition: opacity 0.4s ease;
-      transition: opacity 0.4s ease; }
 
 .third-section__item__img {
   position: absolute;
@@ -2388,11 +2369,11 @@ g.gasStations {
   z-index: 999;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0s ease 0s, visibility 0s ease 0.3s;
-  transition: opacity 0s ease 0s, visibility 0s ease 0.3s;
+  -webkit-transition: opacity 0.3s ease 0s, visibility 0s ease 0.3s;
+  transition: opacity 0.3s ease 0s, visibility 0s ease 0.3s;
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.8);
   top: 0;
   bottom: 0;
   left: 0;
@@ -2400,8 +2381,8 @@ g.gasStations {
   .f-overlay.visible {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity 0s ease 0s, visibility 0s ease 0s;
-    transition: opacity 0s ease 0s, visibility 0s ease 0s; }
+    -webkit-transition: opacity 0.3s ease 0s, visibility 0s ease 0s;
+    transition: opacity 0.3s ease 0s, visibility 0s ease 0s; }
 
 .fancybox-opened .fancybox-skin {
   background-color: transparent;
@@ -2538,8 +2519,6 @@ g.gasStations {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
-          .third-section__item__step.swiper-box .third-section__item__step_i .swiper-slider .swiper-slide .swiper-slide_i .r-text ~ img {
-            margin-top: 40px; }
         .third-section__item__step.swiper-box .third-section__item__step_i .swiper-slider .swiper-slide.swiper-slide-active {
           opacity: 1; }
     .third-section__item__step.swiper-box .third-section__item__step_i .swiper-pagination-bullets {
@@ -2583,7 +2562,7 @@ g.gasStations {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 0.6px;
-    padding: 0 50px 25px;
+    padding: 0 0 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: 100; }
@@ -2597,17 +2576,6 @@ g.gasStations {
   .r-text .main-btn {
     font-size: 20px;
     padding: 0 35px; }
-
-.r-text_links p a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: #000; }
-  .r-text_links p a:hover {
-    text-decoration: none; }
-
-.r-text_links p img {
-  margin: 0 30px;
-  vertical-align: middle; }
 
 .r-text_diff p a {
   text-decoration: underline;
@@ -2810,7 +2778,7 @@ g.gasStations {
   overflow: hidden;
   -webkit-transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s, height 0s ease 0s;
   transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s, height 0s ease 0s;
-  margin: 0; }
+  margin: 0 0 25px; }
   .menu-content__item .loadSection {
     float: left;
     border: 1px solid  #000;
@@ -2827,7 +2795,6 @@ g.gasStations {
     opacity: 1;
     visibility: visible;
     height: auto;
-    margin: 0 0 25px;
     -webkit-transition: opacity 0.4s ease 0s, visibility 0s ease 0s, height 0s ease 0s;
     transition: opacity 0.4s ease 0s, visibility 0s ease 0s, height 0s ease 0s; }
 
@@ -2846,15 +2813,6 @@ g.gasStations {
 
 .about-box-acc.open > .about-box-acc__item {
   display: block; }
-
-.about-box-acc.open > .about-box-acc__title > .icon-arr-right {
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
 
 .about-box-acc__title {
   font-size: 16px;
@@ -2876,24 +2834,11 @@ g.gasStations {
         font-size: 14px;
         line-height: 16px; }
       .about-box-acc__item ul li .about-box-acc__item p {
-        font-size: 14px;
-        line-height: 25px;
-        padding: 0px 20px 20px;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 0 20px;
         color: #000;
-        font-weight: 200; }
-        .about-box-acc__item ul li .about-box-acc__item p a {
-          text-decoration: underline; }
-          .about-box-acc__item ul li .about-box-acc__item p a:hover {
-            text-decoration: none; }
-      .about-box-acc__item ul li .about-box-acc__item h3 {
-        font-size: 16px;
-        line-height: 18px;
-        padding: 0 0 0 20px; }
-        .about-box-acc__item ul li .about-box-acc__item h3 a {
-          text-decoration: none;
-          color: #000; }
-          .about-box-acc__item ul li .about-box-acc__item h3 a:hover {
-            text-decoration: underline; }
+        font-weight: 700; }
 
 .wrap-message {
   font-size: 20px;

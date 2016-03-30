@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="800px" height="115px" viewBox="0 0 800 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="115px" viewBox="0 0 810 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>NC_Mobility</title>
     <desc>Created with Sketch.</desc>
@@ -15,10 +15,10 @@
             <g id="Group" transform="translate(104.000000, 99.000000)" fill="url(#linearGradient-1)">
                 <rect id="Rectangle-path" x="0.917" y="0.651818182" width="590.167" height="13.6363636"></rect>
             </g>
-            <text id="automobile" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="automobile" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="14" y="111">automobile</tspan>
             </text>
-            <text id="walk-/-cycle" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="walk-/-cycle" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="704.459961" y="111">walk / cycle</tspan>
             </text>
             <g id="Group-7" transform="translate(159.000000, 58.000000)">
@@ -47,7 +47,7 @@
                     <path d="M4.146,29.996 L1.504,25.418 L6.789,25.418 L4.146,29.996 Z" id="Shape" fill="#797A72"></path>
                 </g>
             </g>
-            <text id="NEIGHBOURHOOD-CENTRE" font-family="OpenSans-Semibold, Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
+            <text id="NEIGHBOURHOOD-CENTRE" font-family="Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
                 <tspan x="493.425781" y="23">NEIGHBOURHOOD CENTRE</tspan>
             </text>
             <g id="Group-7-Copy" transform="translate(653.000000, 58.000000)">

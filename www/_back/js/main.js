@@ -2039,79 +2039,79 @@ y.params.hashnav&&y.hashnav&&y.hashnav.init(),y.params.a11y&&y.a11y&&y.a11y.init
 }(window, document, jQuery));
 var videoList = {
 	"suburbs": [[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734485/cbt_s_1_s2b8gq.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734484/cbt_s_1_zhhnco.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_s_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_s_1.webm" }
 		],[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734491/cbt_s_2_pp2d2z.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734489/cbt_s_2_wwbpoy.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_s_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_s_2.webm" }
 		],[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734490/cbt_s_3_avlob2.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734489/cbt_s_3_rdwz29.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_s_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_s_3.webm" }
 		]
 	],
 	"neighbourhood": [[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734470/cbt_nc_1_rk7ztw.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734455/cbt_nc_1_qaaj7m.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_1.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734490/cbt_nc_2_bcpqjp.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734472/cbt_nc_2_lbvgiy.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_2.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734458/cbt_nc_3_zt6nri.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734472/cbt_nc_3_kymjb4.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nc_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nc_3.webm" }
 		]
 	],
 	"downtown": [[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734451/cbt_dt_1_hfy9j3.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734450/cbt_dt_1_w0l2zn.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_dt_1.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734471/cbt_dt_2_xfmhb4.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734456/cbt_dt_2_addrs3.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_dt_2.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734449/cbt_dt_3_zmzdkj.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734451/cbt_dt_3_oma2vu.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_dt_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_dt_3.webm" }
 		]
 	],
 	"corner": [[
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734485/cbt_nn_1_r2x9ky.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734478/cbt_nn_1_jc99eb.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_1.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_1.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734481/cbt_nn_2_mud1rx.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734477/cbt_nn_2_gsxua1.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_2.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_2.webm" }
 		], [
-			{ type: "video/mp4",  src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734486/cbt_nn_3_dpqegn.mp4" },
-			{ type: "video/webm", src: "http://res.cloudinary.com/dsibfgci1/video/upload/v1458734480/cbt_nn_3_ifeukl.webm" }
+			{ type: "video/mp4",  src: "videos/1920x1080/cbt_nn_3.mp4" },
+			{ type: "video/webm", src: "videos/1920x1080/cbt_nn_3.webm" }
 		]
 	],
 };
 
 var sectionItemBgList = {
 	"suburbs": [
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734348/scene_2_blank_tyxt4k.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734349/scene_2_housing_xpjwrm.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734348/scene_2_transportation_lgb2cv.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734348/scene_2_ee_eikhje.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734392/Scene_3_S_eivsls.jpg'
+		'img/suburbs/scene_2_blank.jpg',
+		'img/suburbs/scene_2_housing.jpg',
+		'img/suburbs/scene_2_transportation.jpg',
+		'img/suburbs/scene_2_ee.jpg',
+		'img/suburbs/Scene_3_S.jpg'
 	],
 	"neighbourhood": [
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458733651/scene_2_blank_mue971.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458733648/scene_2_housing_v9kaxi.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458733646/scene_2_transportation_taw2yo.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458733649/scene_2_ee_mimrrf.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458733656/Scene_3_NN_kcgkbc.jpg'
+		'img/centers/scene_2_blank.jpg',
+		'img/centers/scene_2_housing.jpg',
+		'img/centers/scene_2_transportation.jpg',
+		'img/centers/scene_2_ee.jpg',
+		'img/centers/Scene_3_NN.jpg'
 	],
 	"downtown": [
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734268/scene_2_blank_gbsawq.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734268/scene_2_housing_fqdlbx.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734268/scene_2_transportation_ejsovp.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734268/scene_2_ee_yhrw57.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734268/Scene_3_NN_qkxgny.jpg'
+		'img/downtown/scene_2_blank.jpg',
+		'img/downtown/scene_2_housing.jpg',
+		'img/downtown/scene_2_transportation.jpg',
+		'img/downtown/scene_2_ee.jpg',
+		'img/downtown/Scene_3_NN.jpg'
 	],
 	"corner": [
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734158/scene_2_blank_a8ecw0.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734158/scene_2_housing_huzvjl.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734158/scene_2_transportation_ymwlyt.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734158/scene_2_ee_znmbqb.jpg',
-		'http://res.cloudinary.com/dsibfgci1/image/upload/v1458734158/Scene_3_NN_qd333s.jpg'
+		'img/corner/scene_2_blank.jpg',
+		'img/corner/scene_2_housing.jpg',
+		'img/corner/scene_2_transportation.jpg',
+		'img/corner/scene_2_ee.jpg',
+		'img/corner/Scene_3_NN.jpg'
 	]
 };
 
@@ -2705,7 +2705,7 @@ function SecondSection(){
 		$parent.find('.button-list').removeClass('hidden');
 		$parent.removeClass('visible');
 		$parent.find('.second-section__item__image').removeClass('active show-titles');
-		// $parent.find('.second-section__item__image[eq=0]').addClass('active');
+		$parent.find('.second-section__item__image[eq=0]').addClass('active');
 		$parent.find('.second-section__item__bott-list__item').removeClass('active');
 		$('.second-section__item[data-section-item-id="'+$this.attr('href').slice(1)+'"]').addClass('visible');
 
@@ -3116,11 +3116,11 @@ function loadSection(location){
 		e.preventDefault();
 
 		loadSection.loadSecondSection();
-		loadSection("");
 	});
 }
 
 loadSection.loadSecondSection = function(){
+	$('.menu-visible').removeClass('menu-visible');
 	$('.button-list.open').removeClass('open');
 	$('.second-section__item').removeClass('visible');
 	$('.second-section__choices').fadeIn();
@@ -3148,9 +3148,7 @@ loadSection.loadSecondSection = function(){
 
 	$('.next-slide-step').find('.r-text').addClass('hidden');
 
-	if(thirdSection.hasOwnProperty('destroy')){
-		thirdSection.destroy();
-	}
+	thirdSection.destroy();
 
 	secondSection = new SecondSection();
 	secondSection.init('simulation');
@@ -3186,8 +3184,6 @@ jQuery(window).load(function(){
 		var $this = $(this),
 			$thisSectionHash = $this.attr('data-location');
 
-		$('.menu-visible').removeClass('menu-visible');
-
 		if(document.location.hash !== $thisSectionHash){
 			loadSection($thisSectionHash);	
 
@@ -3203,14 +3199,6 @@ jQuery(window).load(function(){
 		fancyInit = true;
 		var swiper;
 		$('.fancy-popup').fancybox({
-			beforeShow: function(){
-				var $item = $('.third-section__item.visible');
-				$('.f-overlay').addClass('visible');
-
-				if($item.length){
-					$item.find('.third-section__item__step').addClass('hidden');
-				}
-			},
 			afterShow: function(){
 				var $pagination = $(this.inner).find('.swiper-pagination'),
 					$nextBtn = $(this.inner).find('.swiper-next'),
@@ -3222,18 +3210,12 @@ jQuery(window).load(function(){
 						nextButton: $nextBtn,
 						prevButton: $prevBtn,
 						paginationClickable: true,
-						loop: true,
 						onDestroy: function(){
 						}
 					});
 				}
-			},
-			beforeClose: function(){
-				var $item = $('.third-section__item.visible');
 
-				if($item.length){
-					$item.find('.third-section__item__step').removeClass('hidden');
-				}
+				$('.f-overlay').addClass('visible');
 			},
 			afterClose: function(){
 				if(swiper !== undefined){

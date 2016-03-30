@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="800px" height="115px" viewBox="0 0 800 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="115px" viewBox="0 0 810 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>Suburbs_Development</title>
     <desc>Created with Sketch.</desc>
@@ -59,10 +59,10 @@
                     <tspan x="63.8339844" y="28">centre</tspan>
                 </text>
             </g>
-            <text id="most-impact" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="most-impact" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="6" y="112">most impact</tspan>
             </text>
-            <text id="least-impact" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="least-impact" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="705.387695" y="112">least impact</tspan>
             </text>
         </g>

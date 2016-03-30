@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="800px" height="115px" viewBox="0 0 800 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="115px" viewBox="0 0 810 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>NC_Development</title>
     <desc>Created with Sketch.</desc>
@@ -15,14 +15,14 @@
             <g id="Group" transform="translate(104.000000, 100.000000)" fill="url(#linearGradient-1)">
                 <rect id="Rectangle-path" x="0.917" y="0.651818182" width="590.167" height="13.6363636"></rect>
             </g>
-            <text id="most-impact" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="most-impact" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="6" y="112">most impact</tspan>
             </text>
-            <text id="least-impact" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="least-impact" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="705.387695" y="112">least impact</tspan>
             </text>
             <g id="Group-4" transform="translate(288.000000, 52.000000)">
-                <text id="corner" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
+                <text id="corner" font-family="Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
                     <tspan x="12" y="15">corner</tspan>
                     <tspan x="12" y="28">retail</tspan>
                 </text>
@@ -38,7 +38,7 @@
                         <path d="M4.146,29.996 L1.504,25.418 L6.789,25.418 L4.146,29.996 Z" id="Shape" fill="#797A72"></path>
                     </g>
                 </g>
-                <text id="downtown" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
+                <text id="downtown" font-family="Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
                     <tspan x="12" y="15">downtown</tspan>
                 </text>
             </g>
@@ -49,7 +49,7 @@
                         <path d="M4.146,29.996 L1.504,25.418 L6.789,25.418 L4.146,29.996 Z" id="Shape" fill="#797A72"></path>
                     </g>
                 </g>
-                <text id="suburb" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
+                <text id="suburb" font-family="Open Sans" font-size="14" font-weight="normal" line-spacing="13" letter-spacing="0.5" fill="#4A4A4A">
                     <tspan x="12" y="15">suburb</tspan>
                 </text>
             </g>
@@ -58,7 +58,7 @@
                 <rect id="Rectangle-path" x="3.832" y="0.981" width="4" height="75.515"></rect>
                 <path d="M5.832,83.39 L8.332,79.759 L10.832,76.128 L5.832,76.128 L0.832,76.128 L3.332,79.759 L5.832,83.39 L5.832,83.39 Z" id="Shape"></path>
             </g>
-            <text id="NEIGHBOURHOOD-CENTRE" font-family="OpenSans-Semibold, Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
+            <text id="NEIGHBOURHOOD-CENTRE" font-family="Open Sans" font-size="16" font-weight="500" fill="#FFFFFF">
                 <tspan x="65.4257812" y="23">NEIGHBOURHOOD CENTRE</tspan>
             </text>
         </g>

@@ -201,3 +201,12 @@ label, input[type="button"], input[type="submit"], button {
 	@extend .dib;
 	@extend .s-ico_info;
 }
+
+.icon-arr-right{
+	transition: transform 0.4s ease;
+	@extend .dib;
+	width: 4px;
+	height: 6px;
+	vertical-align: middle;
+	background: url(../img/arr-right-small.svg) 0 0 no-repeat;
+}

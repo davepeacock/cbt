@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="800px" height="115px" viewBox="0 0 800 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="115px" viewBox="0 0 810 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>Downtown_Services</title>
     <desc>Created with Sketch.</desc>
@@ -30,10 +30,10 @@
                 </g>
             </g>
             <path d="M654.832,96.39 L657.332,92.759 L659.832,89.128 L654.832,89.128 L649.832,89.128 L652.332,92.759 L654.832,96.39 L654.832,96.39 Z" id="Shape" fill="#000000"></path>
-            <text id="less-services" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="less-services" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="12" y="111">less services</tspan>
             </text>
-            <text id="more-services" font-family="OpenSans-Semibold, Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
+            <text id="more-services" font-family="Open Sans" font-size="14" font-weight="500" letter-spacing="0.5" fill="#16A085">
                 <tspan x="699.977539" y="111">more services</tspan>
             </text>
             <g id="Group-7" transform="translate(159.000000, 59.000000)">
