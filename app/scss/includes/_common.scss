@@ -78,7 +78,7 @@ body {
 	position: relative;
 	color: #000;
 	text-align: left;
-	font: 62.5%/1.2em arial, sans-serif;
+	font: 62.5%/1.2em 'Open Sans', arial, sans-serif;
 	background: #fff;
 }
 
@@ -106,7 +106,7 @@ label, input[type="button"], input[type="submit"], button {
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: all 300ms;
-	font-family: 'OpenSans';
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 
 	&:hover{
@@ -127,7 +127,7 @@ label, input[type="button"], input[type="submit"], button {
 	font-weight: normal;
 	cursor: pointer;
 	transition: all 300ms;
-	font-family: 'OpenSans';
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	border: 2px solid  #000;
 	background: #fff;
@@ -136,8 +136,9 @@ label, input[type="button"], input[type="submit"], button {
 	text-transform: none;
 
 	&:hover{
-		background-color: #0E9F84;
+		background-color: #000;
 		border-color: #000;
+		color: #fff;
 	}
 }
 
@@ -156,7 +157,7 @@ label, input[type="button"], input[type="submit"], button {
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: all 300ms;
-	font-family: 'OpenSans';
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	background-color: #0E9F84;
 }
@@ -186,7 +187,26 @@ label, input[type="button"], input[type="submit"], button {
 	@extend .s-blue_man;
 }
 
+.icon-yellow-house{
+	@extend .dib;
+	@extend .s-yellow_house;
+}
+
+.icon-yellow-person{
+	@extend .dib;
+	@extend .s-yellow_man;
+}
+
 .icon-info{
 	@extend .dib;
 	@extend .s-ico_info;
+}
+
+.icon-arr-right{
+	transition: transform 0.4s ease;
+	@extend .dib;
+	width: 4px;
+	height: 6px;
+	vertical-align: middle;
+	background: url(../img/arr-right-small.svg) 0 0 no-repeat;
 }

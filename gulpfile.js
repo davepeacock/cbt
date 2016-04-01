@@ -72,7 +72,7 @@ gulp.task('css', function () {
 	.pipe(scss())
 	// .pipe(minifyCss())
 	.pipe(autoprefixer({
-		browsers: ['last 2 versions', '> 1%', 'ie 9'],
+		browsers: ['last 10 versions', '> 1%', 'ie 10'],
 		cascade: false
 	}))
 	// .pipe(rename("bundle.min.css"))
