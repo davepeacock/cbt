@@ -2163,6 +2163,7 @@ g.gasStations{
 							
 							&~img{
 								margin-top: 40px;
+								margin-bottom: -40px;
 							}
 						}
 					}
@@ -2211,6 +2212,10 @@ g.gasStations{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 760px;
+}
+
+.offset-valign{
+	transform: translate(0, -50%);
 }
 
 .r-text{

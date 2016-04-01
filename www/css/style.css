@@ -2539,7 +2539,8 @@ g.gasStations {
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
           .third-section__item__step.swiper-box .third-section__item__step_i .swiper-slider .swiper-slide .swiper-slide_i .r-text ~ img {
-            margin-top: 40px; }
+            margin-top: 40px;
+            margin-bottom: -40px; }
         .third-section__item__step.swiper-box .third-section__item__step_i .swiper-slider .swiper-slide.swiper-slide-active {
           opacity: 1; }
     .third-section__item__step.swiper-box .third-section__item__step_i .swiper-pagination-bullets {
@@ -2572,6 +2573,11 @@ g.gasStations {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   max-width: 760px; }
+
+.offset-valign {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
 
 .r-text {
   color: #000;
