@@ -417,8 +417,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
-<<<<<<< HEAD
-=======
 /**
  * Swiper 3.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -930,7 +928,6 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
->>>>>>> origin/Alex-dev
 .s-blue_man, .icon-blue-person {
   background-image: url(../img/sprite.png);
   background-position: -31px -70px;
@@ -1230,10 +1227,6 @@ g.gasStations {
   transform: translate3d(-340px, 26px, 0); }
 
 .ninth {
-<<<<<<< HEAD
-  -webkit-transform: translate3d(0, 80px, 0);
-  transform: translate3d(0, 80px, 0); }
-=======
   -webkit-transform: translate3d(0, 20px, 0);
   transform: translate3d(0, 20px, 0); }
 
@@ -1241,45 +1234,44 @@ g.gasStations {
   .ninth {
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0); } }
->>>>>>> origin/Alex-dev
 
 .loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 11;
+opacity: 1;
+-webkit-transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
+transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
+overflow: hidden;
+background: #fdfffe; }
+.loading-screen svg {
   width: 100%;
-  z-index: 11;
-  opacity: 1;
+  height: 100%; }
+  .loading-screen svg circle {
+    -webkit-transform-origin: 50% 50% 0;
+    -ms-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+    fill: #F6FAFC;
+    stroke: #13a085;
+    stroke-width: 2px;
+    stroke-dasharray: 40px 172px;
+    -webkit-animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38);
+    animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38); }
+  .loading-screen svg text {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease; }
+    .loading-screen svg text.hidden {
+      opacity: 0; }
+.content-loaded .loading-screen {
+  height: 0;
+  width: 0;
+  opacity: 0;
   -webkit-transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
-  transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
-  overflow: hidden;
-  background: #fdfffe; }
-  .loading-screen svg {
-    width: 100%;
-    height: 100%; }
-    .loading-screen svg circle {
-      -webkit-transform-origin: 50% 50% 0;
-      -ms-transform-origin: 50% 50% 0;
-      transform-origin: 50% 50% 0;
-      fill: #F6FAFC;
-      stroke: #13a085;
-      stroke-width: 2px;
-      stroke-dasharray: 40px 172px;
-      -webkit-animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38);
-      animation: pending 0.66s infinite cubic-bezier(0.12, 0.12, 0.38, 0.38); }
-    .loading-screen svg text {
-      opacity: 1;
-      -webkit-transition: opacity 0.2s ease;
-      transition: opacity 0.2s ease; }
-      .loading-screen svg text.hidden {
-        opacity: 0; }
-  .content-loaded .loading-screen {
-    height: 0;
-    width: 0;
-    opacity: 0;
-    -webkit-transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s;
-    transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s; }
+  transition: opacity 1s ease, width 0s ease 1s, height 0s ease 1s; }
 
 .second-section-welcome {
   position: relative;
@@ -1624,24 +1616,12 @@ g.gasStations {
 
 .second-section__item__titles-list__item#dt-housing .t-title_second {
   top: 35%;
-<<<<<<< HEAD
-  left: 49%; }
-<<<<<<< HEAD
-=======
   right: 44%; }
->>>>>>> b43374e211896a7d273f2fcc965eaf4a18386bcc
 
 .second-section__item__titles-list__item#dt-walkability .t-title_first {
   top: 33%;
   right: 72%; }
 
-=======
-
-.second-section__item__titles-list__item#dt-walkability .t-title_first {
-  top: 37%;
-  left: 27%; }
-
->>>>>>> origin/Alex-dev
 .second-section__item__titles-list__item#dt-walkability .t-title_second {
   top: 35%;
   right: 45%; }
@@ -2292,8 +2272,6 @@ g.gasStations {
     content: "";
     display: block; }
 
-<<<<<<< HEAD
-=======
 .loadThirdSection {
   position: relative;
   margin: 0 55px 0 0;
@@ -2309,7 +2287,6 @@ g.gasStations {
     content: "";
     display: block; }
 
->>>>>>> origin/Alex-dev
 .r-graph__row {
   position: relative;
   z-index: 10;
@@ -2351,8 +2328,6 @@ g.gasStations {
     /* IE6-9 */ }
   .graph.graph_purple {
     background: #8E599F; }
-<<<<<<< HEAD
-=======
 
 .third-section__item {
   position: absolute;
@@ -2790,14 +2765,6 @@ g.gasStations {
     min-width: 55px; }
     .menu-visible .menu-btn__text .default {
       display: none; }
-<<<<<<< HEAD
-  .swiper-slider .swiper-pagination-bullets.hidden {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s;
-    transition: opacity 0.4s ease 0s, visibility 0s ease 0.4s; }
->>>>>>> origin/Alex-dev
-=======
   .menu-btn__text .open {
     display: none;
     min-width: 55px; }
@@ -3085,4 +3052,3 @@ g.gasStations {
 
 .hide {
   display: none; }
->>>>>>> b43374e211896a7d273f2fcc965eaf4a18386bcc

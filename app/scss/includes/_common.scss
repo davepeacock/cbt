@@ -202,6 +202,15 @@ label, input[type="button"], input[type="submit"], button {
 	@extend .s-ico_info;
 }
 
+.camera{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 27px;
+	height: 16px;
+	background: url('../img/camera.svg') 0 0 no-repeat;
+}
+
 .icon-arr-right{
 	transition: transform 0.4s ease;
 	@extend .dib;
